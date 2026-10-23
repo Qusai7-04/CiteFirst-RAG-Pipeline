@@ -296,9 +296,16 @@ def test_vault_delete_real_windows_file_lock(tmp_path, monkeypatch):
     monkeypatch.setattr(api, "delete_document", lambda fn: delete_calls.append(fn) or 2)
 
     import sys
+    locked = True
+    orig_replace = Path.replace
+
+    def maybe_locked_replace(self, target):
+        if locked and self.name == "windows_locked.pdf":
+            raise PermissionError("[WinError 32] The process cannot access the file because it is being used by another process")
+        return orig_replace(self, target)
+
     if sys.platform != "win32":
-        # On POSIX, simulate lock via PermissionError
-        monkeypatch.setattr(Path, "replace", lambda s, t: (_ for _ in ()).throw(PermissionError("Simulated lock")))
+        monkeypatch.setattr(Path, "replace", maybe_locked_replace)
 
     client = TestClient(api.app)
 
@@ -310,9 +317,8 @@ def test_vault_delete_real_windows_file_lock(tmp_path, monkeypatch):
         assert delete_calls == []
         assert pdf_file.exists()
 
-    # After releasing the lock (handle closed), deletion succeeds
-    if sys.platform != "win32":
-        monkeypatch.undo()
+    # After releasing the lock (handle closed / toggled), deletion succeeds
+    locked = False
     res_after = client.delete("/api/vault/delete/windows_locked.pdf")
     assert res_after.status_code == 200
     assert not pdf_file.exists()
