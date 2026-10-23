@@ -1,5 +1,5 @@
 """
-FastAPI bridge between Next.js frontend and the CiteFirst Python pipeline.
+FastAPI backend service for the CiteFirst citation-grounded research RAG pipeline.
 Run locally with: uvicorn api:app --reload --host 127.0.0.1 --port 8000
 """
 import json
@@ -26,10 +26,17 @@ log = logging.getLogger(__name__)
 
 app = FastAPI(title="CiteFirst — Research Assistant with Citations API")
 
-ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+cors_origins_env = os.getenv("CITEFIRST_CORS_ORIGINS")
+if cors_origins_env:
+    ALLOWED_ORIGINS = [o.strip() for o in cors_origins_env.split(",") if o.strip()]
+else:
+    # Default local development origins
+    ALLOWED_ORIGINS = [
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
 
 app.add_middleware(
     CORSMiddleware,

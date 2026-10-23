@@ -1,6 +1,6 @@
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-norecursedirs = [".git", "scratch", "_zip_review", "node_modules", "evaluation_results", ".venv"]
+norecursedirs = [".git", "scratch", "_zip_review", "evaluation_results", ".venv"]
 markers = [
     "needs_symlinks: test requires symlink creation privileges (skipped on unprivileged Windows)",
 ]
