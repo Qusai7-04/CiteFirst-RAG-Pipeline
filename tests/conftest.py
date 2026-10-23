@@ -12,7 +12,10 @@ for _mod, _stub in [
         PersistentClient=lambda *a, **k: SimpleNamespace(
             get_or_create_collection=lambda **kw: SimpleNamespace(
                 count=lambda: 0,
-                query=lambda **kw: {"documents": [[]], "metadatas": [[]], "distances": [[]]}
+                query=lambda **kw: {"documents": [[]], "metadatas": [[]], "distances": [[]]},
+                get=lambda **kw: {"ids": [], "metadatas": [], "documents": []},
+                add=lambda **kw: None,
+                delete=lambda **kw: None,
             )
         )
     )),

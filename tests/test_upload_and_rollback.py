@@ -25,7 +25,7 @@ def test_process_and_save_pdf_duplicate_rejected(monkeypatch):
         return 1
 
     monkeypatch.setattr(database, "delete_document", mock_delete)
-    monkeypatch.setattr(database.collection, "get", lambda where: {"ids": ["existing_1"]})
+    monkeypatch.setattr(database.collection, "get", lambda where: {"ids": ["existing_1"]}, raising=False)
 
     # When replace=False, existing file is skipped cleanly without error or delete
     database.process_and_save_pdf("dummy.pdf", replace=False)
@@ -46,7 +46,7 @@ def test_process_and_save_pdf_rollback_on_failure(monkeypatch):
         return 1
 
     monkeypatch.setattr(database, "delete_document", mock_delete)
-    monkeypatch.setattr(database.collection, "get", lambda where: {"ids": []})
+    monkeypatch.setattr(database.collection, "get", lambda where: {"ids": []}, raising=False)
 
     class FakeDoc:
         def __enter__(self):
@@ -63,13 +63,13 @@ def test_process_and_save_pdf_rollback_on_failure(monkeypatch):
         [("chunk text", 0, 0)],
         [("parent chunk text", 0)]
     ))
-    monkeypatch.setattr(database.parent_collection, "add", lambda **kwargs: None)
+    monkeypatch.setattr(database.parent_collection, "add", lambda **kwargs: None, raising=False)
 
     # Injected failure on child collection add
     def failing_add(**kwargs):
         raise RuntimeError("Injected ChromaDB failure")
 
-    monkeypatch.setattr(database.collection, "add", failing_add)
+    monkeypatch.setattr(database.collection, "add", failing_add, raising=False)
     monkeypatch.setattr(database, "_get_embedding_model", lambda: type("M", (), {"encode": lambda s, x, **kw: type("V", (), {"tolist": lambda self: [[0.1]*384]})()})())
 
     with pytest.raises(RuntimeError, match="Injected ChromaDB failure"):
