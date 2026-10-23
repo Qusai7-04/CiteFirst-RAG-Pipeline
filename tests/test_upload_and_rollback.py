@@ -264,9 +264,10 @@ def test_vault_delete_fails_when_file_unlink_fails(tmp_path, monkeypatch):
     monkeypatch.setattr(api, "CRAG_AVAILABLE", True)
     monkeypatch.setattr(api, "delete_document", lambda fn: 2)
 
-    def failing_unlink(missing_ok=True):
+    def failing_unlink(*a, **k):
         raise OSError("File locked by another process")
 
+    monkeypatch.setattr(api.os, "unlink", failing_unlink)
     monkeypatch.setattr(Path, "unlink", lambda self, *a, **k: failing_unlink() if self.name == "locked_paper.pdf" else None)
 
     client = TestClient(api.app)

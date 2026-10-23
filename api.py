@@ -383,6 +383,8 @@ def vault_delete(filename: str):
                     os.unlink(filename, dir_fd=directory_fd)
                 except FileNotFoundError:
                     pass
+                except OSError as err:
+                    raise HTTPException(status_code=500, detail=f"Physical file deletion failed: {err}")
             finally:
                 os.close(directory_fd)
         else:  # Windows does not provide directory-relative unlink.
