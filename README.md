@@ -222,21 +222,71 @@ python logic_engine.py "Sample test query"
 
 ## Evaluation Dataset & Historical Benchmarks
 
-The project includes `reviewed_dataset.json`, a human-verified dataset of 18 questions across technical domains.
+### Standalone dataset audit
 
-To run audit-only verification:
+The bundled `reviewed_dataset.json` contains 18 schema-valid questions. Run its audit with:
 
 ```powershell
 python evaluator.py --audit-only
 ```
 
-### Evaluation & Benchmark Distinctions
-- **Dataset Audit Only**: The checked-in `reviewed_dataset.json` has 18 records and is useful for an **audit-only** check; the evaluation methodology reports **zero records eligible for a scored default run**. Do not call its audit a reproduced retrieval benchmark.
-- **Historical Corpus Absence**: The historical 66-paper, 7,816-chunk corpus/index is not included in Git; do not claim to reproduce its metrics without the same corpus and protocol.
-- **Classification vs. Final Answer Quality**: Historical 98.48% chunk classification is not final-answer accuracy. In historical human review on the development corpus:
-  - 2 of 22 development questions were accepted.
-  - 4 of 4 pilot questions were accepted, but were disclosed during pipeline tuning (not a blind independent validation).
-- **Smoke Testing Scope**: The synthetic two-page PDF smoke test establishes an operational pipeline path (parsing, embedding, retrieval, reranking, and generation/abstention), not general research-answer quality. The full historical 26-question evaluation was not rerun without the original corpus.
+The [methodology](docs/evaluation/methodology.md) reports **zero records eligible for the default scored run** in this checked-in dataset. This audit checks the data and does not reproduce the historical benchmark.
+
+### Historical CiteFirst evaluation (copied; not rerun here)
+
+The figures below are copied from the [original CiteFirst evaluation section](https://github.com/Qusai7-04/CiteFirst/blob/main/README.md#evaluation-benchmark--verified-results). They were obtained with the original local corpus and evaluation protocol. The 66 PDFs and their index are not tracked in this repository, so a fresh clone cannot reproduce these scores. The standalone backend's synthetic two-page smoke test verifies operation, not benchmark accuracy.
+
+CiteFirst was evaluated against its local benchmark corpus of **66 academic research papers** (7,816 chunks).
+
+#### 1. Chunk-Level Relevance Evaluation
+
+Evaluated using an LLM Grader (`meta-llama/llama-3.1-8b-instruct`) on the 66-paper corpus across **593 chunk-level relevance classifications**:
+
+- **Accuracy**: **0.9848**
+- **Precision**: **0.7000**
+- **Recall**: **0.8235**
+- **F1 Score**: **0.7568**
+
+##### Confusion Matrix (593 Chunk Decisions)
+
+| | Predicted Irrelevant | Predicted Relevant | Total Decisions |
+| :--- | :---: | :---: | :---: |
+| **Actual Irrelevant** | **570** (True Negatives) | **6** (False Positives) | 576 |
+| **Actual Relevant** | **3** (False Negatives) | **14** (True Positives) | 17 |
+| **Total Predictions** | 573 | 20 | **593** |
+
+> [!IMPORTANT]
+> **Understanding Chunk Relevance vs. Answer Correctness**:
+> The high accuracy (98.48%) is driven primarily by the large true-negative denominator (570 correct rejections of irrelevant passages out of 593 total decisions; 570 + 6 + 3 + 14 = 593). This measures the chunk filter's ability to reject distractor passages. **It does NOT represent the accuracy of generated answers.**
+
+#### 2. Answer-Accuracy Evaluation (Human Review)
+
+Answer correctness was evaluated across **26 human-reviewed questions** with signed evidence sign-offs and structured verdict forms, partitioned into 22 development questions and a disclosed 4-question pilot:
+
+| Partition | Questions | ACCEPT | PARTIAL | REJECT | Claim Coverage (Covered / Partial / Omitted) | Approved Pages in Context |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Development (Q001–Q022)** | 22 | **2 (9.1%)** | **9 (40.9%)** | **11 (50.0%)** | 14 / 21 / 39 (N=74) | 15 / 22 |
+| **Disclosed Pilot (Q023–Q026)** | 4 | **4 (100.0%)** | **0 (0.0%)** | **0 (0.0%)** | 9 / 0 / 0 (N=9) | 4 / 4 |
+| **Overall Benchmark Total** | **26** | **6 (23.1%)** | **9 (34.6%)** | **11 (42.3%)** | **23 / 21 / 39 (N=83)** | **19 / 26** |
+
+##### Key Evaluation Findings
+- **Context Presence vs. Claim Synthesis**: In 19 of 26 questions (73.1%), approved source pages successfully reached the generation context. However, multi-part synthesis requirements caused the generator to miss secondary claims or output cautious abstentions.
+- **Pilot Generalizability Caveat**: The pilot questions (Q023–Q026) were inspected during prompt tuning; their 4/4 acceptance rate is disclosed as an internal pilot and must not be interpreted as an unbiased general holdout rate.
+
+#### 3. Historical Ablation Study
+
+The table below reflects the progressive ablation findings from the initial research study:
+
+| Configuration | Accuracy | Precision | Recall | F1 Score | Notes |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Dense-only baseline** (no logic) | 0.938 | 0.390 | 0.760 | 0.514 | High noise, low precision |
+| **Hybrid dense + BM25 / RRF** | 0.885 | 0.380 | 0.860 | 0.525 | Higher recall, broader pool |
+| **Hybrid + Cross-Encoder** (static thresholds) | 0.910 | 0.480 | 0.720 | 0.576 | Reranker sharpens top ranks |
+| **Full Logic + Chunk-level verification** | 0.974 | 0.500 | 0.670 | 0.572 | Early gate reduced true positives |
+| **Full Logic + Pre-flight combined check** | **0.985** | **0.700** | **0.820** | **0.760** | Final architecture; cuts false positives |
+
+
+For detailed protocols, cryptographic manifests, and signed verdict sheets, see the [Pipeline Evaluation & Benchmark Report](docs/evaluation/evaluation_report.md) and [`docs/evaluation/phase4_questions.json`](docs/evaluation/phase4_questions.json).
 
 ---
 
