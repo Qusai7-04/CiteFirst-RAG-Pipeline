@@ -218,28 +218,6 @@ def test_successful_replacement_flow_via_delete_then_upload(tmp_path, monkeypatc
     assert indexed_docs.get("replaceable.pdf") == 5
 
 
-def test_vault_delete_preserves_file_when_index_delete_fails(tmp_path, monkeypatch):
-    papers = tmp_path / "papers"
-    papers.mkdir(parents=True)
-    pdf_file = papers / "safe_paper.pdf"
-    pdf_file.write_bytes(b"%PDF-1.4 content")
-
-    monkeypatch.setattr(api, "PAPERS_DIR", papers)
-    monkeypatch.setattr(api, "CRAG_AVAILABLE", True)
-
-    def failing_delete_doc(filename):
-        raise RuntimeError("Index deletion database lock error")
-
-    monkeypatch.setattr(api, "delete_document", failing_delete_doc)
-
-    client = TestClient(api.app)
-    response = client.delete("/api/vault/delete/safe_paper.pdf")
-    assert response.status_code == 500
-    assert "ChromaDB delete failed" in response.json()["detail"]
-    # Physical file MUST be preserved!
-    assert pdf_file.exists()
-
-
 def test_vault_delete_nonexistent_document_returns_404(tmp_path, monkeypatch):
     papers = tmp_path / "papers"
     papers.mkdir(parents=True)
@@ -254,23 +232,248 @@ def test_vault_delete_nonexistent_document_returns_404(tmp_path, monkeypatch):
     assert "not found" in response.json()["detail"].lower()
 
 
-def test_vault_delete_fails_when_file_unlink_fails(tmp_path, monkeypatch):
+def test_vault_delete_fails_when_file_locked_preserves_file_and_index(tmp_path, monkeypatch):
+    """
+    Fix 1 Invariant: If physical file staging fails (e.g. locked file on Windows),
+    the file bytes, child chunks, parent chunks, and retrieval must remain intact.
+    """
     papers = tmp_path / "papers"
     papers.mkdir(parents=True)
     pdf_file = papers / "locked_paper.pdf"
-    pdf_file.write_bytes(b"%PDF-1.4 locked")
+    pdf_bytes = b"%PDF-1.4 locked paper content that must remain untouched"
+    pdf_file.write_bytes(pdf_bytes)
 
     monkeypatch.setattr(api, "PAPERS_DIR", papers)
+    monkeypatch.setattr(api, "PIPELINE_AVAILABLE", True)
     monkeypatch.setattr(api, "CRAG_AVAILABLE", True)
-    monkeypatch.setattr(api, "delete_document", lambda fn: 2)
 
-    def failing_unlink(*a, **k):
-        raise OSError("File locked by another process")
+    delete_calls = []
+    monkeypatch.setattr(api, "delete_document", lambda fn: delete_calls.append(fn) or 2)
 
-    monkeypatch.setattr(api.os, "unlink", failing_unlink)
-    monkeypatch.setattr(Path, "unlink", lambda self, *a, **k: failing_unlink() if self.name == "locked_paper.pdf" else None)
+    orig_replace = Path.replace
+
+    def failing_replace(self, target):
+        if self.name == "locked_paper.pdf":
+            raise PermissionError("[WinError 32] The process cannot access the file because it is being used by another process")
+        return orig_replace(self, target)
+
+    monkeypatch.setattr(Path, "replace", failing_replace)
 
     client = TestClient(api.app)
     response = client.delete("/api/vault/delete/locked_paper.pdf")
     assert response.status_code == 500
-    assert "Physical file deletion failed" in response.json()["detail"]
+    assert "staging failed" in response.json()["detail"].lower()
+
+    # Invariants:
+    # 1. Physical file still exists with identical original bytes
+    assert pdf_file.exists()
+    assert pdf_file.read_bytes() == pdf_bytes
+    # 2. delete_document was never called - index was not touched!
+    assert delete_calls == []
+    # 3. Document is still downloadable
+    doc_res = client.get("/api/vault/document/locked_paper.pdf")
+    assert doc_res.status_code == 200
+    assert doc_res.content == pdf_bytes
+    # 4. No temporary staging files left in vault
+    assert list(papers.glob(".del_*")) == []
+
+
+def test_vault_delete_real_windows_file_lock(tmp_path, monkeypatch):
+    """
+    Test real OS-level locked file on Windows without mocking replace/unlink.
+    """
+    papers = tmp_path / "papers"
+    papers.mkdir(parents=True)
+    pdf_file = papers / "windows_locked.pdf"
+    pdf_bytes = b"%PDF-1.4 real locked file"
+    pdf_file.write_bytes(pdf_bytes)
+
+    monkeypatch.setattr(api, "PAPERS_DIR", papers)
+    monkeypatch.setattr(api, "PIPELINE_AVAILABLE", True)
+    monkeypatch.setattr(api, "CRAG_AVAILABLE", True)
+
+    delete_calls = []
+    monkeypatch.setattr(api, "delete_document", lambda fn: delete_calls.append(fn) or 2)
+
+    import sys
+    if sys.platform != "win32":
+        # On POSIX, simulate lock via PermissionError
+        monkeypatch.setattr(Path, "replace", lambda s, t: (_ for _ in ()).throw(PermissionError("Simulated lock")))
+
+    client = TestClient(api.app)
+
+    # Hold an open handle (on Windows, this creates a real file sharing violation WinError 32)
+    with open(pdf_file, "r+b") as handle:
+        response = client.delete("/api/vault/delete/windows_locked.pdf")
+        assert response.status_code == 500
+        assert "staging failed" in response.json()["detail"].lower()
+        assert delete_calls == []
+        assert pdf_file.exists()
+
+    # After releasing the lock (handle closed), deletion succeeds
+    if sys.platform != "win32":
+        monkeypatch.undo()
+    res_after = client.delete("/api/vault/delete/windows_locked.pdf")
+    assert res_after.status_code == 200
+    assert not pdf_file.exists()
+    assert list(papers.glob(".del_*")) == []
+
+
+def test_vault_delete_rollback_when_chromadb_fails(tmp_path, monkeypatch):
+    """
+    Fix 1 Invariant: If ChromaDB delete fails after staging, the file must be
+    restored from staging back to original path, leaving no temporary file.
+    """
+    papers = tmp_path / "papers"
+    papers.mkdir(parents=True)
+    pdf_file = papers / "chroma_fail.pdf"
+    pdf_bytes = b"%PDF-1.4 chroma fail paper"
+    pdf_file.write_bytes(pdf_bytes)
+
+    monkeypatch.setattr(api, "PAPERS_DIR", papers)
+    monkeypatch.setattr(api, "PIPELINE_AVAILABLE", True)
+    monkeypatch.setattr(api, "CRAG_AVAILABLE", True)
+
+    def failing_delete(fn):
+        raise RuntimeError("ChromaDB connection severed")
+
+    monkeypatch.setattr(api, "delete_document", failing_delete)
+
+    client = TestClient(api.app)
+    response = client.delete("/api/vault/delete/chroma_fail.pdf")
+    assert response.status_code == 500
+    assert "ChromaDB delete failed" in response.json()["detail"]
+
+    # File was rolled back to original location!
+    assert pdf_file.exists()
+    assert pdf_file.read_bytes() == pdf_bytes
+    # No temporary staging file left behind
+    assert list(papers.glob(".del_*")) == []
+
+
+def test_database_delete_document_child_failure_restores_state(monkeypatch):
+    """
+    If child collection deletion fails, no data is lost.
+    """
+    def mock_get(where=None, include=None):
+        return {
+            "ids": ["c1", "c2"],
+            "documents": ["doc1", "doc2"],
+            "metadatas": [{"source": "fail_child.pdf"}, {"source": "fail_child.pdf"}],
+            "embeddings": [[0.1]*384, [0.2]*384],
+        }
+
+    monkeypatch.setattr(database.collection, "get", mock_get, raising=False)
+    monkeypatch.setattr(database.parent_collection, "get", mock_get, raising=False)
+
+    def failing_child_delete(ids):
+        raise RuntimeError("Child delete exploded")
+
+    monkeypatch.setattr(database.collection, "delete", failing_child_delete, raising=False)
+
+    with pytest.raises(RuntimeError, match="Child delete exploded"):
+        database.delete_document("fail_child.pdf")
+
+
+def test_database_delete_document_parent_failure_restores_child_chunks(monkeypatch):
+    """
+    Fix 1 Invariant: If parent deletion fails after child deletion,
+    the child chunks are restored into child collection before re-raising.
+    """
+    child_records = {
+        "ids": ["c1"],
+        "documents": ["child chunk 1"],
+        "metadatas": [{"source": "test_parent_fail.pdf"}],
+        "embeddings": [[0.1]*384],
+    }
+    parent_records = {
+        "ids": ["p1"],
+        "documents": ["parent chunk 1"],
+        "metadatas": [{"source": "test_parent_fail.pdf"}],
+        "embeddings": [[0.0]*384],
+    }
+
+    monkeypatch.setattr(database.collection, "get", lambda **kw: dict(child_records), raising=False)
+    monkeypatch.setattr(database.parent_collection, "get", lambda **kw: dict(parent_records), raising=False)
+
+    child_deleted_ids = []
+    child_restored_kw = []
+    monkeypatch.setattr(database.collection, "delete", lambda ids: child_deleted_ids.extend(ids), raising=False)
+    monkeypatch.setattr(database.collection, "add", lambda **kw: child_restored_kw.append(kw), raising=False)
+
+    def failing_parent_delete(ids):
+        raise RuntimeError("Parent collection write lock error")
+
+    monkeypatch.setattr(database.parent_collection, "delete", failing_parent_delete, raising=False)
+
+    with pytest.raises(RuntimeError, match="Parent collection write lock error"):
+        database.delete_document("test_parent_fail.pdf")
+
+    # Child chunks were deleted...
+    assert child_deleted_ids == ["c1"]
+    # ...AND restored via compensatory rollback!
+    assert len(child_restored_kw) == 1
+    assert child_restored_kw[0]["ids"] == ["c1"]
+    assert child_restored_kw[0]["documents"] == ["child chunk 1"]
+    assert child_restored_kw[0]["metadatas"] == [{"source": "test_parent_fail.pdf"}]
+    assert child_restored_kw[0]["embeddings"] == [[0.1]*384]
+
+
+def test_database_delete_document_cache_invalidation_failure_restores_all(monkeypatch):
+    """
+    Fix 1 Invariant: If BM25 cache invalidation fails after both child and parent deletes,
+    both child and parent chunks are restored before re-raising.
+    """
+    child_records = {"ids": ["c1"], "documents": ["cdoc"], "metadatas": [{"source": "test.pdf"}], "embeddings": [[0.1]*384]}
+    parent_records = {"ids": ["p1"], "documents": ["pdoc"], "metadatas": [{"source": "test.pdf"}], "embeddings": [[0.0]*384]}
+
+    monkeypatch.setattr(database.collection, "get", lambda **kw: dict(child_records), raising=False)
+    monkeypatch.setattr(database.parent_collection, "get", lambda **kw: dict(parent_records), raising=False)
+
+    child_restored = []
+    parent_restored = []
+    monkeypatch.setattr(database.collection, "delete", lambda ids: None, raising=False)
+    monkeypatch.setattr(database.parent_collection, "delete", lambda ids: None, raising=False)
+    monkeypatch.setattr(database.collection, "add", lambda **kw: child_restored.append(kw), raising=False)
+    monkeypatch.setattr(database.parent_collection, "add", lambda **kw: parent_restored.append(kw), raising=False)
+
+    def failing_cache():
+        raise RuntimeError("Cache directory corrupted")
+
+    monkeypatch.setattr(database, "invalidate_bm25_cache", failing_cache)
+
+    with pytest.raises(RuntimeError, match="Cache directory corrupted"):
+        database.delete_document("test.pdf")
+
+    assert len(child_restored) == 1
+    assert child_restored[0]["ids"] == ["c1"]
+    assert len(parent_restored) == 1
+    assert parent_restored[0]["ids"] == ["p1"]
+
+
+def test_vault_delete_success_cleans_file_and_both_collections(tmp_path, monkeypatch):
+    """
+    Fix 1 Invariant: Successful deletion cleanly unlinks file, staging file,
+    child chunks, parent chunks, and invalidates cache.
+    """
+    papers = tmp_path / "papers"
+    papers.mkdir(parents=True)
+    pdf_file = papers / "success_paper.pdf"
+    pdf_file.write_bytes(b"%PDF-1.4 success content")
+
+    monkeypatch.setattr(api, "PAPERS_DIR", papers)
+    monkeypatch.setattr(api, "PIPELINE_AVAILABLE", True)
+    monkeypatch.setattr(api, "CRAG_AVAILABLE", True)
+
+    deleted_docs = []
+    monkeypatch.setattr(api, "delete_document", lambda fn: deleted_docs.append(fn) or 5)
+
+    client = TestClient(api.app)
+    response = client.delete("/api/vault/delete/success_paper.pdf")
+    assert response.status_code == 200
+    assert response.json() == {"deleted": "success_paper.pdf", "chunks_removed": 5}
+
+    assert not pdf_file.exists()
+    assert list(papers.glob(".del_*")) == []
+    assert deleted_docs == ["success_paper.pdf"]
+

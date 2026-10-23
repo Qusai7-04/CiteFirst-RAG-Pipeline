@@ -575,24 +575,71 @@ def list_documents() -> list:
 
 
 def delete_document(filename: str) -> int:
-    """Delete all chunks (child + parent) for a given source filename."""
-    deleted = 0
-    # Delete child chunks
-    child_data = collection.get(where={"source": filename})
-    child_ids = child_data.get("ids", [])
-    if child_ids:
-        collection.delete(ids=child_ids)
-        deleted += len(child_ids)
+    """Delete all chunks (child + parent) for a given source filename, restoring prior state on failure."""
+    try:
+        child_data = collection.get(where={"source": filename}, include=["documents", "metadatas", "embeddings"])
+    except TypeError:
+        child_data = collection.get(where={"source": filename})
+    child_ids = (child_data.get("ids") or []) if child_data else []
 
-    # Delete parent chunks
-    parent_data = parent_collection.get(where={"source": filename})
-    parent_ids = parent_data.get("ids", [])
-    if parent_ids:
-        parent_collection.delete(ids=parent_ids)
-        deleted += len(parent_ids)
+    try:
+        parent_data = parent_collection.get(where={"source": filename}, include=["documents", "metadatas", "embeddings"])
+    except TypeError:
+        parent_data = parent_collection.get(where={"source": filename})
+    parent_ids = (parent_data.get("ids") or []) if parent_data else []
 
-    invalidate_bm25_cache()
-    return deleted
+    if not child_ids and not parent_ids:
+        return 0
+
+    child_deleted = False
+    parent_deleted = False
+
+    try:
+        if child_ids:
+            collection.delete(ids=child_ids)
+            child_deleted = True
+
+        if parent_ids:
+            parent_collection.delete(ids=parent_ids)
+            parent_deleted = True
+
+        invalidate_bm25_cache()
+    except Exception:
+        # shortcut: best-effort compensatory rollback; lacks distributed 2PC across ChromaDB collections and filesystem, upgrade to transactional blob storage if cross-system ACID is required
+        if child_deleted and child_ids:
+            try:
+                kw = {"ids": child_data["ids"]}
+                if child_data.get("documents"):
+                    kw["documents"] = child_data["documents"]
+                if child_data.get("metadatas"):
+                    kw["metadatas"] = child_data["metadatas"]
+                if child_data.get("embeddings") is not None and len(child_data["embeddings"]) == len(child_ids):
+                    kw["embeddings"] = child_data["embeddings"]
+                collection.add(**kw)
+            except Exception as rb_err:
+                log.error("Failed to restore child chunks for %s: %s", filename, rb_err)
+
+        if parent_deleted and parent_ids:
+            try:
+                kw = {"ids": parent_data["ids"]}
+                if parent_data.get("documents"):
+                    kw["documents"] = parent_data["documents"]
+                if parent_data.get("metadatas"):
+                    kw["metadatas"] = parent_data["metadatas"]
+                if parent_data.get("embeddings") is not None and len(parent_data["embeddings"]) == len(parent_ids):
+                    kw["embeddings"] = parent_data["embeddings"]
+                parent_collection.add(**kw)
+            except Exception as rb_err:
+                log.error("Failed to restore parent chunks for %s: %s", filename, rb_err)
+
+        try:
+            invalidate_bm25_cache()
+        except Exception:
+            pass
+
+        raise
+
+    return len(child_ids) + len(parent_ids)
 
 
 def document_exists(filename: str) -> bool:

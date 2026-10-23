@@ -26,17 +26,9 @@ log = logging.getLogger(__name__)
 
 app = FastAPI(title="CiteFirst — Research Assistant with Citations API")
 
-cors_origins_env = os.getenv("CITEFIRST_CORS_ORIGINS")
-if cors_origins_env:
-    ALLOWED_ORIGINS = [o.strip() for o in cors_origins_env.split(",") if o.strip()]
-else:
-    # Default local development origins
-    ALLOWED_ORIGINS = [
-        "http://localhost:8000",
-        "http://127.0.0.1:8000",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ]
+cors_origins_env = os.getenv("CITEFIRST_CORS_ORIGINS", "")
+ALLOWED_ORIGINS = [o.strip() for o in cors_origins_env.split(",") if o.strip()]
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -187,6 +179,10 @@ async def query_stream(req: QueryRequest, request: Request):
                 except asyncio.TimeoutError:
                     continue
             result = await work
+            await asyncio.sleep(0)
+            while not events.empty():
+                event = events.get_nowait()
+                yield f"data: {json.dumps(event)}\n\n"
         except Exception as e:
             result = {
                 "status": "failed",
@@ -368,39 +364,44 @@ async def vault_upload(file: UploadFile = File(...)):
 @app.delete("/api/vault/delete/{filename}")
 def vault_delete(filename: str):
     root, f = _paper_path(filename)
-    deleted_chunks = 0
-    file_existed = f.exists()
+    if f.is_symlink():
+        raise HTTPException(status_code=400, detail="Paper path must not be a symlink")
+    if f.exists() and not f.is_file():
+        raise HTTPException(status_code=400, detail="Paper path is not a regular file")
 
+    file_existed = f.is_file()
+    staged_path = None
+
+    if file_existed:
+        stage_name = f".del_{uuid.uuid4().hex}_{f.name}.tmp"
+        staged_path = root / stage_name
+        try:
+            # Stage file for removal. On Windows, if file is locked or open without sharing,
+            # replace fails immediately before touching ChromaDB or BM25 index.
+            f.replace(staged_path)
+        except OSError as err:
+            raise HTTPException(status_code=500, detail=f"Physical file staging failed: {err}")
+
+    deleted_chunks = 0
     if PIPELINE_AVAILABLE and CRAG_AVAILABLE:
         try:
             deleted_chunks = delete_document(filename)
         except Exception as e:
+            # Roll back staged file: restore to original path f
+            if staged_path and staged_path.exists():
+                try:
+                    staged_path.replace(f)
+                except Exception as rb_err:
+                    log.error("Failed to restore staged file %s to %s: %s", staged_path, f, rb_err)
             raise HTTPException(status_code=500, detail=f"ChromaDB delete failed: {e}")
 
-    # Delete physical file
-    # A directory handle confines unlink even if its entry changes meanwhile.
-    if root.exists():
-        if (hasattr(os, "O_DIRECTORY") and hasattr(os, "O_NOFOLLOW")
-                and os.open in os.supports_dir_fd and os.unlink in os.supports_dir_fd):
-            directory_fd = os.open(root, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
-            try:
-                if f.is_symlink():
-                    raise HTTPException(status_code=400, detail="Paper path must not be a symlink")
-                try:
-                    os.unlink(filename, dir_fd=directory_fd)
-                except FileNotFoundError:
-                    pass
-                except OSError as err:
-                    raise HTTPException(status_code=500, detail=f"Physical file deletion failed: {err}")
-            finally:
-                os.close(directory_fd)
-        else:  # Windows does not provide directory-relative unlink.
-            if f.is_symlink():
-                raise HTTPException(status_code=400, detail="Paper path must not be a symlink")
-            try:
-                f.unlink(missing_ok=True)
-            except OSError as err:
-                raise HTTPException(status_code=500, detail=f"Physical file deletion failed: {err}")
+    # Remove the staged file now that index deletion succeeded
+    if staged_path and staged_path.exists():
+        try:
+            staged_path.unlink()
+        except OSError as err:
+            log.error("Failed to remove staged file %s: %s", staged_path, err)
+            raise HTTPException(status_code=500, detail=f"Physical file cleanup failed: {err}")
 
     if not file_existed and deleted_chunks == 0:
         raise HTTPException(status_code=404, detail=f"Document '{filename}' not found")

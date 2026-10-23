@@ -13,7 +13,7 @@ for _mod, _stub in [
             get_or_create_collection=lambda **kw: SimpleNamespace(
                 count=lambda: 0,
                 query=lambda **kw: {"documents": [[]], "metadatas": [[]], "distances": [[]]},
-                get=lambda **kw: {"ids": [], "metadatas": [], "documents": []},
+                get=lambda **kw: {"ids": [], "metadatas": [], "documents": [], "embeddings": []},
                 add=lambda **kw: None,
                 delete=lambda **kw: None,
             )
