@@ -1,0 +1,55 @@
+{
+  "pilot_split_name": "Phase 4 Source-Grouped Pilot Split",
+  "freeze_date": "2026-10-20",
+  "reviewer": "project owner (user)",
+  "limitation_statement": "The four reserved questions constitute a small pilot evaluation set (N=4); their scores reflect an initial held-out check on new papers and must not be cited as broad statistical generalization.",
+  "development_partition": {
+    "total_questions": 22,
+    "total_source_papers": 19,
+    "existing_phase3_development": {
+      "question_count": 18,
+      "source_paper_count": 15,
+      "questions": [
+        {"id": "Q001", "source_paper": "rsta.1895.0004.pdf", "review_status": "approved"},
+        {"id": "Q002", "source_paper": "An_Experimentalist_Approach_to_Ethical_Governance_of_Emerging_Technologies.pdf", "review_status": "approved"},
+        {"id": "Q003", "source_paper": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf", "review_status": "approved"},
+        {"id": "Q004", "source_paper": "2603.25694v1.pdf", "review_status": "approved"},
+        {"id": "Q005", "source_paper": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf", "review_status": "approved"},
+        {"id": "Q006", "source_paper": "Akiyama_2019_ApJL_875_L1.pdf", "review_status": "approved"},
+        {"id": "Q007", "source_paper": "1807.06209v4.pdf", "review_status": "approved"},
+        {"id": "Q008", "source_paper": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf", "review_status": "approved"},
+        {"id": "Q009", "source_paper": "Exploration_on_Experimental_Economics_and_the_Education_Reform_of_New_Finance_and_Economics.pdf", "review_status": "approved"},
+        {"id": "Q010", "source_paper": "1294261.1294281.pdf", "review_status": "approved"},
+        {"id": "Q011", "source_paper": "PIIS0092867411001279.pdf", "review_status": "approved"},
+        {"id": "Q012", "source_paper": "Structural_formation_of_the_universe_As_observed_by_X-ray_satellites.pdf", "review_status": "approved"},
+        {"id": "Q013", "source_paper": "PIIS0092867411001279.pdf", "review_status": "approved"},
+        {"id": "Q014", "source_paper": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf", "review_status": "approved"},
+        {"id": "Q015", "source_paper": "2005.11401v4.pdf", "review_status": "approved"},
+        {"id": "Q016", "source_paper": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf", "review_status": "approved"},
+        {"id": "Q017", "source_paper": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf", "review_status": "approved"},
+        {"id": "Q018", "source_paper": "rsta.1895.0004.pdf", "review_status": "approved"}
+      ]
+    },
+    "new_phase4_development": {
+      "question_count": 4,
+      "source_paper_count": 4,
+      "questions": [
+        {"id": "Q019", "source_paper": "1406.2661v1.pdf", "review_status": "approved"},
+        {"id": "Q020", "source_paper": "1412.6980v9.pdf", "review_status": "approved"},
+        {"id": "Q021", "source_paper": "1512.03385v1.pdf", "review_status": "approved"},
+        {"id": "Q022", "source_paper": "2401.15884v3.pdf", "review_status": "approved"}
+      ]
+    }
+  },
+  "reserved_held_out_partition": {
+    "total_questions": 4,
+    "total_source_papers": 4,
+    "status": "reserved_for_single_execution",
+    "questions": [
+      {"id": "Q023", "source_paper": "945445.945450.pdf", "review_status": "approved"},
+      {"id": "Q024", "source_paper": "2310.11511v1.pdf", "review_status": "approved"},
+      {"id": "Q025", "source_paper": "AMA_AdaptiveMemoryviaMultiAgentCollaboration_compressed.pdf", "review_status": "approved_repaired_quotes"},
+      {"id": "Q026", "source_paper": "2603.25600v1.pdf", "review_status": "approved"}
+    ]
+  }
+}

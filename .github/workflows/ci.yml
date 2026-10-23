@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend-offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install -r requirements-test.txt
+      - name: Run offline test suite
+        run: python -m pytest -q tests
+      - name: Bytecode compilation check
+        run: python -m compileall -q api.py database.py logic_engine.py providers.py settings_config.py evaluator.py phase4_diagnostics.py upload_papers.py evaluation scripts tests

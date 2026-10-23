@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["query_id", "source_filename", "page", "passage", "judgment", "reviewer", "reason"],
+    "properties": {
+      "query_id": {"type": "string"},
+      "source_filename": {"type": "string", "pattern": "\\.pdf$"},
+      "page": {"type": ["integer", "null"], "minimum": 1},
+      "passage": {"type": "string"},
+      "judgment": {"enum": ["unjudged", "relevant", "nonrelevant"]},
+      "reviewer": {"type": ["string", "null"]},
+      "reason": {"type": "string"}
+    }
+  }
+}

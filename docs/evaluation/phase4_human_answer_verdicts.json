@@ -1,0 +1,1423 @@
+{
+  "$schema": "./phase4_human_answer_verdicts.schema.json",
+  "title": "Phase 4 Human Answer Evaluation Verdicts",
+  "metadata": {
+    "authoritative_signed_form": "phase4_human_answer_verdict_form.md",
+    "authoritative_signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08",
+    "reviewer": "Qusai",
+    "sign_off_date": "2026-10-21",
+    "total_records": 26,
+    "partitions": {
+      "development": {
+        "range": "Q001-Q022",
+        "count": 22,
+        "overall_verdicts": {
+          "ACCEPT": 2,
+          "PARTIAL": 9,
+          "REJECT": 11
+        },
+        "claim_coverage": {
+          "Covered": 14,
+          "Partial": 21,
+          "Omitted": 39
+        }
+      },
+      "disclosed_pilot": {
+        "range": "Q023-Q026",
+        "count": 4,
+        "overall_verdicts": {
+          "ACCEPT": 4,
+          "PARTIAL": 0,
+          "REJECT": 0
+        },
+        "claim_coverage": {
+          "Covered": 9,
+          "Partial": 0,
+          "Omitted": 0
+        },
+        "status_note": "Disclosed previously exposed pilot; not a pristine or untouched holdout"
+      }
+    },
+    "aggregate_summary": {
+      "overall_verdicts": {
+        "ACCEPT": 6,
+        "PARTIAL": 9,
+        "REJECT": 11
+      },
+      "claim_coverage": {
+        "Covered": 23,
+        "Partial": 21,
+        "Omitted": 39
+      },
+      "factual_correctness": {
+        "Correct": 6,
+        "Partially Correct": 12,
+        "Incorrect": 8
+      },
+      "faithfulness": {
+        "Faithful": 23,
+        "Partially Faithful": 3,
+        "Unfaithful": 0
+      },
+      "citation_support": {
+        "Supported": 20,
+        "Partially Supported": 6,
+        "Unsupported": 0
+      }
+    }
+  },
+  "records": [
+    {
+      "question_id": "Q001",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "rsta.1895.0004.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "Based on the text, deduce the logical reasoning that connects the experimental observation of sinuous motion in fluids under specific resistance conditions to the conclusion that properties of matter causing energy transformation have effects beyond heat-motions.",
+      "approved_pages": [
+        {
+          "source_filename": "rsta.1895.0004.pdf",
+          "page": 17
+        }
+      ],
+      "pages_checked": "p. 17 (approved; also p. 7 in context)",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "Refusal omits all three required claims. Note: approved p17 was actually inside the passed context (chunk 2), so this is a pipeline soft-refusal, not a grounding gap.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "The answer's summary statements are supported by the passed p7/p17 chunks; nothing is fabricated.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file does contain the summarised material, but no page- or claim-level grounding is given.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "Experiments with colour bands show that when resistance in steady mean flow varies with a power of velocity higher than the first, the fluid is always in a state of sinuous motion.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Soft refusal ('Direct Answer Not Found'); the colour-band / resistance→sinuous-motion claim is never stated."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The prevalence of such resistance is direct evidence of a general action by which energy of mean-mean-motion (infinite periods) is directly transformed into energy of relative-mean-motion (finite periods, eddying motion).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No statement of the general mean-mean→relative-mean (eddying) energy transformation."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Because this transformation maintains the state of eddying-motion notwithstanding the continual transformation of its energy into heat-motions, properties of matter determining this transformation produce effects not confined to heat-motions.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No statement that the properties of matter produce effects beyond heat-motions."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Faithful soft refusal that omits all three required claims; it does not answer the question. (partial_match route does not force this, the answer itself does.)",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q002",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "An_Experimentalist_Approach_to_Ethical_Governance_of_Emerging_Technologies.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "Analyze how the principles from Rawls and Habermas, when applied to rule-making, logically lead to enhanced rule legitimacy and compliance through procedural justice and public participation, as described in the text.",
+      "approved_pages": [
+        {
+          "source_filename": "An_Experimentalist_Approach_to_Ethical_Governance_of_Emerging_Technologies.pdf",
+          "page": 5
+        }
+      ],
+      "pages_checked": "p. 5",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "Procedural-justice part matches p5; the Rawls/Habermas analysis is absent.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Statements are supported by the passed p5 chunks; the absence of Rawls/Habermas is acknowledged rather than invented.",
+      "citation_support": "Partially Supported",
+      "citation_support_notes": "p5 grounds the procedural-justice summary but not the philosophical linkage.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "Rawls' framework posits that justice principles are what free and rational individuals accept in an equal starting point as the basis for association.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Rawls' equal-starting-point principle is not stated."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Habermas establishes that rational discourse and public-reasoned consensus legitimize rules.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Habermas' rational-discourse / public-consensus principle is not stated."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Procedural justice and public participation make decision-making fair and legitimate, which makes compliance more likely.",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Summarises procedural justice and public participation from p5, but omits the required Rawls–Habermas linkage."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Covers the procedural-justice claim partially but omits the two philosophical (Rawls/Habermas) claims.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q003",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "Given that the Moon-based platform has different observation angular characteristics from artificial satellites due to its peculiar orbit, explain the logical reasoning behind why coordinate transformations are essential for normalizing the positions and attitudes of the Sun, Earth, and Moon into the same reference system before comparing observation angles. Furthermore, based on the analysis of different seasons and Earth positions, what can be inferred about the potential observational advantages or limitations of a Moon-based platform compared to satellites in LEO, GEO, and Lagrange L1?",
+      "approved_pages": [
+        {
+          "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+          "page": 1
+        },
+        {
+          "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+          "page": 2
+        },
+        {
+          "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+          "page": 3
+        },
+        {
+          "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+          "page": 4
+        }
+      ],
+      "pages_checked": "p. 1, p. 2 (context); approved p3–4 also checked",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "Refusal omits all four required claims.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Summary statements match the passed p1/p2 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file contains the summarised material, but no page/claim-level grounding is given.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "Coordinate transformation relates CLTRS to CITRS via Eq. (1): CITRS = [Π][Ω][Τ][Μ][Γ][Β][Θ][R] CLTRS, establishing a common reference for Earth–Moon–Sun geometry.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Refusal; Eq. (1) CLTRS→CITRS transformation not stated."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The paper defines and calculates viewing elevation, solar elevation, and relative azimuth in the LTRS using Eqs. (2)–(4).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Viewing/solar elevation and relative azimuth definitions (Eqs. 2–4) not stated."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "The Moon-based platform's 380,000 km distance provides almost hemisphere observation, offering continuous viewing and solar observation angles compared to LEO (narrow FOV), GEO (constant 42° viewing elevation at (0°,0°)), and L1 (constant 0° relative azimuth).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "LEO/GEO/L1 vs Moon-based comparison (continuous angles; GEO 42°; L1 0°) not stated."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Moon-based observation angles vary with seasons (e.g., polar points unobservable in certain seasons) and provide more angular information for equatorial regions than high-latitude/polar regions.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Seasonal/latitude limitations not stated."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Faithful soft refusal; omits all four required claims and does not answer the question.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q004",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "2603.25694v1.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "Why do retrievals based on visible (VIS) and near-infrared (NIR) observations alone fail to sufficiently identify land fraction coverage to break the degeneracy between surface albedo and planetary radius without a priori information about Rp?",
+      "approved_pages": [
+        {
+          "source_filename": "2603.25694v1.pdf",
+          "page": 20
+        }
+      ],
+      "pages_checked": "p. 20",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "Correctly states the paper's headline conclusion, but supplies none of the 'why' (claims 2–6).",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Its statements are supported by the passed p20 chunks; it does not hallucinate the missing explanation.",
+      "citation_support": "Partially Supported",
+      "citation_support_notes": "Cited file's p20 supports the stated conclusion, not the omitted explanation.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "For a single 100-hour visit, planet-star contrast ratio scales as Fp/Fs ∝ Rp^2 * Ag(λ), creating a mathematical degeneracy between planetary radius Rp and geometric albedo Ag(λ).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "States the degeneracy conclusion (VIS/NIR alone cannot break it without a priori Rp) but omits the Fp/Fs ∝ Rp²·Ag(λ) scaling."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "An underestimation of Rp can be compensated by adjusting surface composition (increasing fsand and decreasing focean), because ocean and sand lack distinctive VIS/NIR spectral features.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No fsand/focean compensation mechanism."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "In the studied models, the combined degeneracies significantly underestimate ocean coverage across all models and often significantly overestimate sand coverage.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No ocean-underestimation / sand-overestimation result."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Opaque cloud decks (fcloud) act as reflective surfaces that compound the degeneracy with surface coverage.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No fcloud reflective-deck compounding."
+        },
+        {
+          "claim_num": 5,
+          "claim_text": "Polarimetric phase curves may improve ocean coverage priors by detecting ocean glint, but retrievals from VIS and NIR observations alone for a single 100-hour visit without a priori Rp constraints fail to break the radius-albedo degeneracy.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No polarimetric-glint vs VIS/NIR statement."
+        },
+        {
+          "claim_num": 6,
+          "claim_text": "Across the studied models, forest (fforest) was the most consistently detected material due to chlorophyll's distinctive spectral signatures.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No fforest / chlorophyll detection statement."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Answers the 'what' (degeneracy exists) but not the 'why' the question asks for; a large majority of the required claims are omitted.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q005",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "How does employing moral philosophy as a methodological framework address the tendencies of both 'ethics washing' and 'ethics bashing' in the governance of emerging technologies?",
+      "approved_pages": [
+        {
+          "source_filename": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf",
+          "page": 11
+        },
+        {
+          "source_filename": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf",
+          "page": 14
+        },
+        {
+          "source_filename": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf",
+          "page": 15
+        }
+      ],
+      "pages_checked": "p. 11, p. 14, p. 15",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "Soft refusal; omits all three required claims.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Summary is supported by the passed p1/p3 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file contains the summarised ethics-washing/bashing material; no page-level grounding given.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "Moral philosophy identifies 'ethics washing' where tech companies co-opt ethics language and self-regulation as a façade to legitimize pre-existing practices and avert binding legislation (Pages 11, 14).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Refusal; ethics-washing definition (façade legitimising practices, averting legislation) not stated."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Moral philosophy counters 'ethics bashing' by showing that overbroad dismissal of ethics conflates corporate PR co-optation with genuine philosophical inquiry (Pages 14–15).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No ethics-bashing claim."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Engaging from within moral philosophy provides the necessary normative tools to critically evaluate technology's systemic societal impacts and establish substantive grounds for regulation and accountability (Pages 14–15).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No normative-tools / regulation-grounds claim."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Faithful soft refusal omitting all required claims; the approved pages (11,14,15) were not in the context, so the failure is grounding-driven, not hallucination.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q006",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "Akiyama_2019_ApJL_875_L1.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "How do the general-relativistic accretion-flow and radiative-transfer models discussed in EHT Paper I help interpret the asymmetric ring observed around M87*?",
+      "approved_pages": [
+        {
+          "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+          "page": 2
+        },
+        {
+          "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+          "page": 5
+        },
+        {
+          "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+          "page": 6
+        },
+        {
+          "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+          "page": 8
+        },
+        {
+          "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+          "page": 9
+        }
+      ],
+      "pages_checked": "p. 2, p. 5, p. 6, p. 8, p. 9",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "Soft refusal; omits all four required claims.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Summary (42 μas ring, relativistic beaming, Kerr) is supported by the passed p1/p3 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file contains the summarised material; no page-level grounding given.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "EHT Paper I distinguishes earlier foundational literature (e.g., Chan et al. 2015 cited on Page 2) from the dedicated EHT Simulation and Image Libraries built from four GRMHD and three GRRT ray-tracing codes (Section 6, Page 5).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Refusal; no Chan et al. (2015) vs EHT GRMHD/GRRT library distinction."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The models show that strong gravitational lensing and light bending around the black hole produce a bright emission ring encircling a central dark shadow (Pages 2, 5).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No lensing→bright-ring-around-shadow claim."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Rotation and relativistic beaming contribute to the ring's brightness asymmetry; in the paper's corotating-disk interpretation, material in the brighter southern region moves toward the observer (Pages 6, 9).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No rotation/beaming asymmetry (southern region) claim."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Comparison of 2017 EHT observations with the synthetic GRMHD image library confirms the asymmetric ring structure is consistent with the shadow of a Kerr black hole in general relativity (Page 8).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No 2017-data-vs-GRMHD-library Kerr-consistency claim."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Faithful soft refusal omitting all four required claims; does not answer the question.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q007",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "1807.06209v4.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "Explain how the combination of DES data with the baseline Planck likelihood impacts cosmological parameters like Ωm and σ8, and describe the role of systematic uncertainties in this analysis.",
+      "approved_pages": [
+        {
+          "source_filename": "1807.06209v4.pdf",
+          "page": 29
+        },
+        {
+          "source_filename": "1807.06209v4.pdf",
+          "page": 30
+        },
+        {
+          "source_filename": "1807.06209v4.pdf",
+          "page": 31
+        }
+      ],
+      "pages_checked": "p. 29, p. 30, p. 31",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "Numbers and statements match the gold text, but the answer omits the p.29 degeneracy-direction mechanism and the S8 value.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Every claim is supported by the passed p.30 chunks (Eq.33 values, 20 nuisance parameters, 2% PTE, 0.5σ polarization).",
+      "citation_support": "Supported",
+      "citation_support_notes": "The cited target file's approved p.30 carries the Ωm/σ8 values, the nuisance-parameter text and the tension/polarization statements.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "On Page 29 (Section 5.5, Figure 19), DES cosmic shear (~Ωm*σ8^0.5) has a different degeneracy direction from Planck CMB lensing (~Ωm*σ8^0.25), so combining lensing measurements breaks parameter degeneracies in the Ωm–σ8 plane.",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Answer never mentions the Ωm–σ8 degeneracy directions (DES ~Ωmσ8^0.5 vs CMB lensing ~Ωmσ8^0.25) or the lensing-combination step on p.29."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "On Page 30 (Section 5.6), combining the full DES joint likelihood with baseline Planck pulls the Planck result toward lower Ωm and slightly lower σ8, yielding the 68% limits in Eq. (33): S8 = 0.811 ± 0.011, Ωm = 0.3040 ± 0.0060, and σ8 = 0.8062 ± 0.0057.",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Gives lower Ωm/slightly lower σ8 and Ωm=0.3040±0.0060, σ8=0.8062±0.0057 (Eq.33, p.30) but omits S8=0.811±0.011."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "The joint DES analysis marginalizes over 20 nuisance parameters (including galaxy bias and photometric-redshift shifts together with galaxy-lensing parameters), but the paper notes this complex model does not fully model all possible systematic errors (Page 30).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "States 20 nuisance parameters and that the model does not fully capture all error sources; matches p.30."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Planck polarization modeling affects consistency with DES at the 0.5σ level, and the combined DES probes remain in moderate percent-level tension with Planck (Pages 30–31).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "States moderate ~2% PTE tension and 0.5σ polarization sensitivity; matches pp.30–31."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Correctly covers claims 2–4 (minus S8) but omits the p.29 degeneracy-direction claim entirely, so it is a partial answer.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q008",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "Given the data in Figures 3 and 4, what logical inference explains the dominance of the visual modality over audio and olfactory modalities in immersive virtual nature studies, and how does this align with the reported research outcomes?",
+      "approved_pages": [
+        {
+          "source_filename": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf",
+          "page": 4
+        },
+        {
+          "source_filename": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf",
+          "page": 5
+        },
+        {
+          "source_filename": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf",
+          "page": 8
+        }
+      ],
+      "pages_checked": "p. 4, p. 5, p. 8",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "Soft refusal; omits all four required claims.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Summary is supported by the passed p2/p3 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file contains the summarised material; no page-level grounding given.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "Figure 3 documents sensory modality counts across 55 papers: visual in 55, audio in 30, and olfactory in 2 (with 28 visual+audio combinations and 2 using all three) (Page 4).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Refusal; no Figure 3 modality counts (55/30/2)."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Figure 4 presents the distribution of thematic focus across reviewed papers (led by emotional well-being with 25 papers and stress reduction with 21), representing research topic frequency rather than proof of positive outcomes or comparative sensory effectiveness (Page 4).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No Figure 4 thematic-focus distribution."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Nearly all included studies used VR (54/55) and all 55 used visual output, with authors identifying practical constraints on additional sensory cues (olfactory/haptic); explaining visual dominance from these factors is an inference from these observations rather than an established finding of why researchers chose visual output (Pages 4–5, 8).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No 54/55-VR + practical-constraints inference."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Study design characteristics (53 non-interactive studies, 51 short-term exposure protocols; Figure 8, Page 5) describe how experiments were conducted, while sensory gaps are framed as an underutilized research opportunity due to practical constraints rather than evidence against multisensory immersion (Page 8).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No study-design (53 non-interactive / 51 short-term) claim."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Faithful soft refusal omitting all four required claims; approved pages (4,5,8) were not in the context.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q009",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "Exploration_on_Experimental_Economics_and_the_Education_Reform_of_New_Finance_and_Economics.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "How does the methodological shift from theoretical to experimental approaches in economics improve the cultivation of innovative talents in higher education, as described in the text?",
+      "approved_pages": [
+        {
+          "source_filename": "Exploration_on_Experimental_Economics_and_the_Education_Reform_of_New_Finance_and_Economics.pdf",
+          "page": 1
+        }
+      ],
+      "pages_checked": "p. 1",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "Soft refusal; omits all four required claims.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Summary is supported by the passed p2 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file contains the summarised material; no page-level grounding given.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The authors argue that bringing economic theory into laboratory simulations enables students to analyze theory in depth and observe economic laws, shifting away from traditional lecturing (Pages 1–2).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Refusal; no laboratory-simulation claim."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The authors argue that hands-on experimental operation and discussion inspire students' innovative thinking and enhance interaction among students and teachers (Figures 1 & 2, Pages 1–2).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No innovative-thinking/interaction claim."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "The authors argue that a simulated transaction platform allows students to experience actual market conditions, enhancing interest in innovation and entrepreneurship (Page 3).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No simulated-transaction-platform claim."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "The authors argue that integrating theory with practical experience stimulates students' subjective initiative to cultivate innovative talents for 'new finance and economics' education (Pages 1, 4).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No theory+practice integration claim."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Faithful soft refusal omitting all four required claims; does not answer the question.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q010",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "1294261.1294281.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "Why does Amazon advocate for using the 99.9th percentile in SLAs instead of mean or median response times, and how does this reflect their customer-centric philosophy?",
+      "approved_pages": [
+        {
+          "source_filename": "1294261.1294281.pdf",
+          "page": 4
+        }
+      ],
+      "pages_checked": "p. 4",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "Customer-experience rationale is right, but the answer wrongly asserts the context gives no explanation, though p.4 does; most required claims are omitted.",
+      "faithfulness": "Partially Faithful",
+      "faithfulness_notes": "Positive claims match Chunk 1 (p.4), but the claim that the context lacks an explanation is contradicted by that same chunk.",
+      "citation_support": "Partially Supported",
+      "citation_support_notes": "The cited file's p.4 grounds the customer-experience claims, but not the answer's assertion that no explanation is present.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "Common industry metrics like mean and median incorporate observations across requests, but they can obscure high-latency tail experience when the goal is a good experience for all customers rather than just the majority (Page 4).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Captures 'better overall experience'/customer perspective and rejection of averages, but omits the high-latency-tail obscuration point (p.4)."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Customers with longer histories require more processing under personalization, making them an important customer segment whose performance is not addressed by mean or median SLAs (Page 4).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No mention of personalization or customers with longer histories (p.4)."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Generating a page typically requires sending requests to over 150 services across multi-level call graphs, requiring each service to obey its performance contract (with compounding tail latency across this chain being an inference from the architecture) (Page 4).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No mention of 150 services, multi-level call graphs or performance contracts (p.4)."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Amazon chose the 99.9th percentile over higher percentiles based on a cost-benefit analysis demonstrating a significant increase in cost to improve performance beyond that point (Page 4).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No mention of the cost-benefit analysis behind choosing 99.9% over higher percentiles (p.4)."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "A soft 'no direct statement found' refusal that omits most required claims (2–4 and the tail-latency point). Faithful, non-hallucinated refusal, not a fabrication.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q011",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "PIIS0092867411001279.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "How does Hanahan and Weinberg’s review use early work such as Bonnet and Dick (1997) and later studies including Boiko et al. (2010) to discuss the operational definition of cancer stem cells and uncertainties about their prevalence?",
+      "approved_pages": [
+        {
+          "source_filename": "PIIS0092867411001279.pdf",
+          "page": 17
+        },
+        {
+          "source_filename": "PIIS0092867411001279.pdf",
+          "page": 18
+        }
+      ],
+      "pages_checked": "p. 17, p. 18",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "Soft refusal; omits all three required claims (the approved p17–18 content is present in the paper but was not in the context).",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Summary is supported by the passed p10/p26 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file contains the summarised material; no page-level grounding given.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The review's synthesis defines CSCs operationally through efficient tumor-initiating capabilities upon inoculation/xenotransplantation into recipient host mice, citing early work such as Bonnet and Dick (1997) as initially implicating CSCs in hematopoietic malignancies (Pages 17–18).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "Refusal; no operational CSC definition / Bonnet–Dick (1997) claim."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The review cites later studies including Boiko et al. (2010) within the active debate over whether CSCs form a distinct phenotypic subclass and their oft-cited rarity, without detailing Boiko et al.'s experimental methods (Page 18).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No Boiko et al. (2010) rarity/debate claim."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Hanahan and Weinberg suggest that bidirectional phenotypic plasticity between CSCs and non-CSCs may dynamically vary CSC abundance and complicate definitive measurement of their prevalence (Page 18).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No phenotypic-plasticity claim."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Faithful soft refusal omitting all three required claims; does not answer the question.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q012",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "Structural_formation_of_the_universe_As_observed_by_X-ray_satellites.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "How does the paper compare the distance a galaxy could travel at 1000 km/s over a Hubble time with the reported width of a supercluster, and what does the author infer about large-scale structure?",
+      "approved_pages": [
+        {
+          "source_filename": "Structural_formation_of_the_universe_As_observed_by_X-ray_satellites.pdf",
+          "page": 5
+        }
+      ],
+      "pages_checked": "p. 5",
+      "overall_decision": "ACCEPT",
+      "factual_correctness": "Correct",
+      "factual_correctness_notes": "All three required claims are stated accurately and match the gold reference and p.5 text.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Every claim is directly supported by the passed p.5 chunks.",
+      "citation_support": "Supported",
+      "citation_support_notes": "The cited target file's approved p.5 contains all three stated claims.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The author calculates that at a typical velocity of 1000 km/s, a galaxy travels only about 30 million light-years (approximately 9 Mpc, conversion) across a Hubble time (1/H) (Page 5).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "States ~30-million light-year travel over 1/H at 1000 km/s (p.5)."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The reported width of superclusters is 100 million light-years (approximately 31 Mpc, conversion), creating a scale contrast with the galaxy travel distance (Page 5).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "States 100-million light-year supercluster width and the scale contrast (p.5)."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "The author presents this scale contrast as a clue regarding structural formation, discussing that matter forms cosmic filaments rather than being homogeneously distributed and that the universe is dominated by dark matter (Pages 4–5).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "States matter forms cosmic filaments, is not homogeneous, and the universe is dominated by dark matter (p.5)."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "All required claims are correctly and concisely stated and are grounded on approved p.5.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q013",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "PIIS0092867411001279.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "How do phenotypic plasticity and the debated classification of CSCs as a distinct phenotypic subclass impact cancer therapies, disease recurrence, and the emergence of tumor dormancy, as described in the text?",
+      "approved_pages": [
+        {
+          "source_filename": "PIIS0092867411001279.pdf",
+          "page": 18
+        }
+      ],
+      "pages_checked": "p. 18",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "The facts stated match gold, but the answer wrongly claims it 'couldn't find a direct answer' and that the text does not directly address these points.",
+      "faithfulness": "Partially Faithful",
+      "faithfulness_notes": "The summarised claims are supported by the passed p.18 chunks, but the 'not found' framing contradicts them.",
+      "citation_support": "Partially Supported",
+      "citation_support_notes": "The cited file's p.18 grounds the summarised claims, but not the answer's assertion that the text does not address the question.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The review describes evidence suggesting that cells with CSC properties are more resistant to commonly used chemotherapeutic treatments (Page 18).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "The 'summary' section states CSC-like cells are more resistant to commonly used chemotherapeutic treatments (p.18)."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The persistence of CSC-like cells may help explain disease recurrence following apparently successful debulking by radiation or chemotherapy, and could potentially underlie tumor dormancy where latent cells persist after resection or treatment (Page 18).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Summary states persistence explains recurrence after debulking and that CSCs may underlie tumor dormancy (p.18)."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "The authors propose that phenotypic plasticity may allow bidirectional interconversion between CSC and non-CSC states, which could dynamically alter CSC abundance and complicate definitive measurement of their prevalence (Page 18).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Summary states phenotypic plasticity may allow CSC/non-CSC interconversion, complicating prevalence measurement (p.18)."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "The required claims are substantively present and accurate, but the answer frames itself as a refusal and wrongly says the text does not address them.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q014",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "What potential uses and recognition challenges for video action recognition in dance does the paper describe, how does grayscale preprocessing trade color information for reduced computation, and how does it separately describe project-oriented dance teaching?",
+      "approved_pages": [
+        {
+          "source_filename": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf",
+          "page": 1
+        },
+        {
+          "source_filename": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf",
+          "page": 2
+        },
+        {
+          "source_filename": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf",
+          "page": 3
+        }
+      ],
+      "pages_checked": "p. 1, p. 2, p. 3",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "The stated points match gold, but the answer wrongly claims no direct answer exists and omits most of the framework and pedagogy detail.",
+      "faithfulness": "Partially Faithful",
+      "faithfulness_notes": "Its positive statements are supported by the p.1 chunks, but the 'not found' framing is contradicted by them.",
+      "citation_support": "Partially Supported",
+      "citation_support_notes": "The cited file's approved pp.1–2 ground the statements made, but not the answer's claim that the material is absent.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The paper proposes that video action recognition can assist posture evaluation, clip retrieval, and automatic choreography, but notes recognition is challenged by high movement complexity and body self-occlusion (Page 1).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Covers posture evaluation plus complexity/self-occlusion challenges, but omits clip retrieval and automatic choreography (p.1)."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The overall action recognition framework incorporates image preprocessing, 3D Zernike moments, codebooks, and Support Vector Machine (SVM) classification (Page 1).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Mentions image (grayscale) preprocessing only; omits 3D Zernike moments, codebooks and SVM (p.1)."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Grayscale preprocessing trades away RGB color information to reduce the volume of computer calculation, followed by thresholding and segmentation to extract moving body regions (Pages 1–2).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Notes grayscale reduces computation but omits the explicit color-information trade-off and describes GMM/median filtering instead of thresholding/segmentation (pp.1–2)."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Project-oriented dance pedagogy is described separately as a curriculum model where teachers act as supporting guides and students learn via practical projects; the paper does not demonstrate empirical creativity gains from the vision system (Page 3).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No mention of project-oriented dance pedagogy, teachers as supporting roles, or Shanxi Vocational Art College (p.3)."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "A refusal-style answer that covers parts of claims 1–3 but omits claim 4 and key details; some required claims are covered and others omitted.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q015",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "2005.11401v4.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "How does RAG’s DPR bi-encoder formulate top-k passage retrieval as Maximum Inner Product Search, and how do the authors implement approximate retrieval over 21 million Wikipedia passages?",
+      "approved_pages": [
+        {
+          "source_filename": "2005.11401v4.pdf",
+          "page": 3
+        },
+        {
+          "source_filename": "2005.11401v4.pdf",
+          "page": 4
+        },
+        {
+          "source_filename": "2005.11401v4.pdf",
+          "page": 7
+        }
+      ],
+      "pages_checked": "p. 3, p. 4, p. 7",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "Stated facts (bi-encoder, MIPS, sub-linear time) match the gold reference, but the core required content is omitted, so it is not a complete correct answer.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Every claim made is supported by Chunk 1 (p.3); the soft refusal fabricates nothing.",
+      "citation_support": "Supported",
+      "citation_support_notes": "The emitted target file supports the statements made (bi-encoder/MIPS/sub-linear, p.3), though it does not ground the omitted claims.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The DPR bi-encoder defines the retrieval prior probability as proportional to the inner product exponent: $p_\\eta(z|x) \\propto \\exp(d(z)^\\top q(x))$, making top-$k$ selection a Maximum Inner Product Search (MIPS) problem (Page 3).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Answer names the DPR bi-encoder and calls top-k retrieval a MIPS problem, but omits the proportionality p(z|x) ∝ exp(d(z)·q(x))."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Approximate MIPS can be solved in sub-linear time, and the authors implement retrieval over 21 million Wikipedia passages using FAISS with a Hierarchical Navigable Small World (HNSW) approximation (Pages 3–4).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "States MIPS is approximately solvable in sub-linear time, but explicitly says it cannot explain the 21M-passage index/FAISS-HNSW implementation (p.4)."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "In retrieval ablations, the dense retriever outperforms BM25 on open-domain QA, but BM25 performs best on the entity-centric FEVER fact verification task (Page 7, Table 6).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No mention of the BM25 vs dense retrieval ablation or the FEVER entity-centric result (p.7, Table 6)."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "A soft 'couldn't find a direct answer' refusal that omits most required claims. Faithful refusal, not a hallucination, but it fails to answer the question.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q016",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "Why do the authors model CCMV at pH 5 and pH 7 to examine capsid swelling, while examining HAV charge distribution and capacitance spectra across different pH values?",
+      "approved_pages": [
+        {
+          "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+          "page": 2
+        },
+        {
+          "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+          "page": 5
+        },
+        {
+          "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+          "page": 6
+        },
+        {
+          "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+          "page": 7
+        }
+      ],
+      "pages_checked": "p. 2, p. 5, p. 6, p. 7",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "The related statements are consistent with the gold reference, but the answer supplies no actual answer to the why-question.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "All statements (HAV charge/capacitance vs pH, CCMV pH 5/7 swelling) are supported by the p.6 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "The emitted target file supports the statements made (p.6 chunks), though it grounds no answer to the required claims.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "CCMV's native state is modeled at pH 5 and swollen states are modeled at pH 7 (using Swollen Form Models 1 and 2); swelling-related changes in capsid volume and charge affect ΔC_eff, with volume mainly explaining the high-frequency response and charge contributing strongly at low frequency, while capsid openings permitting ion exchange are described without presenting permeability as an isolated cause (Pages 2, 5–6).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Mentions CCMV swelling at pH 5 and pH 7, but gives none of the volume/charge or capsid-opening reasoning required."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "HAV charge distributions are analyzed at pH 3, pH 5, and pH 7 (Figure 9), with the capsid becoming more positive at lower pH (Pages 2, 6).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Says HAV charge is examined across pH values, but never states pH 3, 5, 7 or the more-positive-at-lower-pH finding (Fig. 9)."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "HAV capacitance spectra are evaluated across different pH values (Figure 10) to determine how pH-induced charge variation affects electrical impedance response, while the paper does not model an HAV swelling transition (Pages 6–7).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Notes capacitance spectra across pH but omits Fig. 10 detail and the point that no HAV swelling transition is modeled."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "A soft refusal that omits all substantive required claims. Faithful refusal rather than hallucination, but it does not answer the question.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q017",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "In the paper’s nanoelectrode simulations, what sensitivity is estimated for detecting a single CCMV and distinguishing a full CCMV from an empty capsid, and how do analyte volume and charge affect capacitance response at high and low frequencies across the studied viruses?",
+      "approved_pages": [
+        {
+          "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+          "page": 5
+        },
+        {
+          "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+          "page": 7
+        }
+      ],
+      "pages_checked": "p. 5, p. 7",
+      "overall_decision": "REJECT",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "The quoted 0.1 aF / 10 zF figures are correct, but key required elements (frequency limits, conditions) are absent.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "0.1 aF / 10 zF come from the p.5 chunk and the high/low-frequency statements from the p.6 chunk; nothing is invented.",
+      "citation_support": "Supported",
+      "citation_support_notes": "The emitted target file supports the statements made, though the omitted claims are not grounded.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "In preliminary CCMV simulations (150 mM NaCl electrolyte, 1 nm from the BSA surface, as inherited from Figure 4), detecting a single virus requires ≈0.1 aF sensitivity and discriminating an empty capsid from a full virus requires ≈10 zF; these thresholds are not independently measured for HAV (Page 5).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Gives 0.1 aF and ~10 zF thresholds, but omits the 150 mM NaCl / 1 nm-from-BSA conditions and that the thresholds are not independently measured for HAV."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Prior experimental literature demonstrated 0.1 aF sensitivity only up to 1 MHz, whereas the paper's modeled peak detection sensitivity occurs around/above 100 MHz in 150 mM NaCl (Pages 5, 7).",
+          "coverage_choice": "Omitted",
+          "reviewer_claim_notes": "No mention of the prior 1 MHz demonstration limit or the ~100 MHz modeled peak sensitivity."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "At the high-frequency limit, the capacitance response is governed by total analyte volume (independent of charge), whereas the low-frequency response is largely driven by analyte electrostatic charge distribution (Pages 6–7).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Notes high-frequency charge-insensitivity and low-frequency volume/charge differences, but does not state the volume-proportionality at the high-frequency limit."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "A soft 'Direct Answer Not Found' refusal that omits most required claims. Faithful refusal, not a hallucination, but it fails to answer the question.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q018",
+      "partition": "development",
+      "sub_partition": "development_existing",
+      "target_paper": "rsta.1895.0004.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "According to Section 13, what does Reynolds’s criterion DU_m/μ = K indicate about the conditions under which finite-period eddies can be maintained, and what does he infer about the discriminative cause affecting mean-motions and heat-motions?",
+      "approved_pages": [
+        {
+          "source_filename": "rsta.1895.0004.pdf",
+          "page": 17
+        }
+      ],
+      "pages_checked": "p. 17",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "Claims 1 and 4 match p.17 exactly; claims 2 and 3 are only partially addressed, so the answer is correct but incomplete.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Both stated claims are verbatim-supportable from Chunk 1 (p.17); no unsupported additions.",
+      "citation_support": "Supported",
+      "citation_support_notes": "The cited target file grounds the statements made, which trace to the p.17 chunk.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "According to Section 13, eddies of finite periods (relative-mean-motion) cannot be maintained except under conditions defining superior limits to the velocity of mean-mean-motion (infinite periods) and the periods of relative-mean-motion, as defined in the criterion DU_m/μ = K (Page 17).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "States finite-period eddies are maintained only under conditions defining superior limits to mean-mean-motion velocity and relative-mean-motion periods, per DU_m/μ = K."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Section 13 uses the criterion DU_m/μ = K without supplying physical interpretations of D, U_m, or μ within that passage (Page 17).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Cites the criterion but neither affirms nor supplies the note that D, U_m, μ are left physically undefined in Section 13."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Reynolds infers direct experimental proof of a 'discriminative cause' that prevents the maintenance of periodic mean-motion except with periods greatly in excess of the periods of heat-motions (Page 17).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Gives the discriminative-cause conclusion but omits 'direct experimental proof' and the 'periods greatly in excess of heat-motions' condition."
+        },
+        {
+          "claim_num": 4,
+          "claim_text": "Reynolds concludes that this discriminative cause depends on properties of matter that affect mean-motions as well as heat-motions (Page 17).",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "States the discriminative cause depends on properties of matter affecting mean-motions as well as heat-motions (p.17)."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Covers two required claims fully and two only partially; substantively on-target but misses the experimental-proof framing and the period-ratio condition.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q019",
+      "partition": "development",
+      "sub_partition": "development_new",
+      "target_paper": "1406.2661v1.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "In Generative Adversarial Nets, what is the theoretical optimal discriminator D_G*(x) for a fixed generator G, and at what value of p_g is the global minimum of the virtual training criterion C(G) achieved?",
+      "approved_pages": [
+        {
+          "source_filename": "1406.2661v1.pdf",
+          "page": 4
+        },
+        {
+          "source_filename": "1406.2661v1.pdf",
+          "page": 5
+        }
+      ],
+      "pages_checked": "p. 4, p. 5",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "The −log 4 result and the 1/2 value at the optimum are correct, but the general optimal-discriminator formula is omitted.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Both statements are supported by Chunk 2 (p.5); nothing is fabricated or contradicted.",
+      "citation_support": "Supported",
+      "citation_support_notes": "The emitted target file grounds the statements made (Theorem 1 and D*=1/2 on p.5).",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "For a fixed generator G, the optimal discriminator is D*_G(x) = p_data(x) / (p_data(x) + p_g(x)).",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Gives the evaluated value D_G*(x) = 1/2 at the optimum but omits the general formula p_data/(p_data + p_g) (Prop. 1, p.4)."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The global minimum of the virtual training criterion C(G) is achieved if and only if p_g = p_data, where C(G) achieves the value -log 4.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Correctly states C(G) is minimized iff p_g = p_data, reaching −log 4 (Theorem 1, p.5)."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Covers the global-minimum claim fully but only partially addresses the optimal discriminator, giving the value at the optimum rather than the required general formula.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q020",
+      "partition": "development",
+      "sub_partition": "development_new",
+      "target_paper": "1412.6980v9.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "What default hyperparameter values does the Adam paper recommend for alpha, beta_1, beta_2, and epsilon, and what causes the initialization bias in the first and second moment estimates that requires correction?",
+      "approved_pages": [
+        {
+          "source_filename": "1412.6980v9.pdf",
+          "page": 2
+        },
+        {
+          "source_filename": "1412.6980v9.pdf",
+          "page": 3
+        }
+      ],
+      "pages_checked": "p. 2, p. 3",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Incorrect",
+      "factual_correctness_notes": "The headline deliverable (Adam's default α and ε) is wrong: the answer returns AdaMax's α=0.002 and drops ε. β1/β2 and the bias mechanism are correct.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Faithful to the passed p8/p9 context, which literally contains the AdaMax defaults (α=0.002); Adam p2 was absent from the context.",
+      "citation_support": "Partially Supported",
+      "citation_support_notes": "The cited file does contain α=0.002, but it attributes it to AdaMax, not Adam; so the citation does not support the answer's 'Adam defaults' claim.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The recommended default hyperparameter values are alpha = 0.001, beta_1 = 0.9, beta_2 = 0.999, and epsilon = 10^-8.",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Gives β1=0.9 and β2=0.999 correctly but reports α=0.002 (the AdaMax default) instead of α=0.001, and omits ε=10⁻⁸."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Initialization bias is caused by initializing the running averages with zeros, requiring division by (1 - beta^t) to correct.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Correctly states zero-initialisation of the moment vectors causes bias and that a (1−β^t)-style bias-correction term is applied."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Compound question: the initialization-bias half is correct, but the defaults half is factually wrong (AdaMax leakage, ε missing). Faithful to context yet incorrect vs the paper.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q021",
+      "partition": "development",
+      "sub_partition": "development_new",
+      "target_paper": "1512.03385v1.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "How does the deep residual learning framework formulate the building block mapping, and do the identity shortcut connections add extra parameters or computational complexity?",
+      "approved_pages": [
+        {
+          "source_filename": "1512.03385v1.pdf",
+          "page": 2
+        },
+        {
+          "source_filename": "1512.03385v1.pdf",
+          "page": 3
+        }
+      ],
+      "pages_checked": "p. 2, p. 3",
+      "overall_decision": "ACCEPT",
+      "factual_correctness": "Correct",
+      "factual_correctness_notes": "All required claims match gold; extra Ws linear-projection detail is also correct (p.3 Eqn.2).",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Both claims are directly supported by Chunk 1 (p.2) and Chunk 2 (p.3) of the exact context.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file's pages 2–3 contain the F(x)+x formulation and the no-extra-parameter statement.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The stacked nonlinear layers fit the residual mapping F(x) := H(x) - x, recasting the output as F(x) + x.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer states stacked layers approximate residual F(x):=H(x)-x, recast as F(x)+x. Matches p.2 and p.3 Sec 3.1."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Identity shortcut connections add neither extra parameters nor computational complexity.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer states identity shortcuts add neither extra parameters nor computational complexity. Verbatim p.2; also p.3 Eqn.(1) text."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Both required claims are fully and correctly covered, and every claim is grounded in the cited pages. No hallucination.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q022",
+      "partition": "development",
+      "sub_partition": "development_new",
+      "target_paper": "2401.15884v3.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "In Corrective Retrieval Augmented Generation (CRAG), what three knowledge retrieval actions can be triggered based on the retrieval evaluator's confidence score, and how does the system process retrieved knowledge under each action?",
+      "approved_pages": [
+        {
+          "source_filename": "2401.15884v3.pdf",
+          "page": 5
+        }
+      ],
+      "pages_checked": "p. 5",
+      "overall_decision": "PARTIAL",
+      "factual_correctness": "Partially Correct",
+      "factual_correctness_notes": "Correctly names the three actions but does not describe the processing under each (the second half of the question).",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "The action names and the 'no further detail in context' statement are supported by the passed p4/p10 chunks; no fabrication.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file (p4/p10) does contain the three action names; no page-level grounding of the omitted mechanisms.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "If confidence exceeds the upper threshold, Correct triggers decompose-then-recompose refinement into internal knowledge strips.",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Names the 'Correct' action but omits the decompose-then-recompose refinement into internal knowledge strips."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "If all confidence scores fall below the lower threshold, Incorrect discards retrieved documents and triggers external web search.",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Names the 'Incorrect' action but omits discarding the documents and triggering external web search."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Under Ambiguous, both refined internal knowledge and external web search results are combined.",
+          "coverage_choice": "Partial",
+          "reviewer_claim_notes": "Names the 'Ambiguous' action but omits the combination of refined internal knowledge and web-search results."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Answers 'what three actions' correctly but not 'how the system processes knowledge under each'; a faithful but incomplete answer.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q023",
+      "partition": "disclosed_pilot",
+      "sub_partition": "disclosed_pilot",
+      "target_paper": "945445.945450.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "In the Google File System (GFS), what is the default chunk size, how are chunk replicas stored on chunkservers, and what lazy mechanism avoids space wastage from internal fragmentation?",
+      "approved_pages": [
+        {
+          "source_filename": "945445.945450.pdf",
+          "page": 4
+        }
+      ],
+      "pages_checked": "p. 4",
+      "overall_decision": "ACCEPT",
+      "factual_correctness": "Correct",
+      "factual_correctness_notes": "All three required claims match gold reference and p.4 text exactly.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "All three claims appear verbatim in Chunk 1 (p.4) of the exact context.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file page 4 (Sec 2.5 Chunk Size) contains all three supported statements.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "GFS uses a default chunk size of 64 MB.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer states default chunk size 64 MB. Matches p.4 Sec 2.5 ('We have chosen 64 MB')."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Each chunk replica is stored as a plain Linux file on a chunkserver and extended only as needed.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer states replicas stored as plain Linux files on a chunkserver, extended only as needed. Verbatim p.4."
+        },
+        {
+          "claim_num": 3,
+          "claim_text": "Lazy space allocation avoids wasting space from internal fragmentation.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer names 'Lazy space allocation' as the mechanism avoiding internal-fragmentation waste. Verbatim p.4."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Answer correctly covers all three required claims with no unsupported additions. Fully grounded in cited p.4.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q024",
+      "partition": "disclosed_pilot",
+      "sub_partition": "disclosed_pilot",
+      "target_paper": "2310.11511v1.pdf",
+      "pipeline_route": "partial_match",
+      "route_status": "EXECUTED_PARTIAL_MATCH",
+      "exact_question": "In SELF-RAG, what are the four types of reflection tokens used for self-reflection and what do the Retrieve and IsRel tokens evaluate?",
+      "approved_pages": [
+        {
+          "source_filename": "2310.11511v1.pdf",
+          "page": 4
+        }
+      ],
+      "pages_checked": "p. 4",
+      "overall_decision": "ACCEPT",
+      "factual_correctness": "Correct",
+      "factual_correctness_notes": "Substantive content is correct and matches Table 1, though the refusal header is internally contradictory with the answer body.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Both claims are supported by Table 1 and Algorithm 1 present in Chunk 1 (p.4); the refusal framing is spurious.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file page 4 (Table 1) directly supports the four token types and the Retrieve/ISREL definitions.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "SELF-RAG defines four reflection token types: Retrieve, IsRel, IsSup, and IsUse.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Despite the 'Direct Answer Not Found' header, the answer lists all four token types (Retrieve, ISREL, ISSUP, ISUSE), matching Table 1 p.4."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "Retrieve decides when to retrieve, and IsRel evaluates whether retrieved text provides useful information to solve the input.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer gives Retrieve = decides when to retrieve and ISREL = whether passage d gives useful info to solve x; matches Table 1 p.4."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "The packet's AI proposal says 'Omits', but the answer actually covers both required claims correctly; the soft refusal header does not omit the claims.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q025",
+      "partition": "disclosed_pilot",
+      "sub_partition": "disclosed_pilot",
+      "target_paper": "AMA_AdaptiveMemoryviaMultiAgentCollaboration_compressed.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "In the Adaptive Memory via Multi-Agent Collaboration (AMA) framework, what are the four specialized agents that orchestrate memory evolution and what are their respective roles?",
+      "approved_pages": [
+        {
+          "source_filename": "AMA_AdaptiveMemoryviaMultiAgentCollaboration_compressed.pdf",
+          "page": 3
+        }
+      ],
+      "pages_checked": "p. 3",
+      "overall_decision": "ACCEPT",
+      "factual_correctness": "Correct",
+      "factual_correctness_notes": "Agent names and roles match gold reference and the p.3 Figure 2 caption exactly.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Chunk 1 (p.3) contains the Figure 2 caption verbatim, fully supporting both claims.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file page 3 Figure 2 caption supports the four agents and their roles.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The four specialized agents in AMA are Retriever, Judge, Refresher, and Constructor.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer names Retriever, Judge, Refresher, Constructor. Matches Figure 2 caption p.3 verbatim."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The Retriever routes inputs based on intent, the Judge audits content relevance and detects conflicts, the Refresher executes updates or deletions to rectify inconsistencies, and the Constructor synthesizes validated context into structured memory entries.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer reproduces each agent's role verbatim from the Figure 2 caption on p.3."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Answer correctly and completely covers both required claims, grounded in the cited p.3 caption. No hallucination.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    },
+    {
+      "question_id": "Q026",
+      "partition": "disclosed_pilot",
+      "sub_partition": "disclosed_pilot",
+      "target_paper": "2603.25600v1.pdf",
+      "pipeline_route": "success",
+      "route_status": "EXECUTED_SUCCESS",
+      "exact_question": "What X-ray emission line does the paper propose using for evaluating circumgalactic medium (CGM) mass via resonant scattering, and at what transition energy?",
+      "approved_pages": [
+        {
+          "source_filename": "2603.25600v1.pdf",
+          "page": 1
+        }
+      ],
+      "pages_checked": "p. 1",
+      "overall_decision": "ACCEPT",
+      "factual_correctness": "Correct",
+      "factual_correctness_notes": "Both required claims match the gold reference and the abstract on p.1 exactly.",
+      "faithfulness": "Faithful",
+      "faithfulness_notes": "Chunk 1 (p.1 abstract) contains both the OVII resonant-line and E = 574 eV statements.",
+      "citation_support": "Supported",
+      "citation_support_notes": "Cited file page 1 abstract supports both the OVII line and the 574 eV energy.",
+      "claim_verdicts": [
+        {
+          "claim_num": 1,
+          "claim_text": "The proposed diagnostic uses the helium-like oxygen (OVII) resonant line.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer states the diagnostic uses the helium-like oxygen (OVII) resonant line. Matches p.1 abstract."
+        },
+        {
+          "claim_num": 2,
+          "claim_text": "The transition energy is E = 574 eV.",
+          "coverage_choice": "Covered",
+          "reviewer_claim_notes": "Answer states transition energy E = 574 eV. Matches p.1 abstract ('at E = 574 eV')."
+        }
+      ],
+      "reviewer": "Qusai",
+      "sign_off_date": "2026-10-21",
+      "overall_notes": "Answer correctly and completely covers both required claims, fully grounded in the cited p.1 abstract.",
+      "signed_form_sha256": "172bb3a46973534430aa2c2e909cac76a76d0801c2618dbd22ca80a152ceeb08"
+    }
+  ]
+}

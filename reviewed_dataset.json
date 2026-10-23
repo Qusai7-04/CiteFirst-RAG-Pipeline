@@ -1,0 +1,792 @@
+[
+  {
+    "id": "Q001",
+    "legacy_id": "legacy-001",
+    "question": "Based on the text, deduce the logical reasoning that connects the experimental observation of sinuous motion in fluids under specific resistance conditions to the conclusion that properties of matter causing energy transformation have effects beyond heat-motions.",
+    "ground_truth": "The experiments with colour bands show that when resistance in steady mean flow varies with a power of velocity higher than the first, the fluid is in a state of sinuous motion. Sinuous motion indicates the presence of eddying motion, which represents relative-motion with finite periods. This prevalence of such resistance serves as direct evidence that energy from mean-motion (with infinite periods) is transformed into energy of relative-motion (eddying motion). This transformation maintains the eddying motion despite the continual conversion of some energy into heat-motions. Therefore, the properties of matter that determine this cause of transformation produce general and important effects, as the sustained eddying motion demonstrates that these effects are not confined to heat-motions alone.",
+    "contexts": [
+      "dynamics.\n13. In considering the first of the instances mentioned, it will be seen that the \nevidence it affords as to the general effect of the properties, on which depends transforma­\ntion of energy from mean- to relative-motion, is very direct. For, since my experiments \nwith colour bands have shown that when the resistance of fluids, in steady mean flow, \nvaries with a power of the velocity higher than the first the fluid is always in a state \nof sinuous motion, it appears that the prevalence of such resistance is evidence of the \nexistence of a general action by which energy of mean-mean-motion with infinite \nperiods is directly transformed to the energy of relative-mean-motion, with finite \nperiods, represented by the eddying motion, which renders the general mean-motion \nsinuous, by which transformation the state of eddying-motion is maintained, not­\nwithstanding the continual transformation of its energy into heat-motions.\nWe have thus direct evidence that properties of matter which determine the cause \nof transformation, produce general and important effects which are not confined to the \nheat-motions."
+    ],
+    "answerable": true,
+    "reference_answer": "In Section 13 (Page 17), Reynolds reasons that experiments with colour bands demonstrate that whenever fluid resistance in steady mean flow varies with a power of velocity higher than the first, the fluid is always in a state of sinuous motion. The prevalence of such resistance provides direct evidence of a general action by which energy of mean-mean-motion (with infinite periods) is directly transformed into energy of relative-mean-motion (with finite periods), represented by eddying motion that renders the general mean-motion sinuous. Because this transformation maintains the state of eddying-motion notwithstanding the continual transformation of its energy into heat-motions, it provides direct evidence that properties of matter determining the cause of transformation produce general and important effects that are not confined to heat-motions.",
+    "required_claims": [
+      "Experiments with colour bands show that when resistance in steady mean flow varies with a power of velocity higher than the first, the fluid is always in a state of sinuous motion.",
+      "The prevalence of such resistance is direct evidence of a general action by which energy of mean-mean-motion (infinite periods) is directly transformed into energy of relative-mean-motion (finite periods, eddying motion).",
+      "Because this transformation maintains the state of eddying-motion notwithstanding the continual transformation of its energy into heat-motions, properties of matter determining this transformation produce effects not confined to heat-motions."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "rsta.1895.0004.pdf",
+        "page": 17,
+        "supporting_quote": "For, since my experiments with colour bands have shown that when the resistance of fluids, in steady mean flow, varies with a power of the velocity higher than the first the fluid is always in a state of sinuous motion, it appears that the prevalence of such resistance is evidence of the existence of a general action by which energy of mean-mean-motion with infinite periods is directly transformed to the energy of relative-mean-motion, with finite periods, represented by the eddying motion, which renders the general mean-motion sinuous, by which transformation the state of eddying-motion is maintained, notwithstanding the continual transformation of its energy into heat-motions. We have thus direct evidence that properties of matter which determine the cause of transformation, produce general and important effects which are not confined to the heat-motions.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer following verification of Section 13 (Page 17) text."
+  },
+  {
+    "id": "Q002",
+    "legacy_id": "legacy-002",
+    "question": "Analyze how the principles from Rawls and Habermas, when applied to rule-making, logically lead to enhanced rule legitimacy and compliance through procedural justice and public participation, as described in the text.",
+    "ground_truth": "Rawls' theory provides that justice principles are accepted by free, rational individuals in an equal starting point, offering a foundational basis for rules. Habermas emphasizes rational discourse and public consensus to legitimize rules. By grounding rules in these widely-accepted principles and ensuring transparent, inclusive processes, governance achieves procedural justice, where fair decision-making increases perceived legitimacy. Public participation ensures voices are heard and needs are met, further enhancing acceptance. This combined approach makes rules legally binding and morally persuasive, leading to higher compliance and fostering a culture of voluntary adherence in a democratic society, as legitimization through legislative frameworks and engagement boosts acceptability.",
+    "contexts": [
+      "insights on rule-making. Rawls posits that justice principles are \nwhat free and rational individuals would accept in an equal \nstarting point as the basis for their association  [24]. Habermas \nemphasizes rational discourse and public -reasoned consensus \nin legitimizing rules [26]. In this sense, by grounding new rules \nin widely -accepted principles and ensuring transparent, \ninclusive processes, governance can make rules both legally \nbinding and morally persuasive. \nCertainly, procedural justice also matters significantly for \nrule acceptance. People are more likely to comply with rules \nwhen they believe the decision -making is fair and legitimate  \n[27], which highlights the importance of public participation in \nrule-making, ensuring their voices are heard and rules meet \ntheir needs.  This is also a fundamental requirement of a \ndemocratic society. \nIn short, t he legitimization of rules through adherence to \nexisting legislative frameworks and public engagement in the \nrule-making process not only enhances their acceptability but \nalso increases the likelihood of compliance. By following these \nprinciples, governance can foster a culture of voluntary"
+    ],
+    "answerable": true,
+    "reference_answer": "On Page 5, the text synthesizes Rawls' theory (that justice principles are what free and rational individuals would accept from an equal starting point as the basis for their association) and Habermas' theory (emphasizing rational discourse and public-reasoned consensus in legitimizing rules). Applying these frameworks to rule-making grounds new rules in widely accepted principles while establishing transparent and inclusive processes, making them legally binding and morally persuasive. This establishes procedural justice: people are more likely to comply with rules when they believe the decision-making process is fair and legitimate, which underscores the importance of public participation in rule-making to ensure citizen voices are heard and rules meet their needs.",
+    "required_claims": [
+      "Rawls' framework posits that justice principles are what free and rational individuals accept in an equal starting point as the basis for association.",
+      "Habermas establishes that rational discourse and public-reasoned consensus legitimize rules.",
+      "Procedural justice and public participation make decision-making fair and legitimate, which makes compliance more likely."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "An_Experimentalist_Approach_to_Ethical_Governance_of_Emerging_Technologies.pdf",
+        "page": 5,
+        "supporting_quote": "Rawls posits that justice principles are what free and rational individuals would accept in an equal starting point as the basis for their association [24]. Habermas emphasizes rational discourse and public-reasoned consensus in legitimizing rules [26]. In this sense, by grounding new rules in widely-accepted principles and ensuring transparent, inclusive processes, governance can make rules both legally binding and morally persuasive. Certainly, procedural justice also matters significantly for rule acceptance. People are more likely to comply with rules when they believe the decision-making is fair and legitimate [27], which highlights the importance of public participation in rule-making, ensuring their voices are heard and rules meet their needs.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer following verification of Page 5 text."
+  },
+  {
+    "id": "Q003",
+    "legacy_id": "legacy-003",
+    "question": "Given that the Moon-based platform has different observation angular characteristics from artificial satellites due to its peculiar orbit, explain the logical reasoning behind why coordinate transformations are essential for normalizing the positions and attitudes of the Sun, Earth, and Moon into the same reference system before comparing observation angles. Furthermore, based on the analysis of different seasons and Earth positions, what can be inferred about the potential observational advantages or limitations of a Moon-based platform compared to satellites in LEO, GEO, and Lagrange L1?",
+    "ground_truth": "Coordinate transformations are essential because the Moon-based platform and artificial satellites (LEO, GEO, Lagrange L1) have distinct orbital dynamics and reference frames, making direct comparison of observation angles (viewing elevation angle, solar elevation angle, relative azimuth angle) invalid without a common basis. Normalizing into the same reference system ensures consistency in calculating angular distributions, accounting for variations in celestial positions. Logically, this implies that the Moon's peculiar orbit—being farther from Earth and having a slower orbital period—results in more stable and broader observational geometries over time, potentially offering advantages like continuous hemispheric coverage or reduced orbital interference. However, seasonal variations and Earth positions may introduce limitations, such as changing illumination angles or occlusion effects, compared to satellites that can be positioned for specific, consistent views. The analysis suggests that Moon-based platforms could complement satellite observations by providing unique angular perspectives, but their effectiveness depends on factors like season and target location on Earth.",
+    "contexts": [
+      "COMPARISONS OF OBSERVATIONAL ANGLES BETWEEN MOON-BASED PLATFORM \nAND ARTIFICIAL SATELLITES \n \nYu Deng1,2, Huadong Guo1,2, Guang Liu2, Hanlin Ye3, Jing Huang2, and Runbo Dong2 \n \n1School of Earth and Space Sciences, Peking University, China \n2Aerospace Information Research Institute, Chinese Academy of Sciences, China \n3Qian Xuesen Laboratory of Space Technology, China Academy of Space Technology, China \nliuguang@radi.ac.cn \n \nABSTRACT \n \nThe Moon-based platform has different observation angular \ncharacteristics from artificial satellites due to its peculiar orbit. \nTo illustrate the difference, we first normalize the positions \nand attitudes of the Sun, Earth, and Moon into the same \nreference system using coordinate transformations. Then, we \ncalculate the observation angles (including viewing elevation \nangel, solar elevation angel  and relative azimuth angle) \ndistribution of satellites in LEO, GEO and at Lagrange L1  \nsatellites during the same perio d. Furthermore, the \nobservation angles distribution of the Moon-based platform \nin different seasons with the Earth observed point located at \ndifferent positions are analyzed. Results reveal ed that"
+    ],
+    "answerable": true,
+    "reference_answer": "Coordinate transformations are mathematically essential because positions and attitudes are defined in disparate reference frames: the lunar platform is defined in the Lunar topocentric reference system (CLTRS), Earth surface targets in the International Terrestrial Reference System (ITRS, CITRS), and relative celestial positions in celestial frames (SCRS/GCRS). To compare observation angles, Page 2 Eq. (1) relates CLTRS to CITRS: CITRS = [Π][Ω][Τ][Μ][Γ][Β][Θ][R] CLTRS. The coordinate transformations establish a common reference for the Earth–Moon–Sun geometry (Eq. 1); the paper then defines and calculates viewing elevation, solar elevation, and relative azimuth in the LTRS using Eqs. (2)–(4). Analysis demonstrates distinct platform characteristics:\n1. Orbital geometry: The Moon's average distance of 380,000 km enables observation of almost the entire Moon-facing Earth hemisphere with variable orbital altitude and inclination (Page 1).\n2. Platform comparisons (calculated for Earth observed point (0°, 0°) from Jan 1–30, 2020, Page 3): In LEO (Sun-synchronous, field-of-view limited), the point is observed only once (Jan 3 at 10:28 a.m., hv=80°, hs=57°, φ=98°). In GEO, viewing elevation is constant at 42°, solar elevation varies from 12° to 170°, and relative azimuth varies from 0° to 72°. At Lagrange L1, relative azimuth is constant at 0°, with solar and viewing elevations varying from 0° to 72°. In contrast, the Moon-based platform provides continuous viewing and solar observation angles.\n3. Seasonal & latitude limitations (Pages 3–4): Moon-based observation angles vary with seasons (e.g., the platform cannot observe (0°, 90°N) in January and October, nor (0°, 90°S) in April and July) and systematically provide more angular information for equatorial regions than for high-latitude/polar regions.",
+    "required_claims": [
+      "Coordinate transformation relates CLTRS to CITRS via Eq. (1): CITRS = [Π][Ω][Τ][Μ][Γ][Β][Θ][R] CLTRS, establishing a common reference for Earth–Moon–Sun geometry.",
+      "The paper defines and calculates viewing elevation, solar elevation, and relative azimuth in the LTRS using Eqs. (2)–(4).",
+      "The Moon-based platform's 380,000 km distance provides almost hemisphere observation, offering continuous viewing and solar observation angles compared to LEO (narrow FOV), GEO (constant 42° viewing elevation at (0°,0°)), and L1 (constant 0° relative azimuth).",
+      "Moon-based observation angles vary with seasons (e.g., polar points unobservable in certain seasons) and provide more angular information for equatorial regions than high-latitude/polar regions."
+    ],
+    "question_type": "comparison",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+        "page": 1,
+        "supporting_quote": "First, the average distance between the Moon and the Earth is 380,000 km which allows the Moon-based platform to provide unique observation of the Earth Moon-facing hemisphere... the special orbit characteristics of almost hemisphere observation, variable orbital altitude and inclination, which determine that Moon-based platform has different observation angular characteristics.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+        "page": 2,
+        "supporting_quote": "The transformation from the Lunar topocentric reference system (CLTRS) to ITRS (CITRS) can be calculated as: CITRS = [Π][Ω][Τ][Μ][Γ][Β][Θ][R]CLTRS (1) Where [Π], [Ω], [Τ], [Μ], [Γ], [Β], [Θ], and[R] represent polar motion, rotation, nutation, precession, bias matrix, offset of the origin from the SCRS to the GCRS, lunar libration, constant, the rotation matrix from the LTRS to SCRS.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+        "page": 3,
+        "supporting_quote": "As shown in Fig.2(a), for the satellites in LEO, this observed point can only be seen at 10:28 a.m. on January 3, when the viewing elevation angel is 80°, the solar elevation angle is 57°, and the relative azimuth angle is 98°. Fig.2(b) shows that for the satellites in GEO, the values of viewing elevation angels remain constant at 42°, and the values of solar elevation angles vary from 12° to 170°. Meanwhile, the values of relative azimuth angles vary from 0° to 72°. In Fig.2(c), for the satellite at L1 point, the values of solar elevation angles and the viewing elevation angels vary from 0° to 72°, and the relative azimuth angle is 0°.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Comparisons_of_Observational_Angles_Between_Moon-Based_Platform_and_Artificial_Satellites.pdf",
+        "page": 4,
+        "supporting_quote": "the Moon-based platform has continuous viewing observation angles and solar observation angles. Its observation angles vary with the seasons, and it provides more angular information for equatorial regions than polar regions of the Earth.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer following verification of Pages 1–4 text, equations, and numerical values.",
+    "unsupported_claims": [
+      "The claim that Moon-based platforms provide 'reduced orbital interference' is unsupported by the text.",
+      "The claim that seasonal variations cause 'occlusion effects' is unsupported by the text; the paper states observation angles vary with seasons and provide less angular information for polar than equatorial regions."
+    ],
+    "cross_paper_relevance": "Specific to Comparisons_of_Observational_Angles...pdf. Reviewing this PDF does not confirm that no other paper among the 66 is relevant."
+  },
+  {
+    "id": "Q004",
+    "legacy_id": "legacy-004",
+    "question": "Why do retrievals based on visible (VIS) and near-infrared (NIR) observations alone fail to sufficiently identify land fraction coverage to break the degeneracy between surface albedo and planetary radius without a priori information about Rp?",
+    "ground_truth": "Retrievals using only VIS and NIR data cannot sufficiently constrain land fraction coverage because the overall reflected flux from an exoplanet is governed by a fundamental degeneracy between the planetary radius (Rp) and surface albedo (Ag), where the planet-star contrast ratio scales as Fp/Fs ∝ Rp^2 * Ag(λ). Without prior constraints on Rp, a smaller planet with a highly reflective surface (e.g., higher sand fraction) produces an identical spectral signature to a larger planet with a lower albedo (e.g., higher ocean fraction). Furthermore, surfaces like sand and ocean lack distinctive, sharp spectral absorption features in the VIS and NIR wavelengths that would allow them to be uniquely unmixed. Clouds exacerbate this ambiguity by acting as an opaque reflecting boundary, shielding the surface and mimicking high-albedo terrain, thereby preventing atmospheric and surface retrieval models from breaking the radius-albedo degeneracy.",
+    "contexts": [
+      "els, and often significantly overestimates sand coverage.\nAdditional polarimetric phase curves may enable better-\ninformed priors on ocean coverage in retrievals by de-\ntecting ocean glint (T. D. Robinson et al. 2010; S. R.\nVaughan et al. 2023; N. B. Cowan et al. 2025).\nThe\nplanet-star contrast ratio scales as Fp/Fs ∝R2\npAg(λ),\nso two scenarios are possible: either a small planet with\na bright surface or a large planet with a dim surface.\nThat is, an underestimation of Rp can be compensated\nby adjusting the surface composition; increasing fsand\nwhile decreasing focean can normalize the overall flux\nto the decrease in radius.\nWe find that the retrieval\nunderestimates Rp for all spectral models, except the\n100% cloud-coverage model. The degeneracies present\non Rp are analogous to studies of brown dwarf spectra,\nwhich find the radius difficult to constrain within ex-\npected physical limits (B. Burningham et al. 2021; C. E.\nHood et al. 2023; D. Kitzmann et al. 2020; A. Lueber\net al. 2022; W. Ceva et al. 2025).\nRetrievals from VIS and NIR observations of the\nplanet alone, for a single 100-hour visit, can not yet\nidentify land fraction coverage sufficiently to break the\ndegeneracy between surface albedo and planetary ra-\ndius without a priori information about Rp. An opaque\ncloud deck can also produce a similar effect: Fp/Fs in-\ncreases with fcloud and is degenerate with surface cover-\nage. In the posterior distributions of all models, shown\nin Figs. 14-18, these degeneracies can clearly be seen.\nDespite the degeneracies between surface components,\nwe find that fforest was the most consistently detected\nmaterial due to chlorophyll’s spectral signatures that\nare distinct from those of any other surface reflection\nincluded in our model. However, a single constrained\nbiota-surface coverage detection is insufficient to sup-\nport claims about potential life on the planet’s surface.\nMultiple surface materials could have identifiable false\npositive red-edge-like signals, such as iron oxide (S. R.\nBorges et al. 2024), cinnabar, and sulfur (N. Parenteau\net al. 2026).\nSimilar to how biosignature gases are\nsought for in combination to rule out false positives (L.\nKaltenegger 2017; E. W. Schwieterman et al. 2018), sur-\nface biopigments need to be assessed in context (V.\nMeadows et al. 2022).\nTo identify specific surface coverage using retrievals\ncurrently requires a priori information about the planet.\nIn addition, as shown in the retrieval using the model\nfrom G. Roccetti et al. (2025) in Sec. 3.2.2, improper\nassumptions about the material used to model surface\nreflectivity can significantly bias the retrieved spectrum."
+    ],
+    "answerable": true,
+    "reference_answer": "As detailed on Page 20 of 2603.25694v1.pdf, for a single 100-hour visit, VIS and NIR direct imaging observations of the planet alone cannot identify land fraction coverage sufficiently to break the degeneracy between surface albedo and planetary radius without a priori information about Rp, because the planet-star contrast ratio scales as Fp/Fs ∝ Rp^2 * Ag(λ). Consequently, an underestimation of Rp can be compensated by adjusting surface composition—specifically by increasing featureless high-albedo sand (fsand) while decreasing low-albedo ocean (focean). In the studied models, the combined degeneracies significantly underestimate ocean coverage across all models and often significantly overestimate sand coverage. Opaque cloud decks (fcloud) act as reflective surfaces that further compound this degeneracy. While polarimetric phase curves may improve ocean coverage priors by detecting ocean glint, retrievals from VIS and NIR observations alone for a single 100-hour visit without a priori Rp constraints fail to break the radius-albedo degeneracy. In the studied models, forest (fforest) was the most consistently detected material due to chlorophyll's distinctive spectral signatures.",
+    "required_claims": [
+      "For a single 100-hour visit, planet-star contrast ratio scales as Fp/Fs ∝ Rp^2 * Ag(λ), creating a mathematical degeneracy between planetary radius Rp and geometric albedo Ag(λ).",
+      "An underestimation of Rp can be compensated by adjusting surface composition (increasing fsand and decreasing focean), because ocean and sand lack distinctive VIS/NIR spectral features.",
+      "In the studied models, the combined degeneracies significantly underestimate ocean coverage across all models and often significantly overestimate sand coverage.",
+      "Opaque cloud decks (fcloud) act as reflective surfaces that compound the degeneracy with surface coverage.",
+      "Polarimetric phase curves may improve ocean coverage priors by detecting ocean glint, but retrievals from VIS and NIR observations alone for a single 100-hour visit without a priori Rp constraints fail to break the radius-albedo degeneracy.",
+      "Across the studied models, forest (fforest) was the most consistently detected material due to chlorophyll's distinctive spectral signatures."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "2603.25694v1.pdf",
+        "page": 20,
+        "supporting_quote": "The planet-star contrast ratio scales as Fp/Fs ∝ R^2_p * Ag(λ), so two scenarios are possible: either a small planet with a bright surface or a large planet with a dim surface. That is, an underestimation of Rp can be compensated by adjusting the surface composition; increasing fsand while decreasing focean can normalize the overall flux to the decrease in radius... Retrievals from VIS and NIR observations of the planet alone, for a single 100-hour visit, can not yet identify land fraction coverage sufficiently to break the degeneracy between surface albedo and planetary radius without a priori information about Rp. Additional polarimetric phase curves may enable better-informed priors on ocean coverage in retrievals by detecting ocean glint... In the absence of clouds, the planetary radius shows significant degeneracies with surfaces that lack characteristic spectral features in the VIS and NIR, such as the ocean and sand. We find that the combination of degeneracies significantly underestimates ocean coverage across all models, and often significantly overestimates sand coverage... Despite the degeneracies between surface components, we find that fforest was the most consistently detected material due to chlorophyll’s spectral signatures that are distinct from those of any other surface reflection included in our model.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer following verification of Page 20 text, equations, and single 100-hour visit scope.",
+    "unsupported_claims": [
+      "Any claim that VIS/NIR observations cannot identify ANY surface material is contradicted by the paper's finding that fforest is reliably identified due to chlorophyll signatures."
+    ],
+    "cross_paper_relevance": "Unique to 2603.25694v1.pdf in the corpus. Reviewing this PDF does not confirm that no other paper among the 66 is relevant."
+  },
+  {
+    "id": "Q005",
+    "legacy_id": "legacy-005",
+    "question": "How does employing moral philosophy as a methodological framework address the tendencies of both 'ethics washing' and 'ethics bashing' in the governance of emerging technologies?",
+    "ground_truth": "Moral philosophy provides a rigorous, conceptually clear framework that counters 'ethics washing' (using superficial ethical rhetoric to avoid regulation) by demanding substantive ethical justification and consistency. Concurrently, it counters 'ethics bashing' (dismissing ethics as entirely useless or subservient to corporate interests) by demonstrating that ethical concepts offer concrete normative guidance and accountability mechanisms beyond mere compliance or public relations.",
+    "contexts": [
+      "philosophers or ethicists within technology companies appears to be a façade that is frequently used to legitimate certain pre-existing practices and to shield companies from measures more protective of consumers... What moral philosophy as a method enables us to do is to take a step back, to consider these attitudes along a spectrum of nuanced positions on companies' ethical behavior, and to evaluate our reasons for supporting or resisting initiatives... Two main fallacies seem at play in overbroad critiques of ethics: a linguistic misunderstanding (conflating ethics washing with moral philosophy) and ignorance of or resistance to the possibilities of moral philosophy as a discipline."
+    ],
+    "answerable": true,
+    "reference_answer": "In Sections 7, 9, and 10 (Pages 11, 14–15), the author argues that moral philosophy counteracts both 'ethics washing' (the corporate instrumentalization and co-optation of ethics language as a PR façade to legitimate existing practices, deflect criticism, and avert binding legislation) and 'ethics bashing' (the reflexive dismissal of ethics as futile or complicit). By operating as a reflexive mode of inquiry with intrinsic and instrumental value, moral philosophy enables critics to expose the performative misuse of corporate ethics while defending the substantive necessity of ethical reasoning in setting meaningful normative boundaries, evaluating technology's systemic societal impacts, and justifying regulation.",
+    "required_claims": [
+      "Moral philosophy identifies 'ethics washing' where tech companies co-opt ethics language and self-regulation as a façade to legitimize pre-existing practices and avert binding legislation (Pages 11, 14).",
+      "Moral philosophy counters 'ethics bashing' by showing that overbroad dismissal of ethics conflates corporate PR co-optation with genuine philosophical inquiry (Pages 14–15).",
+      "Engaging from within moral philosophy provides the necessary normative tools to critically evaluate technology's systemic societal impacts and establish substantive grounds for regulation and accountability (Pages 14–15)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf",
+        "page": 11,
+        "supporting_quote": "philosophers or ethicists within technology companies appears to be a façade that is frequently used to legitimate certain pre-existing practices and to shield companies from measures more protective of consumers... Taylor and Dencik for example have described the political dynamics within the European Commission’s High Level Expert Group on AI, showing that instead of having outcomes guided by processes of reflection and philosophical principles, ethical reflections are often designed to produce pre-determined instrumental outcomes... What moral philosophy as a method enables us to do is to take a step back, to consider these attitudes along a spectrum of nuanced positions on companies' ethical behavior, and to evaluate our reasons for supporting or resisting initiatives",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf",
+        "page": 14,
+        "supporting_quote": "Two main fallacies seem at play in overbroad critiques of ethics that see ethics as distinct from law, politics, justice or social organizing: a linguistic misunderstanding, that is to say the conflation of instrumentalized ethics washing efforts with moral philosophy as a reflexive exercise, and ignorance of or resistance to the possibilities and importance of moral philosophy as a discipline and method... Much of the ink used to bash 'ethics' was perhaps justified but it could have been used more wisely by distinguishing corporate ethics, or ethics washing, from the practice of moral philosophy.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "From_Ethics_Washing_to_Ethics_Bashing_A_Moral_Philosophy_View_on_Tech_Ethics.pdf",
+        "page": 15,
+        "supporting_quote": "A richer critique of corporate self-regulatory efforts therefore demands that we operate at two levels: be critical of ethics washing, while also being aware that our very critique positions ourselves distinctly within moral philosophy... The way to combat ethics washing, therefore, is not to instrumentalize, reduce, and then dispose of ethical language, but rather to distinguish performative and instrumentalized forms of ethics from valuable commitments to moral principle that promote advancements in self-knowledge, understanding, and social change.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer following verification of Sections 7, 9, and 10 (Pages 11, 14–15) text.",
+    "unsupported_claims": [],
+    "cross_paper_relevance": "Specific to From_Ethics_Washing_to_Ethics_Bashing...pdf. Reviewing this PDF does not confirm that no other paper among the 66 is relevant."
+  },
+  {
+    "id": "Q006",
+    "legacy_id": "legacy-006",
+    "question": "How do the general-relativistic accretion-flow and radiative-transfer models discussed in EHT Paper I help interpret the asymmetric ring observed around M87*?",
+    "original_question": "How do the theoretical models of black hole shadows described in Chan et al. (2015) contribute to the interpretation of the asymmetric ring feature observed in M87*, as detailed in the text?",
+    "ground_truth": "Theoretical models of black hole shadows, including Chan et al. (2015), use general-relativistic magnetohydrodynamic (GRMHD) simulations and relativistic ray tracing to model accretion flows in strong gravitational lensing and Doppler bending regimes. These models predict that relativistic plasma orbiting a Kerr black hole produces an asymmetric emission ring around a central brightness depression (the shadow). The brightness asymmetry arises because relativistic Doppler boosting enhances emission from plasma moving toward the observer while dimming emission moving away. Comparing the observed 2017 EHT data against these model libraries confirmed that M87*'s asymmetric ring is consistent with expectations for the shadow of a rotating Kerr black hole in general relativity.",
+    "contexts": [
+      "Modern general-relativistic simulations of accretion flows and radiative transfer produce realistic images of black hole shadows and crescents for a wide range of near-horizon emission models (Broderick & Loeb 2006; Mościbrodzka et al. 2009; Dexter et al. 2012; Dibi et al. 2012; Chan et al. 2015; Mościbrodzka et al. 2016; Porth et al. 2017; Chael et al. 2018a...).\nThe appearance of M87* has been modeled successfully using GRMHD simulations, which describe a turbulent, hot, magnetized disk orbiting a Kerr black hole... At a wavelength of 1.3 mm, and as observed here, the simulations also predict a shadow and an asymmetric emission ring... The elements of the Simulation Library have been coupled to three different general-relativistic ray-tracing and radiative-transfer codes... the brightness in the ring is dominated by gravitational lensing and relativistic beaming, while the central depression is the shadow of the black hole... The brightness excess in the south part of the emission ring is explained as relativistic beaming of material rotating in the clockwise direction as seen by the observer, i.e., the bottom part of the emission region is moving toward the observer... consistent with the shadow of a Kerr black hole as predicted by general relativity."
+    ],
+    "answerable": true,
+    "reference_answer": "In EHT Paper I (Akiyama et al. 2019), general-relativistic accretion-flow and radiative-transfer models provide the theoretical framework for interpreting the 1.3 mm image of M87*. The paper distinguishes earlier published literature—such as Chan et al. (2015) and related studies cited on Page 2, which established that relativistic simulations of accretion flows and radiative transfer produce realistic images of black hole shadows and crescents—from the dedicated EHT Simulation and Image Libraries developed for this campaign (Section 6, Page 5). The EHT library combined four GRMHD codes modeling turbulent, hot, magnetized accretion disks around a Kerr black hole with three relativistic ray-tracing and radiative-transfer (GRRT) codes. Under curved spacetime, gravitational light bending produces a central dark shadow encircled by a bright emission ring associated with the lensed photon ring (Pages 2, 5). Rotation and relativistic beaming contribute to the ring's brightness asymmetry; in the paper's corotating-disk interpretation, material in the brighter southern region moves toward the observer (Pages 6, 9). Comparing the observed 2017 EHT data against these model libraries confirms that the asymmetric ring is consistent with the shadow of a rotating Kerr black hole as predicted by general relativity (Page 8).",
+    "required_claims": [
+      "EHT Paper I distinguishes earlier foundational literature (e.g., Chan et al. 2015 cited on Page 2) from the dedicated EHT Simulation and Image Libraries built from four GRMHD and three GRRT ray-tracing codes (Section 6, Page 5).",
+      "The models show that strong gravitational lensing and light bending around the black hole produce a bright emission ring encircling a central dark shadow (Pages 2, 5).",
+      "Rotation and relativistic beaming contribute to the ring's brightness asymmetry; in the paper's corotating-disk interpretation, material in the brighter southern region moves toward the observer (Pages 6, 9).",
+      "Comparison of 2017 EHT observations with the synthetic GRMHD image library confirms the asymmetric ring structure is consistent with the shadow of a Kerr black hole in general relativity (Page 8)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+        "page": 2,
+        "supporting_quote": "For accreting black holes embedded in a geometrically thick, optically thin emission region, as in LLAGNs, the combination of an event horizon and light bending leads to the appearance of a dark “shadow” together with a bright emission ring that should be detectable through very long baseline interferometery (VLBI) experiments (Falcke et al. 2000a). Its shape can appear as a “crescent” because of fast rotation and relativistic beaming... Modern general-relativistic simulations of accretion flows and radiative transfer produce realistic images of black hole shadows and crescents for a wide range of near-horizon emission models (Broderick & Loeb 2006; Mościbrodzka et al. 2009; Dexter et al. 2012; Dibi et al. 2012; Chan et al. 2015; Mościbrodzka et al. 2016; Porth et al. 2017; Chael et al. 2018a; Ryan et al. 2018; Davelaar et al. 2019).",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+        "page": 5,
+        "supporting_quote": "The appearance of M87* has been modeled successfully using GRMHD simulations, which describe a turbulent, hot, magnetized disk orbiting a Kerr black hole... At a wavelength of 1.3 mm, and as observed here, the simulations also predict a shadow and an asymmetric emission ring. The latter does not necessarily coincide with the innermost stable circular orbit, or ISCO, and is instead related to the lensed photon ring... The elements of the Simulation Library have been coupled to three different general-relativistic ray-tracing and radiative-transfer codes (GRRT, Bronzwaer et al. 2018; Mościbrodzka & Gammie 2018; Z. Younsi et al. 2019, in preparation).",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+        "page": 6,
+        "supporting_quote": "the brightness in the ring is dominated by gravitational lensing and relativistic beaming, while the central depression is the shadow of the black hole.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+        "page": 8,
+        "supporting_quote": "and the conclusion that it is consistent with the shadow of a Kerr black hole as predicted by general relativity... The size of the shadow is a feature tied to the mass of the black hole",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Akiyama_2019_ApJL_875_L1.pdf",
+        "page": 9,
+        "supporting_quote": "The brightness excess in the south part of the emission ring is explained as relativistic beaming of material rotating in the clockwise direction as seen by the observer, i.e., the bottom part of the emission region is moving toward the observer.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer with source-answerable revised question, distinguishing earlier literature from EHT Simulation Library, and exact phrasing on rotation, relativistic beaming, and southern corotating motion (Pages 6, 9).",
+    "unsupported_claims": [
+      "Any claim that Paper I presents the detailed stand-alone mathematical formulas or code implementation of Chan et al. (2015) is unsupported; Paper I references Chan et al. (2015) in a composite citation bundle on page 2 representing foundational GRMHD ray-tracing literature, whereas the image comparison relies on the dedicated EHT Simulation Library (Paper V)."
+    ],
+    "cross_paper_relevance": "Sole EHT paper in the corpus. EHT Papers II through VI are not present in papers/."
+  },
+  {
+    "id": "Q007",
+    "legacy_id": "legacy-007",
+    "question": "Explain how the combination of DES data with the baseline Planck likelihood impacts cosmological parameters like Ωm and σ8, and describe the role of systematic uncertainties in this analysis.",
+    "ground_truth": "Combining Dark Energy Survey (DES) clustering and weak lensing data with the baseline Planck likelihood breaks parameter degeneracies, notably refining constraints on matter density (Ωm) and the amplitude of fluctuations (σ8). While Planck CMB measurements alone tightly constrain combinations like Ωm*h^2, late-universe probes like DES constrain the parameter combination S8 = σ8*(Ωm/0.3)^0.5. The joint analysis yields improved precision on these parameters, although modest tension exists in S8 between CMB and cosmic shear measurements. Systematic uncertainties, such as photometric redshift errors, intrinsic galaxy alignments, and shear calibration in DES, alongside instrumental beam and calibration systematics in Planck, must be modeled carefully to prevent biased cosmological inferences.",
+    "contexts": [
+      "Figure 19 shows the constraints in the Ωm–σ8 plane from DES lensing, compared to the constraints from the CMB power spectra and CMB lensing. The DES cosmic shear constraint is of comparable statistical power to CMB lensing, but due to the significantly lower mean source redshift, the degeneracy directions are different (with DES cosmic shear approximately constraining Ωm*σ8^0.5 and CMB lensing constraining Ωm*σ8^0.25)... combine the DES and Planck lensing results to break a large part of the degeneracy, giving a substantially tighter constraint than either alone... As shown in the previous section, the DES lensing results are quite compatible with Planck, although their cosmic shear measurements favour a lower value of S8 than Planck... parameter constraints are obtained after marginalizing over the bias, as well as a photometric redshift window mid-point shift parameter to account for redshift uncertainties. Together with galaxy lensing parameters, the full joint analysis has 20 nuisance parameters. Although this is a relatively complex nuisance-parameter model, it clearly does not fully model all possible systematic errors... The Planck result is therefore sensitive to the details of the polarization modelling at the 0.5 σ level, and the tension cannot be quantified robustly beyond this level. Combining DES with the baseline Planck likelihood pulls the Planck result to lower Ωm and slightly lower σ8, giving S8 = 0.811 ± 0.011, Ωm = 0.3040 ± 0.0060, σ8 = 0.8062 ± 0.0057, (68 %, Planck TT,TE,EE+lowE+lensing+DES) (33)... In summary, the DES combined probes of ΛCDM parameters are in moderate percent-level tension with Planck."
+    ],
+    "answerable": true,
+    "reference_answer": "In Planck 2018 results VI (1807.06209v4.pdf), the analysis treats the comparison and combination of Dark Energy Survey (DES) 1-year data with Planck in distinct steps:\n1. DES Cosmic Shear vs. CMB Lensing (Page 29, Section 5.5): In the Ωm–σ8 plane, DES cosmic shear alone has statistical power comparable to CMB lensing, but because of DES's lower source redshift, their degeneracy directions differ (DES cosmic shear approximately constrains Ωm*σ8^0.5, whereas CMB lensing constrains Ωm*σ8^0.25; Figure 19). Combining lensing data breaks much of the parameter degeneracy.\n2. Full Joint DES Likelihood Combination (Page 30, Section 5.6): Combining the full DES joint likelihood (clustering, galaxy-galaxy lensing, and cosmic shear; 457 data points) with the baseline Planck likelihood (Planck TT,TE,EE+lowE+lensing+DES) pulls the Planck result toward lower Ωm and slightly lower σ8, yielding the 68% parameter constraints of Eq. (33):\n   - S8 = 0.811 ± 0.011\n   - Ωm = 0.3040 ± 0.0060\n   - σ8 = 0.8062 ± 0.0057\n3. Systematic Uncertainties & Tension (Pages 30–31): The joint DES analysis models 20 nuisance parameters (including galaxy bias and photometric-redshift shifts together with galaxy-lensing parameters; Page 30), but the paper explicitly notes this relatively complex model does not fully model all possible systematic errors. Furthermore, Planck polarization modeling affects consistency at the 0.5σ level (e.g., using CamSpec yields slightly greater consistency with DES than default Plik). Overall, the combined DES probes of ΛCDM parameters remain in moderate percent-level tension with Planck (Page 31).",
+    "required_claims": [
+      "On Page 29 (Section 5.5, Figure 19), DES cosmic shear (~Ωm*σ8^0.5) has a different degeneracy direction from Planck CMB lensing (~Ωm*σ8^0.25), so combining lensing measurements breaks parameter degeneracies in the Ωm–σ8 plane.",
+      "On Page 30 (Section 5.6), combining the full DES joint likelihood with baseline Planck pulls the Planck result toward lower Ωm and slightly lower σ8, yielding the 68% limits in Eq. (33): S8 = 0.811 ± 0.011, Ωm = 0.3040 ± 0.0060, and σ8 = 0.8062 ± 0.0057.",
+      "The joint DES analysis marginalizes over 20 nuisance parameters (including galaxy bias and photometric-redshift shifts together with galaxy-lensing parameters), but the paper notes this complex model does not fully model all possible systematic errors (Page 30).",
+      "Planck polarization modeling affects consistency with DES at the 0.5σ level, and the combined DES probes remain in moderate percent-level tension with Planck (Pages 30–31)."
+    ],
+    "question_type": "comparison",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "1807.06209v4.pdf",
+        "page": 29,
+        "supporting_quote": "Figure 19 shows the constraints in the Ωm–σ8 plane from DES lensing, compared to the constraints from the CMB power spectra and CMB lensing. The DES cosmic shear constraint is of comparable statistical power to CMB lensing, but due to the significantly lower mean source redshift, the degeneracy directions are different (with DES cosmic shear approximately constraining Ωm*σ8^0.5 and CMB lensing constraining Ωm*σ8^0.25)... combine the DES and Planck lensing results to break a large part of the degeneracy, giving a substantially tighter constraint than either alone.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "1807.06209v4.pdf",
+        "page": 30,
+        "supporting_quote": "parameter constraints are obtained after marginalizing over the bias, as well as a photometric redshift window mid-point shift parameter to account for redshift uncertainties. Together with galaxy lensing parameters, the full joint analysis has 20 nuisance parameters. Although this is a relatively complex nuisance-parameter model, it clearly does not fully model all possible systematic errors... The Planck result is therefore sensitive to the details of the polarization modelling at the 0.5 σ level, and the tension cannot be quantified robustly beyond this level. Combining DES with the baseline Planck likelihood pulls the Planck result to lower Ωm and slightly lower σ8, giving S8 = 0.811 ± 0.011, Ωm = 0.3040 ± 0.0060, σ8 = 0.8062 ± 0.0057, (68 %, Planck TT,TE,EE+lowE+lensing+DES) (33)",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "1807.06209v4.pdf",
+        "page": 31,
+        "supporting_quote": "In summary, the DES combined probes of ΛCDM parameters are in moderate percent-level tension with Planck. Whether this is a statistical fluctuation, evidence for systematics, or new physics is currently unclear.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: separate Page 29 DES cosmic shear comparison and Page 30 joint DES-plus-baseline-Planck result with Eq. (33); describes the 20 nuisance parameters as including galaxy bias and photometric-redshift shifts together with galaxy-lensing parameters (without asserting shear calibration or intrinsic alignment is specifically enumerated by page 30); notes 0.5-sigma polarization sensitivity and moderate percent-level tension.",
+    "unsupported_claims": [],
+    "cross_paper_relevance": "Only Planck 2018 Cosmological Parameters (1807.06209v4.pdf) contains the specific discussion of DES lensing compatibility, S8 parameterization, and weak lensing systematics."
+  },
+  {
+    "id": "Q008",
+    "legacy_id": "legacy-008",
+    "question": "Given the data in Figures 3 and 4, what logical inference explains the dominance of the visual modality over audio and olfactory modalities in immersive virtual nature studies, and how does this align with the reported research outcomes?",
+    "ground_truth": "The dominance of the visual modality (55 papers) over audio (30 papers) and olfactory (2 papers) modalities, as shown in Figure 3, stems from the visual nature of immersive technologies like VR headsets and 360-degree videos, which are primarily engineered for visual display and easier to implement than multisensory setups. This visual dominance aligns with the primary research focus on emotional well-being (Figure 4, 25 papers) and stress reduction (21 papers), where visual stimuli play a crucial role in evoking positive affective states and promoting relaxation. The relative scarcity of olfactory and tactile modalities highlights technological and methodological constraints, as well as an established body of literature prioritizing visual landscape aesthetics for stress recovery and emotional restoration.",
+    "contexts": [
+      "Classification of sensory output modalities used in the reviewed studies. (Left) Frequency of papers employing visual, audio, and olfactory modalities individually. (Right) Number of papers using various combinations of these modalities... Thematic focus of reviewed papers... Emotional well-being (25), stress reduction (21), restorative benefits (16), cognitive performance (16), nature connectedness (8), attention recovery (5)... Across the 55 reviewed papers, user interaction was minimal. Only two papers incorporated interactive elements beyond basic locomotion or gaze-based navigation (Figure 8-left)... Of the 55 papers, 51 implemented short-term exposure protocols, typically involving single sessions lasting between 5 and 30 minutes (Figure 8-right)... While all studies included visual output and most included audio, only two studies incorporated olfactory cues, and none used haptics. This overreliance on visual-audio channels limits the fidelity and affective depth of virtual nature experiences... they can enrich user experience and presence but are often underutilized due to practical constraints... Emotional well-being and stress reduction were the most frequently covered themes, reflecting the field’s early focus on short-term affective benefits... This may be due to the greater ease of assessing emotional states through validated self-report tools, whereas cognitive performance requires more complex, task-based methods."
+    ],
+    "answerable": true,
+    "reference_answer": "Figure 3 records sensory output modalities across the 55 reviewed papers: visual output is universal (all 55 papers), audio is frequent (30 papers), and olfactory is rare (2 papers; with 28 papers combining visual+audio and 2 combining all three). Figure 4 illustrates the distribution of thematic focus across the literature, led by Emotional Well-Being (25 papers) and Stress Reduction (21 papers), followed by Restorative Benefits (16), Cognitive Performance (16), Nature Connectedness (8), and Attention Recovery (5); this reflects the topics researchers chose to investigate rather than proof of comparative sensory effectiveness or clinical efficacy (Page 4).\nThe paper does not establish an empirically proven causal explanation for why researchers chose visual output. Instead, nearly all included studies used VR (54 of 55 papers; Page 8), all 55 included visual output, and the authors identify practical constraints on additional sensory cues such as olfactory and haptic modalities (Page 8, Section 7.1.1). Explaining the dominance of visual stimuli from these factors is an inference from these observations rather than a demonstrated finding of the paper. Furthermore, early research heavily prioritized short-term affective themes (emotional well-being and stress reduction) assessed using validated self-report questionnaires (Page 8), aligning with observational study designs where 53 of 55 papers were non-interactive and 51 of 55 used short-term exposures (Figure 8, Page 5; describing study design characteristics rather than causal reasons for visual selection). The authors emphasize that underutilization of non-visual modalities reflects practical constraints rather than evidence against multisensory immersion.",
+    "required_claims": [
+      "Figure 3 documents sensory modality counts across 55 papers: visual in 55, audio in 30, and olfactory in 2 (with 28 visual+audio combinations and 2 using all three) (Page 4).",
+      "Figure 4 presents the distribution of thematic focus across reviewed papers (led by emotional well-being with 25 papers and stress reduction with 21), representing research topic frequency rather than proof of positive outcomes or comparative sensory effectiveness (Page 4).",
+      "Nearly all included studies used VR (54/55) and all 55 used visual output, with authors identifying practical constraints on additional sensory cues (olfactory/haptic); explaining visual dominance from these factors is an inference from these observations rather than an established finding of why researchers chose visual output (Pages 4–5, 8).",
+      "Study design characteristics (53 non-interactive studies, 51 short-term exposure protocols; Figure 8, Page 5) describe how experiments were conducted, while sensory gaps are framed as an underutilized research opportunity due to practical constraints rather than evidence against multisensory immersion (Page 8)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf",
+        "page": 4,
+        "supporting_quote": "Fig. 3: Classification of sensory output modalities used in the reviewed studies. (Left) Frequency of papers employing visual, audio, and olfactory modalities individually. (Right) Number of papers using various combinations of these modalities. Fig. 4: Thematic focus of reviewed papers... Emotional well-being (25), stress reduction (21), restorative benefits (16), cognitive performance (16), nature connectedness (8), attention recovery (5).",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf",
+        "page": 5,
+        "supporting_quote": "Across the 55 reviewed papers, user interaction was minimal. Only two papers incorporated interactive elements beyond basic locomotion or gaze-based navigation (Figure 8-left). The majority of papers adopted a passive exposure approach, where participants remained stationary and viewed pre-rendered or guided nature scenes without any direct influence on the environment... Of the 55 papers, 51 implemented short-term exposure protocols, typically involving single sessions lasting between 5 and 30 minutes (Figure 8-right)... Emotional well-being, defined as the experience of positive emotional states, emerged as the most common outcome across the studies reviewed, appearing in 25 papers. This prevalence is not surprising given that immersive technologies are frequently used for enjoyment and entertainment, which naturally prioritize affective experience over clinical outcomes.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Experiencing_Immersive_Virtual_Nature_for_Well-Being_Restoration_Performance_and_Nature_Connectedness_A_Scoping_Review.pdf",
+        "page": 8,
+        "supporting_quote": "While all studies included visual output and most included audio, only two studies incorporated olfactory cues, and none used haptics. This overreliance on visual-audio channels limits the fidelity and affective depth of virtual nature experiences, especially given the rich multisensory nature of real-world environments... they can enrich user experience and presence but are often underutilized due to practical constraints [53]... Emotional well-being and stress reduction were the most frequently covered themes, reflecting the field’s early focus on short-term affective benefits. In contrast, cognitive performance and especially attention recovery were relatively underexplored. This may be due to the greater ease of assessing emotional states through validated self-report tools, whereas cognitive performance requires more complex, task-based methods.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: removed commercial hardware claims; explains that nearly all included studies used VR (54/55), all 55 included visual output, and authors identify practical constraints on additional sensory cues; frames visual dominance as an inference from these observations; marks causal explanation as an inference; clarifies that Figure 8 counts describe study design rather than why researchers chose visual output.",
+    "unsupported_claims": [
+      "Any claim that Figure 4 proves positive outcomes or comparative sensory effectiveness is contradicted by the text, which identifies Figure 4 as a distribution of research topics.",
+      "Any claim that visual dominance is an established causal necessity for affective recovery is unsupported; the authors frame it as a plausible inference from practical hardware accessibility and passive study designs."
+    ],
+    "cross_paper_relevance": "Unique review paper in papers/ on immersive virtual nature."
+  },
+  {
+    "id": "Q009",
+    "legacy_id": "legacy-009",
+    "question": "How does the methodological shift from theoretical to experimental approaches in economics improve the cultivation of innovative talents in higher education, as described in the text?",
+    "ground_truth": "The methodological shift from deductive theoretical economics to experimental economics transforms higher education by replacing passive rote learning with active, inquiry-based scientific exploration. By participating in laboratory and classroom market experiments, students directly test economic assumptions, observe market equilibria, and analyze behavioral anomalies. This practical engagement fosters critical thinking, problem-solving skills, and empirical rigor, bridging the gap between abstract mathematical models and real-world socioeconomic dynamics.",
+    "contexts": [
+      "Experimental economics, as a new discipline, has broken the previous inherent cognition of the theoretical and experimental separation of economics. The application of experimental economics in the teaching of new finance and economics can not only improve students' interest in learning, but also cultivate students' innovative thinking and practical ability through participatory and interactive teaching methods, promoting the reform of traditional teaching mode to modern experimental teaching mode."
+    ],
+    "answerable": true,
+    "reference_answer": "In Wang et al. (2020), the authors argue for the educational benefits of transitioning from purely lecture-based theory to experimental economics in higher education:\n1. Laboratory Simulation of Economic Theory (Pages 1–2): The authors argue that bringing abstract economic theory into the laboratory for simulation enables students to analyze theories in depth and feel the development of economic laws, changing the traditional teacher-centered lecturing mode (Figures 1 & 2).\n2. Inspiring Innovative Thinking (Pages 1–2): Through hands-on operation and discussion of experimental processes, experimental economics is argued to inspire students' innovative thinking and enhance interaction between teachers and students and among students.\n3. Realistic Market Transaction Platform (Page 3): The authors argue that experimental economics provides students with a transaction platform that simulates reality, allowing them to experience actual market conditions and enhancing their interest in innovation and entrepreneurship.\n4. Integrating Theory with Practical Experience (Pages 1, 4): The authors assert that practical and integrated experimental economics stimulates students' subjective initiative, arguing that this combination of theoretical knowledge and practical experience cultivates innovative talents needed for the education reform of 'new finance and economics'.",
+    "required_claims": [
+      "The authors argue that bringing economic theory into laboratory simulations enables students to analyze theory in depth and observe economic laws, shifting away from traditional lecturing (Pages 1–2).",
+      "The authors argue that hands-on experimental operation and discussion inspire students' innovative thinking and enhance interaction among students and teachers (Figures 1 & 2, Pages 1–2).",
+      "The authors argue that a simulated transaction platform allows students to experience actual market conditions, enhancing interest in innovation and entrepreneurship (Page 3).",
+      "The authors argue that integrating theory with practical experience stimulates students' subjective initiative to cultivate innovative talents for 'new finance and economics' education (Pages 1, 4)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "Exploration_on_Experimental_Economics_and_the_Education_Reform_of_New_Finance_and_Economics.pdf",
+        "page": 1,
+        "supporting_quote": "Experimental economics, as a new discipline, has broken the previous inherent cognition of the theoretical and experimental separation of economics. The application of experimental economics in the teaching of new finance and economics can not only improve students' interest in learning, but also cultivate students' innovative thinking and practical ability through participatory and interactive teaching methods, promoting the reform of traditional teaching mode to modern experimental teaching mode.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: describes educational mechanisms as benefits argued for by the authors rather than outcomes measured in this paper.",
+    "unsupported_claims": [
+      "Any claim that this paper reports empirical measurements, grade improvements, or statistical outcomes from these educational interventions is unsupported; the authors present pedagogical arguments and cite external literature (e.g. Emerson & Taylor 2004)."
+    ]
+  },
+  {
+    "id": "Q010",
+    "legacy_id": "legacy-010",
+    "question": "Why does Amazon advocate for using the 99.9th percentile in SLAs instead of mean or median response times, and how does this reflect their customer-centric philosophy?",
+    "ground_truth": "Amazon advocates for the 99.9th percentile rather than mean or median response times because average and median metrics fail to capture the experience of users in the high-latency tail. In a microservices architecture, a single user request often triggers calls to dozens of internal services; if services only optimize for median performance, cumulative latency degrades significantly. Customers subjected to the tail latency are frequently the most active and valuable customers with large account histories and shopping carts. Guaranteeing performance at the 99.9th percentile ensures that even the most demanding users receive responsive service, reflecting Amazon's commitment to customer satisfaction over misleading aggregate metrics.",
+    "contexts": [
+      "To provide a response within 300ms for 99.9% of its requests for a peak load of 500 requests/second.\nIn Amazon’s decentralized service oriented infrastructure, SLAs play a pivotal role... The common industry standard for service oriented SLA is to describe it using average, median and expected variance... An SLA stated in terms of mean or median response times will not address customers with the worst experience, at Amazon, SLAs are expressed and measured at the 99.9th percentile of the distribution. The choice for 99.9% over an even higher percentile has been made based on a cost-benefit analysis."
+    ],
+    "answerable": true,
+    "reference_answer": "In Section 2.2 (Pages 3–4) of the Dynamo paper (DeCandia et al. 2007), Amazon explains why SLAs are defined and measured at the 99.9th percentile of the distribution:\n1. Industry Metrics vs. High-Latency Tail (Page 4): Common industry SLA metrics (average, median, and expected variance) incorporate performance observations across requests, but they can obscure the high-latency tail experience when the goal is to build a system where all customers have a good experience rather than just the majority.\n2. Important Customer Segment with Longer Histories (Page 4): When extensive personalization techniques are used, customers with longer histories require more processing, which impacts performance at the high end of the distribution. An SLA stated in terms of mean or median response times will not address the performance of this important customer segment.\n3. Multi-Service Call Graphs and Performance Contracts (Page 4): A single page request to an e-commerce site typically requires the rendering engine to send requests to over 150 services, which often have multi-level call graphs. To maintain a clear bound on page delivery, each service within the call chain must obey its performance contract; an inference from this architecture is that tail latencies at individual dependencies can compound across the chain.\n4. Cost-Benefit Analysis at the 99.9th Percentile (Page 4): Amazon selected the 99.9th percentile over an even higher percentile based on a cost-benefit analysis which demonstrated a significant increase in cost to improve performance beyond that level. Experiences with Amazon's production systems showed that this approach provides a better overall customer experience compared to systems meeting SLAs based on mean or median.",
+    "required_claims": [
+      "Common industry metrics like mean and median incorporate observations across requests, but they can obscure high-latency tail experience when the goal is a good experience for all customers rather than just the majority (Page 4).",
+      "Customers with longer histories require more processing under personalization, making them an important customer segment whose performance is not addressed by mean or median SLAs (Page 4).",
+      "Generating a page typically requires sending requests to over 150 services across multi-level call graphs, requiring each service to obey its performance contract (with compounding tail latency across this chain being an inference from the architecture) (Page 4).",
+      "Amazon chose the 99.9th percentile over higher percentiles based on a cost-benefit analysis demonstrating a significant increase in cost to improve performance beyond that point (Page 4)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "1294261.1294281.pdf",
+        "page": 4,
+        "supporting_quote": "The common industry standard for service oriented SLA is to describe it using average, median and expected variance... However, at Amazon, an SLA stated in terms of mean or median response times will not address customers with the worst experience (e.g. customers with large cart history)... at Amazon, SLAs are expressed and measured at the 99.9th percentile of the distribution. The choice for 99.9% over an even higher percentile has been made based on a cost-benefit analysis.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: clarifies mean/median incorporate observations across requests but can obscure high-latency tail experience; refers to customers with longer histories as an important customer segment without inferring value; states improving performance beyond 99.9th percentile entails a significant increase in cost (removed 99.99%); states multi-service call graph and performance contract requirements, labeling compounding tail latency as an inference.",
+    "unsupported_claims": [
+      "Any claim that customers with longer histories are empirically verified to generate higher dollar value or revenue is an inference not stated on Page 4; the text terms them an 'important customer segment'.",
+      "Any claim specifying 99.99% as the specific tested alternative is unsupported; the text refers generally to 'an even higher percentile'."
+    ]
+  },
+  {
+    "id": "Q011",
+    "legacy_id": "legacy-011",
+    "question": "How does Hanahan and Weinberg’s review use early work such as Bonnet and Dick (1997) and later studies including Boiko et al. (2010) to discuss the operational definition of cancer stem cells and uncertainties about their prevalence?",
+    "ground_truth": "Bonnet and Dick (1997) provided seminal evidence for cancer stem cells in acute myeloid leukemia (AML) by showing that only a rare subpopulation (CD34+CD38-) could initiate leukemia in immunocompromised mice, establishing the operational definition of CSCs as cells with tumor-initiating capacity. Boiko et al. (2010) extended this operational paradigm to solid tumors by identifying CD271+ melanoma cells as tumor-initiating cells capable of self-renewal and multipotent differentiation. Together, these studies demonstrate that the hierarchical organization of tumors—where only a privileged cellular subset possesses indefinite self-renewal and tumorigenic potential—is not restricted to hematologic malignancies but also operates in aggressive solid tumors, supporting the generalizability of the CSC model across divergent neoplastic lineages.",
+    "contexts": [
+      "CSCs were initially implicated in the pathogenesis of hemato- poietic malignancies (Reya et al., 2001; Bonnet and Dick, 1997)\n... An increasing number of human tumors are reported to contain subpopulations with the properties of CSCs, as defined operationally through their efficient tumor-initiating capabilities upon xenotransplantation into mice. Nevertheless, the importance of CSCs as a distinct phenotypic subclass of neoplastic cells remains a matter of debate, as does their oft-cited rarity within tumors (Boiko et al., 2010; Gupta et al., 2009; Quintana et al., 2008)."
+    ],
+    "answerable": true,
+    "reference_answer": "In Hanahan and Weinberg (Cell 2011, Pages 17–18), the authors synthesize the cancer stem cell (CSC) literature across tumor types:\n1. Operational Definition from the Review's Synthesis (Pages 17–18): The review itself synthesizes the operational definition of CSCs as neoplastic subpopulations defined operationally through their ability to efficiently seed new tumors upon inoculation (xenotransplantation) into recipient host mice, often complemented by the expression of cell-surface markers shared with normal stem cells in the tissue of origin. The review cites early work by Bonnet and Dick (1997) (along with Reya et al. 2001) as initially implicating CSCs in hematopoietic malignancies, prior to subsequent identification in solid tumors.\n2. Debate over CSC Rarity and Distinctness (Page 18): The review cites Boiko et al. (2010) (alongside Quintana et al. 2008 and Gupta et al. 2009) within the active debate regarding whether CSCs constitute a distinct phenotypic subclass of neoplastic cells and whether they are as rare within tumors as oft-cited. The review notes this controversy without detailing Boiko et al.'s specific experimental methods or surface marker profiles.\n3. Phenotypic Plasticity (Page 18): Hanahan and Weinberg explain that phenotypic plasticity operating within tumors may produce bidirectional interconversion between CSCs and non-CSCs, resulting in dynamic variation in the relative abundance of CSCs and complicating definitive measurement of their prevalence.",
+    "required_claims": [
+      "The review's synthesis defines CSCs operationally through efficient tumor-initiating capabilities upon inoculation/xenotransplantation into recipient host mice, citing early work such as Bonnet and Dick (1997) as initially implicating CSCs in hematopoietic malignancies (Pages 17–18).",
+      "The review cites later studies including Boiko et al. (2010) within the active debate over whether CSCs form a distinct phenotypic subclass and their oft-cited rarity, without detailing Boiko et al.'s experimental methods (Page 18).",
+      "Hanahan and Weinberg suggest that bidirectional phenotypic plasticity between CSCs and non-CSCs may dynamically vary CSC abundance and complicate definitive measurement of their prevalence (Page 18)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "PIIS0092867411001279.pdf",
+        "page": 17,
+        "supporting_quote": "CSCs were initially implicated in the pathogenesis of hematopoietic malignancies (Reya et al., 2001; Bonnet and Dick, 1997)... An increasing number of human tumors are reported to contain subpopulations with the properties of CSCs, as deﬁned operationally through their efﬁcient tumor-initiating capabilities upon xenotransplantation into mice.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "PIIS0092867411001279.pdf",
+        "page": 18,
+        "supporting_quote": "Nevertheless, the importance of CSCs as a distinct phenotypic subclass of neoplastic cells remains a matter of debate, as does their oft-cited rarity within tumors (Boiko et al., 2010; Gupta et al., 2009; Quintana et al., 2008). Indeed, it is plausible that the phenotypic plasticity operating within tumors may produce bidirectional interconversion between CSCs and non-CSCs, resulting in dynamic variation in the relative abundance of CSCs.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: replaced question with source-grounded review framing (original preserved); attributes operational definition to review synthesis; clarifies Boiko et al. is cited within debate over rarity and distinctness without detailing experimental methods; highlights bidirectional phenotypic plasticity.",
+    "unsupported_claims": [
+      "Any claim that Hanahan & Weinberg (2011) details specific surface markers (such as CD34+CD38- or CD271) or primary experimental isolation protocols for Bonnet & Dick (1997) and Boiko et al. (2010) is unsupported; the review cites them at the conceptual level of xenotransplantation and the rarity/plasticity debate."
+    ],
+    "cross_paper_relevance": "PIIS0092867411001279.pdf is also the source paper for Q013.",
+    "original_question": "How do the studies by Bonnet and Dick (1997) on acute myeloid leukemia and Boiko et al. (2010) on melanoma contribute to the argument for the existence and operational definition of Cancer Stem Cells (CSCs) across different cancer types?"
+  },
+  {
+    "id": "Q012",
+    "legacy_id": "legacy-012",
+    "question": "How does the paper compare the distance a galaxy could travel at 1000 km/s over a Hubble time with the reported width of a supercluster, and what does the author infer about large-scale structure?",
+    "ground_truth": "A galaxy traveling at a typical velocity of 1000 km/s can only cover about 30 Mpc over the entire age of the universe (Hubble time of 10 to 15 Gyr). Therefore, coherent cosmic structures such as the Great Wall, filaments, and superclusters spanning hundreds of megaparsecs cannot have formed by galaxies migrating and aggregating together through peculiar velocities within cosmic time. Instead, this physical scale limit proves that these massive structures are not the product of galaxy movements after formation, but must have originated from primordial density fluctuations in the early universe, where galaxies formed in situ along pre-existing cosmic web filaments.",
+    "contexts": [
+      "A galaxy traveling at 1000 km/s will traverse only ~30 Mpc across the Hubble time (1/H0 ~ 10-15 Gyr). Since structures such as superclusters and walls extend over hundreds of megaparsecs, they cannot be formed by the motion of galaxies alone. This implies that such large-scale structures reflect primordial density fluctuations present in the early universe rather than dynamic aggregation."
+    ],
+    "answerable": true,
+    "reference_answer": "In Section VI (Page 5) of the paper, the author presents a cosmic scale comparison:\n1. Distance Comparison (Page 5): If a typical galaxy velocity of 1000 km/s is assumed, according to the Hubble law a galaxy would travel only about 30 million light-years distance (an approximate conversion is ~9 Mpc) over the Hubble time ($1/H$, the age of the universe). In contrast, superclusters span a reported width of 100 million light-years (an approximate conversion is ~31 Mpc), creating a substantial scale contrast with the galaxy travel distance.\n2. Inferences on Large-Scale Structure (Pages 4–5): The author notes that simple cosmic scale calculations like this underestimate the expanding universe, but presents the scale contrast and existence of superclusters as clues about the structural formation of the universe. Specifically, the author discusses that matter is not distributed homogeneously as once expected, but forms cosmic filaments (with sponge-like walls and empty voids/balloons in between), and concludes that today's cosmic picture shows the universe is dominated by dark matter rather than regular matter.",
+    "required_claims": [
+      "The author calculates that at a typical velocity of 1000 km/s, a galaxy travels only about 30 million light-years (approximately 9 Mpc, conversion) across a Hubble time (1/H) (Page 5).",
+      "The reported width of superclusters is 100 million light-years (approximately 31 Mpc, conversion), creating a scale contrast with the galaxy travel distance (Page 5).",
+      "The author presents this scale contrast as a clue regarding structural formation, discussing that matter forms cosmic filaments rather than being homogeneously distributed and that the universe is dominated by dark matter (Pages 4–5)."
+    ],
+    "question_type": "comparison",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "Structural_formation_of_the_universe_As_observed_by_X-ray_satellites.pdf",
+        "page": 5,
+        "supporting_quote": "Super clusters span to 100-million light-year width. If we consider a typical galaxy velocity of 1000 km/s, according to the Hubble law, a galaxy would travel only about 30-million light-year distance in 1/H (the age of the universe) time. This scale is quite small compared to super clusters size. This type of simple cosmic scale calculations always underestimates the observed expanding universe. Even the existence of super clusters gives the clues of structural formation of the universe. The matter is not homogeneously distributed, as expected. It forms cosmic filaments. Today’s cosmic picture shows that universe is not dominated by regular matter, but dark-matter.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: updated question to source-accurate light-year comparison (original preserved); uses author's stated estimates of about 30 million light-years travelled and 100 million light-years for supercluster width, with explicitly labelled approximate conversions of ~9 Mpc and ~31 Mpc; states author presents this scale contrast as a clue and discusses filamentary structure and dark matter dominance; removed unsupported claims of proof against migration or specific early-universe mechanisms.",
+    "original_question": "Given that a galaxy traveling at 1000 km/s would only traverse approximately 30 Mpc across Hubble time (1/H0 ~ 10-15 Gyr), why does the observation of large-scale structures spanning hundreds of megaparsecs imply that these structures could not have formed through the motion of galaxies alone?",
+    "unsupported_claims": [
+      "Any claim that this calculation proves galaxy migration alone cannot form superclusters or establishes a specific early-universe mechanism is unsupported; the author presents this simple calculation as an underestimate and a clue pointing to cosmic filaments and dark matter dominance."
+    ]
+  },
+  {
+    "id": "Q013",
+    "legacy_id": "legacy-013",
+    "question": "How do phenotypic plasticity and the debated classification of CSCs as a distinct phenotypic subclass impact cancer therapies, disease recurrence, and the emergence of tumor dormancy, as described in the text?",
+    "ground_truth": "Phenotypic plasticity allows cancer cells to dynamically interconvert between CSC and non-CSC states, challenging the view that CSCs are a rigid, distinct subclass. This plasticity complicates cancer therapies because targeting a static CSC population is insufficient if non-CSCs can de-differentiate into new CSCs. CSCs are inherently more resistant to chemotherapy and radiation due to enhanced DNA repair, quiescence, and multi-drug resistance transporters. Their ability to survive debulking therapy underlies tumor dormancy, where latent CSCs persist in distant tissues for years before regenerating lethal secondary tumors, driving disease recurrence.",
+    "contexts": [
+      "These complexities notwithstanding, it is evident that this new dimension of tumor heterogeneity holds important implica- tions for successful cancer therapies. Increasing evidence in a variety of tumor types suggests that cells with properties of CSCs are more resistant to various commonly used chemother- apeutic treatments (Singh and Settleman, 2010; Creighton et al., 2009; Buck et al., 2007). Their persistence may help to explain the almost-inevitable disease recurrence following apparently successful debulking of human solid tumors by radi- ation and various forms of chemotherapy. Indeed, CSCs may well prove to underlie certain forms of tumor dormancy, whereby latent cancer cells persist for years or even decades after surgical resection or radio/chemotherapy, only to suddenly erupt and generate life-threatening disease. Hence, CSCs may represent a double-threat, in that they are more resistant to therapeutic killing and, at the same time, endowed with the ability to regenerate a tumor once therapy has been halted."
+    ],
+    "answerable": true,
+    "reference_answer": "In Hanahan and Weinberg (Cell 2011, Page 18), the authors discuss the implications of cancer stem cells (CSCs) and phenotypic plasticity for clinical oncology using carefully calibrated language:\n1. Chemotherapeutic Resistance (Page 18): The review notes that increasing evidence across a variety of tumor types suggests that cells with properties of CSCs are more resistant to various commonly used chemotherapeutic treatments. The authors refer to CSCs as a potential 'double-threat' because they appear more resistant to therapeutic killing and may be endowed with the ability to regenerate a tumor once therapy ceases. (The cited passage notes recurrence after radiation or chemotherapy, but does not itself establish radiation resistance).\n2. Disease Recurrence and Tumor Dormancy (Page 18): The persistence of CSC-like cells may help explain the almost-inevitable recurrence of disease following apparently successful debulking of human solid tumors by radiation or chemotherapy. Furthermore, the review suggests CSCs may well prove to underlie certain forms of tumor dormancy, whereby latent cancer cells persist for years or decades after surgical resection or radio/chemotherapy before erupting into life-threatening disease.\n3. Phenotypic Plasticity as a Proposed Mechanism (Page 18): The authors propose that phenotypic plasticity operating within tumors could produce bidirectional interconversion between CSCs and non-CSCs, resulting in dynamic variation in CSC abundance and complicating definitive measurement of their prevalence. Rather than reporting an experimentally demonstrated failure of a CSC-targeted regimen, the review discusses this dynamic plasticity as a plausible complexity for therapeutic design.",
+    "required_claims": [
+      "The review describes evidence suggesting that cells with CSC properties are more resistant to commonly used chemotherapeutic treatments (Page 18).",
+      "The persistence of CSC-like cells may help explain disease recurrence following apparently successful debulking by radiation or chemotherapy, and could potentially underlie tumor dormancy where latent cells persist after resection or treatment (Page 18).",
+      "The authors propose that phenotypic plasticity may allow bidirectional interconversion between CSC and non-CSC states, which could dynamically alter CSC abundance and complicate definitive measurement of their prevalence (Page 18)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "PIIS0092867411001279.pdf",
+        "page": 18,
+        "supporting_quote": "Increasing evidence in a variety of tumor types suggests that cells with properties of CSCs are more resistant to various commonly used chemotherapeutic treatments... Their persistence may help to explain the almost-inevitable disease recurrence following apparently successful debulking of human solid tumors by radiation and various forms of chemotherapy. Indeed, CSCs may well prove to underlie certain forms of tumor dormancy... endowed with the ability to regenerate a tumor once therapy has been halted.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: describes evidence suggesting CSC-like cells resist commonly used chemotherapies; discusses possible recurrence after radiation/chemotherapy and dormancy after resection/treatment without asserting radiation resistance is established on page 18; frames bidirectional plasticity as a proposed possibility rather than an experimentally demonstrated targeted-therapy failure; preserves uncertainty language.",
+    "unsupported_claims": [
+      "Any claim that Page 18 establishes radiation resistance is unsupported; the passage mentions debulking by radiation or chemotherapy in the context of disease recurrence, but specifically cites evidence of resistance for commonly used chemotherapies.",
+      "Any claim presenting a specific CSC-targeted treatment failure scenario as an experimentally demonstrated result is unsupported; the review presents bidirectional plasticity as a plausible hypothesis complicating therapy."
+    ]
+  },
+  {
+    "id": "Q014",
+    "legacy_id": "legacy-014",
+    "question": "What potential uses and recognition challenges for video action recognition in dance does the paper describe, how does grayscale preprocessing trade color information for reduced computation, and how does it separately describe project-oriented dance teaching?",
+    "ground_truth": "Traditional dance education suffers from subjective observation, high teacher-to-student ratios, and insufficient individual feedback, limiting students' creative consciousness. The proposed video action recognition framework uses computer vision and deep learning (e.g., spatial-temporal graph convolutional networks or 3D CNNs) to objectively capture, analyze, and evaluate dance movements in real time. This overcomes traditional teaching bottlenecks by providing quantitative, personalized posture feedback and creative movement variations. The algorithmic trade-offs discussed include balancing real-time computational latency against spatial-temporal feature extraction accuracy, and managing sensitivity to background clutter and occlusion.",
+    "contexts": [
+      "devoted themselves to the reform of the teaching system, increasing the emphasis on the cultivation of students' creative consciousness in dance, but the effect was minimal... The video action recognition technology can accurately extract movement trajectories and provide real-time objective feedback, overcoming the limitations of subjective teacher evaluation."
+    ],
+    "answerable": true,
+    "reference_answer": "In Wang (2021), the paper discusses computer vision techniques for dance videos alongside vocational dance pedagogy:\n1. Potential Uses and Recognition Challenges (Page 1): The paper describes applying video action recognition to dance videos to analyze movement, compare trainee actions with standard actions to provide modification advice, assist automatic choreography, and facilitate the retrieval of dance video clips to reduce professionals' manual workload. However, dance action recognition faces domain-specific challenges due to the high complexity of dance movements and severe self-occlusion during motion.\n2. Algorithmic Workflow and Grayscale Preprocessing (Pages 1–2): The method utilizes image preprocessing, 3D Zernike moments, codebook construction, and Support Vector Machines (SVM) trained on the KTH database and A-go-go dance video database to classify actions. To handle the computational load of true-color (RGB) video, grayscale preprocessing converts RGB frames into grayscale images, deliberately trading away color information to reduce computation. Subsequent thresholding and binary segmentation (using Gaussian mixture modeling and edge detection in Matlab) extract the moving foreground body contours.\n3. Project-Oriented Dance Pedagogy (Page 3): Separately from the action recognition algorithm, the paper describes project-oriented dance vocational education (practiced at Shanxi Vocational Art College), where classroom projects serve as the main instructional line. In this pedagogy, teachers shift from traditional 'protagonists' to 'supporting roles', and students learn actively through internship and stage practice; the paper does not empirically demonstrate that the vision system itself caused improvements in student creativity.",
+    "required_claims": [
+      "The paper proposes that video action recognition can assist posture evaluation, clip retrieval, and automatic choreography, but notes recognition is challenged by high movement complexity and body self-occlusion (Page 1).",
+      "The overall action recognition framework incorporates image preprocessing, 3D Zernike moments, codebooks, and Support Vector Machine (SVM) classification (Page 1).",
+      "Grayscale preprocessing trades away RGB color information to reduce the volume of computer calculation, followed by thresholding and segmentation to extract moving body regions (Pages 1–2).",
+      "Project-oriented dance pedagogy is described separately as a curriculum model where teachers act as supporting guides and students learn via practical projects; the paper does not demonstrate empirical creativity gains from the vision system (Page 3)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf",
+        "page": 1,
+        "supporting_quote": "The main research is to use image preprocessing, 3DZernike moments, building codebooks and support vector machines (SVM) to recognize human actions in action videos... due to the high complexity of human movements in dance videos... problem of self-occlusion... If the motion recognition technology is applied to the analysis of these music and dance videos to obtain organically connected music-dance action clips, it will not only reduce the work intensity of dance professionals, facilitate the retrieval of music and dance video data, but also enable an automatic dance choreography system More efficient",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf",
+        "page": 2,
+        "supporting_quote": "Because of the huge amount of calculation to directly process the true color image, the analysis efficiency is low. Therefore, this article uses the gray-scale transformation method to process the video image into a gray-scale image to reduce the color information contained in the image... The purpose of image thresholding is to obtain a binary image of a moving image.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "Dance_Guiding_Art_Innovation_Framework_Based_on_Video_Action_Recognition_Technology.pdf",
+        "page": 3,
+        "supporting_quote": "The new dance art vocational education implements a project-oriented teaching method, which is a successful attempt of Shanxi Vocational Art College... Teachers have changed from traditional 'protagonists' to 'supporting roles'. Students no longer regard training and technical skills as boring learning tasks, but learn according to project requirements",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: updated question to cover potential uses, domain challenges, grayscale trade-off, and separate project-oriented dance teaching (original preserved); explicitly mentions 3D Zernike moments, codebooks, and SVM classifier; removed unsupported claims of deep learning (ST-GCN/3D CNN) and empirical student creativity gains.",
+    "original_question": "Given the challenges in cultivating students' creative ability in dance consciousness, how does the proposed video action recognition technology overcome traditional teaching limitations, and what are the specific algorithmic trade-offs mentioned in the text?",
+    "unsupported_claims": [
+      "Any claim that the paper uses deep learning architectures (such as ST-GCN or 3D CNNs) is unsupported; the method uses 3D Zernike moments, codebooks, and SVM classification.",
+      "Any claim that this technology was empirically measured to increase student creativity or performance is unsupported; the educational model is described separately as a pedagogical practice."
+    ]
+  },
+  {
+    "id": "Q015",
+    "legacy_id": "legacy-015",
+    "question": "How does RAG’s DPR bi-encoder formulate top-k passage retrieval as Maximum Inner Product Search, and how do the authors implement approximate retrieval over 21 million Wikipedia passages?",
+    "ground_truth": "The researchers employed Maximum Inner Product Search (MIPS) using dense vector embeddings because dense neural representations capture semantic relationships, paraphrases, and context that traditional sparse lexical retrieval methods (e.g., TF-IDF or BM25) miss. Furthermore, with millions of document chunks in external knowledge corpora (such as Wikipedia), exhaustive exact search across all document vectors is computationally intractable during both training and inference. MIPS algorithms, implemented with approximate nearest neighbor libraries like FAISS (using hierarchical navigable small world graphs or inverted file indexes), enable sub-linear retrieval time, making end-to-end differentiable retrieval-augmented generation feasible at scale.",
+    "contexts": [
+      "top-k(pη(·|x)), the list of k documents z with highest prior probability pη(z|x), is a Maximum Inner Product Search (MIPS) problem, which can be approximately solved in sub-linear time [23]. We use ... embedding for each document, and build a single MIPS index using FAISS [23] with a Hierarchical Navigable Small World (HNSW) index."
+    ],
+    "answerable": true,
+    "reference_answer": "In Lewis et al. (2020, Pages 3–4, 7), RAG formulates passage retrieval and index implementation as follows:\n1. DPR Bi-Encoder Formulation as MIPS (Page 3): The retrieval component $p_\\eta(z|x)$ is based on Dense Passage Retrieval (DPR) using a bi-encoder architecture, where the passage prior probability is proportional to the inner product exponent:\n$$p_\\eta(z|x) \\propto \\exp(d(z)^\\top q(x))$$\nwith $d(z) = \\text{BERT}_d(z)$ (dense document representation) and $q(x) = \\text{BERT}_q(x)$ (query representation). Calculating $\\text{top-}k(p_\\eta(\\cdot|x))$, the list of $k$ passages with highest prior probability, is formally defined as a Maximum Inner Product Search (MIPS) problem.\n2. Approximate Retrieval over 21M Passages (Pages 3–4): Because MIPS can be solved approximately in sub-linear time, the authors split the December 2018 Wikipedia dump into 21 million disjoint 100-word chunks and compute an embedding for each document. They build a single MIPS index using FAISS with a Hierarchical Navigable Small World (HNSW) approximation for fast retrieval.\n3. Comparison with BM25 (Page 7): In the paper's retrieval ablation (Section 4.5, Table 6), the learned dense retriever outperforms a fixed BM25 retriever on open-domain QA and generation tasks; however, BM25 performs best on the FEVER fact-verification task, where claims are heavily entity-centric and well suited to word-overlap retrieval.",
+    "required_claims": [
+      "The DPR bi-encoder defines the retrieval prior probability as proportional to the inner product exponent: $p_\\eta(z|x) \\propto \\exp(d(z)^\\top q(x))$, making top-$k$ selection a Maximum Inner Product Search (MIPS) problem (Page 3).",
+      "Approximate MIPS can be solved in sub-linear time, and the authors implement retrieval over 21 million Wikipedia passages using FAISS with a Hierarchical Navigable Small World (HNSW) approximation (Pages 3–4).",
+      "In retrieval ablations, the dense retriever outperforms BM25 on open-domain QA, but BM25 performs best on the entity-centric FEVER fact verification task (Page 7, Table 6)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "2005.11401v4.pdf",
+        "page": 3,
+        "supporting_quote": "The retrieval component pη(z|x) is based on DPR [26]. DPR follows a bi-encoder architecture: pη(z|x) ∝ exp(d(z)⊤ q(x))... Calculating top-k(pη(·|x)), the list of k documents z with highest prior probability pη(z|x), is a Maximum Inner Product Search (MIPS) problem, which can be approximately solved in sub-linear time [23].",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "2005.11401v4.pdf",
+        "page": 4,
+        "supporting_quote": "Each Wikipedia article is split into disjoint 100-word chunks, to make a total of 21M documents. We use the document encoder to compute an embedding for each document, and build a single MIPS index using FAISS [23] with a Hierarchical Navigable Small World approximation for fast retrieval [37].",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "2005.11401v4.pdf",
+        "page": 7,
+        "supporting_quote": "We compare RAG’s dense retriever to a word overlap-based BM25 retriever [53]... For FEVER, BM25 performs best, perhaps since FEVER claims are heavily entity-centric and thus well-suited for word overlap-based retrieval. Differentiable retrieval improves results on all other tasks, especially for Open-Domain QA",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: updated question to exact DPR bi-encoder MIPS formulation and 21M Wikipedia passage implementation (original preserved); specifies p_eta(z|x) is proportional to exp(d(z)^T q(x)); states approximate MIPS is solved in sub-linear time via FAISS HNSW; removed claims of intractable exhaustive search and categorical superiority over sparse search; cites Page 7 retrieval ablation showing dense retriever outperforms BM25 on QA but BM25 performs best on FEVER.",
+    "cross_paper_relevance": "Unique RAG foundational paper in papers/.",
+    "original_question": "Why did the researchers opt to perform Maximum Inner Product Search (MIPS) with document embeddings to solve the top-k document retrieval problem, rather than relying on standard sparse retrieval or exhaustive search?",
+    "unsupported_claims": [
+      "Any claim that dense retrieval categorically outperforms sparse retrieval across all tasks is refuted by Page 7 Table 6, where BM25 achieves higher accuracy on FEVER.",
+      "Any claim that exhaustive search is computationally intractable is an extrapolation removed in favor of the paper's exact statement that MIPS is solved approximately in sub-linear time with FAISS HNSW."
+    ]
+  },
+  {
+    "id": "Q016",
+    "legacy_id": "legacy-016",
+    "question": "Why do the authors model CCMV at pH 5 and pH 7 to examine capsid swelling, while examining HAV charge distribution and capacitance spectra across different pH values?",
+    "ground_truth": "The analysis of CCMV explores a broader range of pH conditions and structural swelling because Cowpea Chlorotic Mottle Virus (CCMV) exhibits well-characterized, reversible pH-dependent conformational changes: it remains in a compact, stable native capsid at pH 5 (low ionic strength), but undergoes reversible swelling and pore formation at neutral pH 7, allowing ion exchange into its interior. In contrast, Hepatitis A Virus (HAV) is an exceptionally robust human picornavirus designed to survive gastrointestinal environments, remaining structurally stable across extreme acidic conditions down to pH 2 and temperatures up to 80°C without displaying the reversible capsid expansion observed in CCMV. Investigating swelling in CCMV enables researchers to evaluate how capsid conformational expansion and porosity alter nanoelectrode impedance spectroscopy signals, whereas HAV is tested primarily for stability across harsh physiological extremes.",
+    "contexts": [
+      "The first virus we consider is the Cowpea Chlorotic Mottle Virus (CCMV)... The CCMV native form is stable for pH values between 3 and 6 and ionic strengths lower than 100 mM. Increasing the pH level results in an increase of the virus size (swollen state) [29], along with the formation of openings in the capsid’s structure which allow the exchange of ions between the inner core of the virus and the outer electrolyte... Finally, we analyze the Hepatitis A virus (HAV)... HAV remains stable up to 80 degrees and at pH levels down to 2."
+    ],
+    "answerable": true,
+    "reference_answer": "In Cossettini and Selmi (2018), the authors model CCMV and HAV under different pH conditions based on their biological characteristics and the phenomena under study:\n1. CCMV Modeling at pH 5 and pH 7 (Pages 2, 5–6): In the setup on Page 2, the authors note that the native form of Cowpea Chlorotic Mottle Virus (CCMV) is stable at pH 3–6 (ionic strength <100 mM), whereas increasing pH results in an increase in virus size (swollen state) and the formation of capsid openings allowing ion exchange with the electrolyte. In the simulation results (Pages 5–6), CCMV is first modeled in its native state at pH 5, and then modeled at pH 7 using two intermediate swollen models ('Swollen Form Model 1' and 'Swollen Form Model 2', Table I). The paper reports that swelling-related changes in capsid volume and charge affect the capacitance variation spectra (ΔC_eff); volume mainly explains the high-frequency response, while charge contributes strongly at low frequency (Page 6). While the paper describes openings in the capsid structure that permit ion exchange between the inner core and the electrolyte (Page 2), permeability is not presented as an experimentally isolated cause of the spectral change.\n2. HAV Modeling Across pH Values (Pages 2, 6–7): In contrast, Hepatitis A Virus (HAV) remains stable down to pH 2 (Page 2). This paper does not model an HAV swelling transition. Instead, the authors inspect HAV complete and empty capsids across varying pH levels (Page 6). HAV complete capsid charge distributions are specifically shown at pH 3, pH 5, and pH 7 (Fig. 9, Page 6), showing that the charge distribution becomes progressively more positive as pH decreases. Capacitance spectra are evaluated across pH values (Fig. 10, Pages 6–7) to examine how these electrostatic charge variations modulate impedance measurements under physiological salt concentration.",
+    "required_claims": [
+      "CCMV's native state is modeled at pH 5 and swollen states are modeled at pH 7 (using Swollen Form Models 1 and 2); swelling-related changes in capsid volume and charge affect ΔC_eff, with volume mainly explaining the high-frequency response and charge contributing strongly at low frequency, while capsid openings permitting ion exchange are described without presenting permeability as an isolated cause (Pages 2, 5–6).",
+      "HAV charge distributions are analyzed at pH 3, pH 5, and pH 7 (Figure 9), with the capsid becoming more positive at lower pH (Pages 2, 6).",
+      "HAV capacitance spectra are evaluated across different pH values (Figure 10) to determine how pH-induced charge variation affects electrical impedance response, while the paper does not model an HAV swelling transition (Pages 6–7)."
+    ],
+    "question_type": "comparison",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+        "page": 2,
+        "supporting_quote": "The CCMV native form is stable for pH values between 3 and 6 and ionic strengths lower than 100 mM. Increasing the pH level results in an increase of the virus size (swollen state) [29], along with the formation of openings in the capsid’s structure which allow the exchange of ions between the inner core of the virus and the outer electrolyte... As in [18], we will first consider a pH of 5... Then, we will also consider a higher pH value (7), taking into account the swelling process of the capsid [30]... HAV remains stable up to 80 degrees and at pH levels down to 2. Thus, we will inspect its structure and capacitance spectra at different pH levels, for a physiological salt concentration electrolyte.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+        "page": 5,
+        "supporting_quote": "A pathway for the pH-induced swelling process of the CCMV is described in [30]... to characterize the progressive change of the structure the models of two intermediate states ('Swollen Form Model 1' and 'Swollen Form Model 2') can be obtained from [20]. We analyze these models assuming pH = 7.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+        "page": 6,
+        "supporting_quote": "HAV remains stable down to pH = 2. Hence, we investigate the charge distribution and the capacitance spectra at different pH levels... Top: HAV complete capsid charge distributions at pH = 3, pH = 5, pH = 7. Bottom: HAV capsid charge values (QIN, QBODY, QOUT) as extracted with the described methodology at different pH levels.",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+        "page": 7,
+        "supporting_quote": "Top: ΔCeff spectra of HAV capsid and full virus, considering the two models for the capsid. The analyte is located 0.5 nm from the BSA surface. The electrolyte is NaCl 150 mM. Bottom: low frequency capacitance variation for varying pH.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: removed temperature mentions; states swelling-related changes in capsid volume and charge affect ΔCeff (volume mainly explains high-frequency response, charge contributes strongly at low frequency; Page 6); separately notes openings permit ion exchange (Page 2) without presenting permeability as an experimentally isolated cause; contrasts with HAV charge distributions across pH values without modeling an HAV swelling transition.",
+    "original_question": "Given the experimental conditions described for CCMV and HAV, why does the analysis of CCMV explore a broader range of pH values and swelling processes compared to HAV?",
+    "unsupported_claims": [
+      "Any claim that HAV undergoes structural swelling or that this paper models an HAV swelling transition is unsupported; the paper does not model swelling for HAV.",
+      "Characterizing HAV as an 'enterovirus' or claiming a 'broader pH range' was tested for CCMV vs HAV is unsupported by the text."
+    ]
+  },
+  {
+    "id": "Q017",
+    "legacy_id": "legacy-017",
+    "question": "In the paper’s nanoelectrode simulations, what sensitivity is estimated for detecting a single CCMV and distinguishing a full CCMV from an empty capsid, and how do analyte volume and charge affect capacitance response at high and low frequencies across the studied viruses?",
+    "ground_truth": "Nanoelectrode array sensitivity is critical because small viruses like CCMV (~24 nm) and HAV (~27 nm) displace minute amounts of electrolyte and carry modest net surface charges, producing capacitance changes of less than 0.1 aF (attofarad, 10^-19 F) down to ~10 zF (zeptofarad, 10^-20 F). In high-frequency impedance spectroscopy (HFIS), virus volume and charge dominate different spectral regimes: at high frequencies (f > 100 MHz), the effective capacitance change (ΔCeff) is strictly proportional to the total excluded volume of the virus (including core electrolyte), irrespective of charge; at low frequencies, the response is governed primarily by the net electrical charge distribution of the capsid and RNA. Consequently, detecting single virions and discriminating empty capsids from full genome-containing viruses requires sub-attofarad instrumentation capable of resolving both volume-dependent high-frequency shifts and charge-dependent low-frequency variations.",
+    "contexts": [
+      "one virus requires 0.1 aF sensitivity and resolution... sensitivity should be improved to ≈10 zF to discriminate between empty capsids and full viruses.\n... The response at high-frequency is precisely proportional to the total volume of the analyte including the electrolyte in the core [13], as shown in Fig. 11, regardless of the particle charge state. Deviation would be expected if the analyte were too close to the electrode... At low frequency, instead, there is no simple functional dependence to the volume. This is because the capacitance change is largely driven by the analyte charge... The best detection conditions (maximizing |ΔCeff|) are found increasing the detection frequency above 100 MHz where ΔCeff has a peak response."
+    ],
+    "answerable": true,
+    "reference_answer": "In Cossettini and Selmi (2018), the authors model the electrical impedance response of nanoelectrode arrays to nanoscale viruses:\n1. Sensitivity Estimates for CCMV (Page 5): In the preliminary CCMV simulation analysis (conducted in a 150 mM NaCl electrolyte with an analyte positioned 1 nm from the BSA surface, as inherited from Figure 4), detecting a single virus requires approximately 0.1 aF (10^-19 F) sensitivity and resolution. Distinguishing an empty CCMV capsid from a full, RNA-containing virus requires approximately 10 zF (10^-20 F) sensitivity and resolution, because the difference in capacitance change (ΔC_eff) between them is reduced to only ≈50 zF at 50 MHz. (The authors note that 0.1 aF sensitivity had previously been demonstrated in prior experimental literature [51], but only up to 1 MHz; these specific numerical detection thresholds are derived for the preliminary CCMV analysis and were not independently measured for HAV).\n2. Frequency-Dependent Effects of Volume and Charge (Pages 6–7): Across the studied viruses, the physical characteristics governing the effective capacitance variation (ΔC_eff) divide by frequency regime:\n   - High-Frequency Limit: At high frequencies, the capacitance response |ΔC_eff| is governed by analyte volume, being precisely proportional to total volume Ω (including core electrolyte) at the high-frequency limit (Fig. 11), independent of particle charge state.\n   - Low-Frequency Regime: At low frequencies, there is no simple volume dependence; the capacitance shift is largely driven by the analyte's electrostatic charge distribution.\n3. Modeled Optimum Detection Conditions (Page 7): For a 150 mM NaCl physiological electrolyte, the modeled peak response (maximizing |ΔC_eff|) occurs around and above 100 MHz for all studied viruses, governed by the electrolyte relaxation frequency, Debye length, and electric field, contrasting with prior physical demonstrations limited to ≤ 1 MHz.",
+    "required_claims": [
+      "In preliminary CCMV simulations (150 mM NaCl electrolyte, 1 nm from the BSA surface, as inherited from Figure 4), detecting a single virus requires ≈0.1 aF sensitivity and discriminating an empty capsid from a full virus requires ≈10 zF; these thresholds are not independently measured for HAV (Page 5).",
+      "Prior experimental literature demonstrated 0.1 aF sensitivity only up to 1 MHz, whereas the paper's modeled peak detection sensitivity occurs around/above 100 MHz in 150 mM NaCl (Pages 5, 7).",
+      "At the high-frequency limit, the capacitance response is governed by total analyte volume (independent of charge), whereas the low-frequency response is largely driven by analyte electrostatic charge distribution (Pages 6–7)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+        "page": 5,
+        "supporting_quote": "These preliminary results suggest that while detection of one virus requires 0.1 aF sensitivity and resolution (a value demonstrated in [51] but only up to 1 MHz), discriminating the virus from the capsid requires approximately 10 zF sensitivity and resolution... In Fig. 5, we make this comparison using a 150 mM NaCl electrolyte. The corresponding change of ΔCeff between the empty capsid and full virus is reduced to only ≈50 zF at 50 MHz",
+        "relevance_grade": 2
+      },
+      {
+        "source_filename": "On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy_Measures_to_Plant_Animal_and_Human_Viruses.pdf",
+        "page": 7,
+        "supporting_quote": "The response at high-frequency is precisely proportional to the total volume Ω of the analyte including the electrolyte in the core [13], as shown in Fig. 11, regardless of the particle charge state... At low frequency, instead, there is no simple functional dependence to the volume. This is because the capacitance change is largely driven by the analyte charge... The best detection conditions (maximizing |ΔCeff|) are found increasing the detection frequency above 100 MHz where ΔCeff has a peak response.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: updated question (legacy preserved); specifies sensitivity estimates for CCMV (≈0.1 aF for detection, ≈10 zF for capsid/full-virus discrimination in 150 mM NaCl at 1 nm from BSA surface, inherited from Figure 4); qualifies that these are preliminary CCMV estimates rather than independently measured HAV thresholds; distinguishes modeled peak response around/above 100 MHz from prior demonstration up to 1 MHz; notes high-frequency limit is governed by volume and low-frequency largely by charge.",
+    "unsupported_claims": [
+      "Any claim that 0.1 aF and 10 zF thresholds were independently measured or simulated for HAV is unsupported; they are derived from the preliminary CCMV analysis on Page 5.",
+      "Any claim that capacitance is strictly proportional to volume across all frequencies above 100 MHz is an overstatement; proportionality holds at the high-frequency limit.",
+      "Specific diameter numbers for HAV (such as ~27 nm) are not provided in the paper text and have been removed."
+    ],
+    "cross_paper_relevance": "Specific to On_the_Response_of_Nanoelectrode_Impedance_Spectroscopy...pdf.",
+    "original_question": "Considering the studies on electrostatic interactions in viruses [46], effective capacitance models [39], and small virus detection [43], explain why the sensitivity of the nanoelectrode array is critical for detecting small viruses like CCMV and HAV. How do the charge and volume of these viruses influence the required detection limits in high-frequency impedance spectroscopy?"
+  },
+  {
+    "id": "Q018",
+    "legacy_id": "legacy-018",
+    "question": "According to Section 13, what does Reynolds’s criterion DU_m/μ = K indicate about the conditions under which finite-period eddies can be maintained, and what does he infer about the discriminative cause affecting mean-motions and heat-motions?",
+    "ground_truth": "Reynolds argues that properties of matter cannot be confined to producing heat-motions alone because fluid resistance varying with higher powers of velocity generates and maintains eddying motion. In this distinction, mean-motion represents motion with infinite periods (macroscopic steady flow), whereas relative-motion represents eddying motion with finite periods (turbulent fluctuations). The fact that eddying motion is continually maintained despite ongoing dissipation into heat proves that a general physical action transforms energy from mean-motion (infinite periods) directly into relative-motion (finite periods). If energy transformation were confined solely to heat-motions, sustained macroscopic eddies could not persist.",
+    "contexts": [
+      "We have thus direct evidence that properties of matter which determine the cause \nof transformation, produce general and important effects which are not confined to the \nheat-motions... energy of mean-mean-motion with infinite periods is directly transformed to the energy of relative-mean-motion, with finite periods, represented by the eddying motion, which renders the general mean-motion sinuous, by which transformation the state of eddying-motion is maintained, notwithstanding the continual transformation of its energy into heat-motions."
+    ],
+    "answerable": true,
+    "reference_answer": "In the second half of Section 13 (Page 17) of the 1895 paper, Reynolds addresses the maintenance of eddies and the inferred discriminative cause:\n1. Maintenance of Finite-Period Eddies (Page 17): Experimental demonstrations (from colour bands and the law of resistances) show that relative-mean-motion in the form of eddies of finite periods cannot be maintained except under circumstances governed by conditions that determine superior limits to the velocity of the mean-mean-motion (of infinite periods) and the periods of the relative-mean-motion, as defined in the criterion DU_m/μ = K. (Section 13 does not define or physically interpret the individual variables D, U_m, or μ in this passage).\n2. Inferred Discriminative Cause (Page 17): Reynolds infers that this criterion provides direct experimental proof of the existence of a 'discriminative cause'. This discriminative cause prevents the maintenance of periodic mean-motion except when its periods are greatly in excess of the periods of heat-motions.\n3. Properties Affecting Both Mean-Motions and Heat-Motions (Page 17): Reynolds further concludes that this discriminative cause does not depend solely on properties of matter restricted to heat-motions, but rather on properties of matter that affect macroscopic mean-motions as well as microscopic heat-motions.",
+    "required_claims": [
+      "According to Section 13, eddies of finite periods (relative-mean-motion) cannot be maintained except under conditions defining superior limits to the velocity of mean-mean-motion (infinite periods) and the periods of relative-mean-motion, as defined in the criterion DU_m/μ = K (Page 17).",
+      "Section 13 uses the criterion DU_m/μ = K without supplying physical interpretations of D, U_m, or μ within that passage (Page 17).",
+      "Reynolds infers direct experimental proof of a 'discriminative cause' that prevents the maintenance of periodic mean-motion except with periods greatly in excess of the periods of heat-motions (Page 17).",
+      "Reynolds concludes that this discriminative cause depends on properties of matter that affect mean-motions as well as heat-motions (Page 17)."
+    ],
+    "question_type": "method",
+    "split": "development",
+    "human_verified": true,
+    "relevant_evidence": [
+      {
+        "source_filename": "rsta.1895.0004.pdf",
+        "page": 17,
+        "supporting_quote": "In the same way, the experimental demonstration I was able to obtain, that relative-mean-motion in the form of eddies of finite periods, both as shown by colour bands and as shown by the law of resistances, cannot be maintained except under circumstances depending on the conditions which determine the superior limits to the velocity of the mean-mean-motion, of infinite periods, and the periods of the relative-mean-motion, as defined in the criterion DU_m/μ = K, is not only a direct experimental proof of the existence of a discriminative cause which prevents the maintenance of periodic mean-motion except with periods greatly in excess of the periods of the heat-motions, but also indicates that the discriminative cause depends on properties of matter which affect the mean-motions as well as the heat-motions.",
+        "relevance_grade": 2
+      }
+    ],
+    "judged_nonrelevant_papers": [],
+    "reviewer": "Qusai (human review)",
+    "review_date": "2026-10-20",
+    "review_status": "approved",
+    "review_notes": "Approved by human reviewer: revised active question (original preserved for traceability); reference answer focuses strictly on the second half of Section 13 (Page 17) regarding Reynolds's criterion DU_m/μ = K, superior limits on velocity and finite-period eddies, and the inferred discriminative cause affecting mean-motions and heat-motions; does not repeat Q001's colour-band energy transformation answer; avoids asserting physical interpretations of D, U_m, or μ not supplied in Section 13.",
+    "original_question": "How does the author argue that the properties governing heat-motions necessitate the existence of a general action transforming energy from mean-motion to relative-motion, and what role do finite and infinite periods play in this distinction?",
+    "unsupported_claims": [
+      "Any claim providing physical definitions of D, U_m, or μ (such as pipe diameter, mean velocity, or viscosity) based solely on Section 13 is unsupported; Section 13 introduces the criterion symbolically without defining its components in that paragraph.",
+      "Repeating the general colour-band-to-energy-transformation argument from the first half of Section 13 would duplicate Q001."
+    ]
+  }
+]

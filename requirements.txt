@@ -1,0 +1,29 @@
+# ── Core Pipeline ───────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+pydantic>=2.10.0
+python-dotenv>=1.1.0
+python-multipart>=0.0.9
+
+# ── Vector Store & Embeddings ───────────────────────────
+chromadb>=1.0.0
+sentence-transformers>=5.0.0
+
+# ── LLM API (OpenRouter) ────────────────────────────────
+openai>=1.50.0
+
+# ── PDF Parsing ────────────────────────────────────────
+PyMuPDF>=1.25.0
+
+# ── Sparse Search (BM25) ──────────────────────────────
+rank-bm25>=0.2.2
+
+# ── Scientific Computing ──────────────────────────────
+numpy>=2.0.0
+
+# ── Evaluation & Visualization ────────────────────────
+matplotlib>=3.10.0
+seaborn>=0.13.0
+
+# ── Utilities ──────────────────────────────────────────
+requests>=2.32.0

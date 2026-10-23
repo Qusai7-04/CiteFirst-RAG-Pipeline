@@ -1,0 +1,162 @@
+[
+  {
+    "query_id": "Q019",
+    "source_filename": "1406.2661v1.pdf",
+    "page": 4,
+    "passage": "Proposition 1. For G fixed, the optimal discriminator D is D*_G(x) = pdata(x) / (pdata(x) + pg(x))",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p4 (Sec. 4.1); passage = Proposition 1 / Eq. 2, matches the page. Answers the optimal-discriminator part of Q019 (the p_g = p_data global-minimum part is on p5). Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q019",
+    "source_filename": "1512.03385v1.pdf",
+    "page": 1,
+    "passage": "Deep Residual Learning for Image Recognition",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. p1 is the ResNet title/abstract page (matches the passage). Not title-only: full-text scan of all 12 pages found zero 'discriminator'/'generative adversarial'/'adversarial net'/'minimax'. Supplies no Q019 evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  },
+  {
+    "query_id": "Q020",
+    "source_filename": "1412.6980v9.pdf",
+    "page": 2,
+    "passage": "Good default settings for the tested machine learning problems are alpha = 0.001, beta1 = 0.9, beta2 = 0.999 and epsilon = 10^-8.",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p2 (Algorithm 1); passage gives all four defaults (alpha=0.001, beta1=0.9, beta2=0.999, epsilon=10^-8) and matches the page. Answers the defaults part of Q020 (the bias-cause part is on p3). Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q020",
+    "source_filename": "1406.2661v1.pdf",
+    "page": 1,
+    "passage": "Generative Adversarial Nets",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. p1 is the GAN title page (matches the passage). Not title-only: full-text scan of all 9 pages found zero 'adam'/'beta1'/'beta2'/'moment estimate'. Supplies no Q020 evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  },
+  {
+    "query_id": "Q021",
+    "source_filename": "1512.03385v1.pdf",
+    "page": 2,
+    "passage": "Formally, denoting the desired underlying mapping as H(x), we let the stacked nonlinear layers fit another mapping of F(x) := H(x)-x.",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p2 (Sec. 3.1); passage = residual mapping F(x):=H(x)-x, matches the page. Answers the mapping-formulation part of Q021 (the 'identity shortcuts add no parameters/complexity' part is on p3). Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q021",
+    "source_filename": "1412.6980v9.pdf",
+    "page": 1,
+    "passage": "Adam: A Method for Stochastic Optimization",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. p1 is the Adam title page (matches the passage). Not title-only: full-text scan of all 15 pages found zero 'residual'/'shortcut'/'resnet'/'identity mapping'. Supplies no Q021 evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  },
+  {
+    "query_id": "Q022",
+    "source_filename": "2401.15884v3.pdf",
+    "page": 5,
+    "passage": "Based on the aforementioned confidence score for each retrieved document, three types of actions are designed and triggered accordingly where the upper and lower thresholds are set.",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p5 (Sec. 4.3 Action Trigger + Algorithm 1); passage states the three threshold-triggered actions and the same page names Correct/Incorrect/Ambiguous and the processing under each. Matches the page. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q022",
+    "source_filename": "2005.11401v4.pdf",
+    "page": 1,
+    "passage": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. p1 is the base-RAG title page (matches the passage). Not title-only: full-text scan of all 19 pages found zero 'corrective'/'confidence score'/'threshold'/'ambiguous'/'crag'. Supplies no Q022 evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  },
+  {
+    "query_id": "Q023",
+    "source_filename": "945445.945450.pdf",
+    "page": 4,
+    "passage": "Chunk size is 64 MB, which is much larger than typical file system block sizes. Each chunk replica is stored as a plain Linux file on a chunkserver and is extended only as needed. Lazy space allocation avoids wasting space due to internal fragmentation, perhaps the greatest objection against such a large chunk size.",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p4 (Sec. 2.5 Chunk Size); passage is a light compression of the page (not a verbatim quote) but substantively accurate and answers all three components (64 MB, replicas as plain Linux files extended as needed, lazy space allocation). Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q023",
+    "source_filename": "1294261.1294281.pdf",
+    "page": 1,
+    "passage": "Dynamo: Amazon's Highly Available Key-Value Store",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. Page 1 is Dynamo: Amazon's Highly Available Key-Value Store (DOI 10.1145/1294261.1294281), NOT 'The Tail at Scale' (0 occurrences in the PDF) - the original passage was mislabeled. Not title-only: full-text scan found no 'chunk size'/'64 MB'/'lazy space' (GFS only a related-work citation on p5). Supplies no Q023 evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  },
+  {
+    "query_id": "Q024",
+    "source_filename": "2310.11511v1.pdf",
+    "page": 4,
+    "passage": "Table 1: Definitions of reflection tokens... Retrieve: Decides when to retrieve with R... ISREL: d provides useful information to solve x... ISSUP: whether y is supported by d... ISUSE: overall usefulness",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p4; Table 1 defines the four reflection tokens (Retrieve, IsRel, IsSup, IsUse) with roles and Algorithm 1 shows their use. Matches the page. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q024",
+    "source_filename": "2401.15884v3.pdf",
+    "page": 1,
+    "passage": "Corrective Retrieval Augmented Generation",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. p1 is the CRAG title page (matches the passage). Not title-only: CRAG mentions Self-RAG/'reflection tokens' only in passing (pp. 2,4,7,8) and never defines Retrieve/IsRel/IsSup/IsUse or their roles. Supplies no Q024 token-definition evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  },
+  {
+    "query_id": "Q025",
+    "source_filename": "AMA_AdaptiveMemoryviaMultiAgentCollaboration_compressed.pdf",
+    "page": 3,
+    "passage": "Figure 2: Overview of the AMA framework. The system orchestrates four agents to enable adaptive memory evolution. The Retriever routes inputs to optimal granularities based on intent. The Judge audits content relevance to trigger feedback loops and detects conflicts. The Refresher executes updates or deletions to rectify these inconsistencies. Finally, the Constructor synthesizes the validated context into structured memory entries.",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p3; Figure 2 caption names the four orchestrating agents (Retriever, Judge, Refresher, Constructor) and their roles. Matches physical page 3. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q025",
+    "source_filename": "1406.2661v1.pdf",
+    "page": 1,
+    "passage": "Generative Adversarial Nets",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. p1 is the GAN title page (matches the passage). Not title-only: full-text scan of all 9 pages found zero 'memory'/'multi-agent'/'agent collaboration'/'adaptive memory'. Supplies no Q025 evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  },
+  {
+    "query_id": "Q026",
+    "source_filename": "2603.25600v1.pdf",
+    "page": 1,
+    "passage": "We propose a novel method for evaluating the CGM mass using resonant scattering of the helium-like oxygen (OVII) resonant line at E = 574 eV.",
+    "judgment": "relevant",
+    "reviewer": "Qusai",
+    "reason": "Relevant. Opened physical p1 (abstract); passage gives the OVII (helium-like oxygen) resonant line and transition energy E = 574 eV for CGM-mass evaluation. Matches the page. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "relevant"
+  },
+  {
+    "query_id": "Q026",
+    "source_filename": "1807.06209v4.pdf",
+    "page": 1,
+    "passage": "Planck 2018 results. VI. Cosmological parameters",
+    "judgment": "nonrelevant",
+    "reviewer": "Qusai",
+    "reason": "Nonrelevant. p1 is the Planck cosmological-parameters title page (matches the passage). Not title-only: full-text scan of all 73 pages found zero 'OVII'/'circumgalactic'/'CGM'/'resonant scattering'/'574 eV'/'helium-like oxygen'. Supplies no Q026 evidence. Signed by reviewer Qusai on 2026-10-21.",
+    "proposed_judgment": "nonrelevant"
+  }
+]

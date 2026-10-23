@@ -1,0 +1,94 @@
+{
+  "manifest_version": "1.1.0",
+  "date_created": "2026-10-19T19:18:27.453426Z",
+  "code_commit": "50e182c4197f3eeb3f1203942424683c2cd7c60b",
+  "canonical_phase4_dataset": {
+    "path": "docs/evaluation/phase4_questions.json",
+    "records": 26,
+    "sha256": "a9effa8fab40b3b2c3cf8a255f94395de84f24a9610b7fe46965b0392d0de25a",
+    "partitions": {"development": 22, "disclosed_pilot": 4}
+  },
+  "reviewed_dataset": {
+    "path": "reviewed_dataset.json",
+    "records": 18,
+    "sha256": "395b11567576562e5528c52801f0c8da79f86cbd66fc8e7ec0e1dad8ea847487"
+  },
+  "historical_datasets": {
+    "golden_dataset": {
+      "archived_location": "private_archive/golden_dataset.json",
+      "records": 18,
+      "sha256": "5ee6866f05beba02edbe04321543d5a6aa9d30dbfaba0fecc219d9c6328754ab",
+      "note": "Unverified synthetic Phase 1 draft; superseded by human-reviewed dataset."
+    },
+    "reviewed_draft_dataset": {
+      "note": "Consolidated into reviewed_dataset.json (confirmed byte-identical)."
+    }
+  },
+  "corpus_manifest": {
+    "directory": "papers",
+    "pdf_count": 66,
+    "sorted_manifest_sha256": "4035c42aeb626527ef714fd3105fdab3157a095bae64f782d84add65558e2583"
+  },
+  "vector_index": {
+    "evaluation_index": {
+      "location": "./vector_vault_eval",
+      "status": "populated",
+      "collections": {
+        "ieee_papers": 7816,
+        "ieee_papers_parent": 2418
+      },
+      "derived_index_tag": "vault-eval-c7816-p2418-sha256-4035c42aeb62",
+      "bm25_cached": true,
+      "bm25_corpus_sha256": "974089122253ea1eddcd4afca224aa6f5a15487be8f4f13f0ba478e2d90c6846"
+    },
+    "preserved_default_vault": {
+      "location": "./vector_vault",
+      "status": "preserved_empty_zero_chunks",
+      "collections": {
+        "ieee_papers": 0,
+        "ieee_papers_parent": 0
+      }
+    }
+  },
+  "embedding_configuration": {
+    "model_identifier": "BAAI/bge-small-en-v1.5",
+    "dimensions": 384,
+    "child_chunk_words": 100,
+    "child_overlap_words": 20,
+    "parent_chunk_words": 350,
+    "parent_overlap_words": 75,
+    "query_prefix": "Represent this sentence for searching relevant passages: "
+  },
+  "retrieval_configuration": {
+    "settings": {
+      "FETCH_K": 30,
+      "PROCESS_K": 10,
+      "CHUNK_WORD_LIMIT": 300,
+      "CORRECT_THRESHOLD": 0.55,
+      "AMBIGUOUS_THRESHOLD": 0.25,
+      "BENDY_THRESHOLD": 0.1,
+      "MAX_VERIFIED_CHUNKS": 2,
+      "SOFTMAX_MASS_CUTOFF": 0.9,
+      "DISTANCE_THRESHOLD": 0.7,
+      "TOTAL_DOCS": 60
+    },
+    "config_sha256": "da7f4b49f6b70b3482753755dbc0cea1984c75ca757bdfb3810fcb9c10f4aeae",
+    "bm25_available": true,
+    "bm25_cached": true
+  },
+  "fingerprinting_limits": {
+    "automatically_fingerprinted": [
+      "repository code git commit SHA",
+      "evaluation and golden dataset file contents (SHA-256)",
+      "corpus PDF file contents and sorted manifest (SHA-256)",
+      "BM25 tokenized corpus cache (SHA-256)",
+      "retrieval configuration dictionary (SHA-256)",
+      "Chroma collection names and exact record counts"
+    ],
+    "not_automatically_fingerprinted": [
+      "HuggingFace model weight binaries (downloaded dynamically or cached locally without cryptographic pin)",
+      "Chroma SQLite internal B-tree file structure (varies with SQLite page allocations, journal modes, and timestamps across platforms)"
+    ],
+    "cryptographic_boundaries_note": "A tag hashing only the PDF files (e.g. vault-sha256-4035c42aeb62) cryptographically proves the raw input corpus, but does not confirm that the vector vault has been populated or verify its contents. Raw SQLite .sqlite3 files cannot be uniquely fingerprinted by cryptographic hash because SQLite binary layouts contain volatile transaction headers, allocation free-lists, and platform-dependent timestamps. Reproducibility is therefore established by cryptographically binding: (1) corpus PDF manifest SHA-256, (2) deterministic chunking and collection record counts, (3) BM25 corpus cache SHA-256, (4) retrieval config SHA-256, and (5) code commit."
+  }
+}

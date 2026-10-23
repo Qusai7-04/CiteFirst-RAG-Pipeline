@@ -1,0 +1,48 @@
+# ── Python & Environment ────────────────────────────────
+.env
+!.env.example
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# ── Vector DB & Local Storage ───────────────────────────
+chroma_db/
+vector_vault/
+vector_vault*/
+papers/
+*.pdf
+*.sqlite3
+vault.db
+*.db
+
+# ── Sparse Search Cache ─────────────────────────────────
+bm25_corpus.json
+
+# ── Evaluation & Generated Outputs ──────────────────────
+evaluation_results/
+artifacts/*
+!artifacts/.gitkeep
+confusion_matrix_*.png
+metrics_chart_*.png
+VALIDATION_LOG.txt
+MANIFEST.txt
+*.patch
+
+# ── IDE & Operating System ──────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.pem
+
+# ── Agent scratch & prompt files ────────────────────────
+.agents/
+.claude/
+CLAUDE.md
+*PROMPT*
+scratch/
+*.zip

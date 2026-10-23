@@ -1,0 +1,70 @@
+[
+  {
+    "id": "CORR-001",
+    "query": "What default values for beta_1, beta_2, and epsilon does the Adam paper recommend?",
+    "category": "relevant",
+    "gold_decision": "relevant",
+    "proposal_status": "human_verified",
+    "human_verified": true,
+    "reviewer": "Qusai (signed 2026-10-21)",
+    "rationale": "Verified relevant by reviewer Qusai (signed 2026-10-21). Judged strictly on the supplied physical page 2 passage (Algorithm 1). The passage directly provides all three requested default settings (beta_1 = 0.9, beta_2 = 0.999, epsilon = 10^-8) without ambiguity. Confirms former AI proposal ('relevant').",
+    "passages": [
+      {
+        "source_filename": "1412.6980v9.pdf",
+        "page": 2,
+        "text": "Good default settings for the tested machine learning problems are alpha = 0.001, beta1 = 0.9, beta2 = 0.999 and epsilon = 10^-8."
+      }
+    ]
+  },
+  {
+    "id": "CORR-002",
+    "query": "What hyperparameters are recommended for Adam, and why is the initialization bias correction step necessary?",
+    "category": "partially_relevant",
+    "gold_decision": "partially_relevant",
+    "proposal_status": "human_verified",
+    "human_verified": true,
+    "reviewer": "Qusai (signed 2026-10-21)",
+    "rationale": "Verified partially_relevant by reviewer Qusai (signed 2026-10-21). Judged strictly on the single supplied physical page 2 passage. The exact supplied passage contains only Adam's recommended default hyperparameter values; it does not contain the bias-corrected update formulas (which appear elsewhere in Algorithm 1 on physical page 2) or the explanation of why zero initialization causes early bias (which appears in Section 3 on physical page 3). For this compound question, only the default hyperparameter half is answered by the supplied passage. Confirms signed decision ('partially_relevant'). (Post-sign-off description correction: distinguished single supplied passage from other content elsewhere in the Adam PDF; signed decision preserved unchanged).",
+    "passages": [
+      {
+        "source_filename": "1412.6980v9.pdf",
+        "page": 2,
+        "text": "Good default settings for the tested machine learning problems are alpha = 0.001, beta1 = 0.9, beta2 = 0.999 and epsilon = 10^-8."
+      }
+    ]
+  },
+  {
+    "id": "CORR-003",
+    "query": "What residual mapping formulation did He et al. propose in deep residual learning?",
+    "category": "irrelevant",
+    "gold_decision": "irrelevant",
+    "proposal_status": "human_verified",
+    "human_verified": true,
+    "reviewer": "Qusai (signed 2026-10-21)",
+    "rationale": "Verified irrelevant by reviewer Qusai (signed 2026-10-21). Passage defines Multi-Head attention from 'Attention Is All You Need' and is completely off-topic for ResNet residual mapping F(x):=H(x)-x; signed decision is irrelevant. Page correction: the quoted passage was originally mislabeled as page 3; confirmed against local PDF (papers/1706.03762v7.pdf) that Section 3.2.2 Multi-Head Attention is on physical page 5 (0-indexed page 4), whereas physical page 3 contains Section 3.1 residual connections and Figure 1. Confirms former AI proposal ('irrelevant').",
+    "passages": [
+      {
+        "source_filename": "1706.03762v7.pdf",
+        "page": 5,
+        "text": "Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. MultiHead(Q, K, V) = Concat(head_1, ..., head_h)W^O where head_i = Attention(Q W_i^Q, K W_i^K, V W_i^V)."
+      }
+    ]
+  },
+  {
+    "id": "CORR-004",
+    "query": "What was the exact training runtime in seconds for the 152-layer ResNet on ImageNet?",
+    "category": "insufficient_evidence",
+    "gold_decision": "insufficient_evidence",
+    "proposal_status": "human_verified",
+    "human_verified": true,
+    "reviewer": "Qusai (signed 2026-10-21)",
+    "rationale": "Verified insufficient_evidence by reviewer Qusai (signed 2026-10-21). Judged strictly on the supplied physical page 4 passage (Sec. 3.4 ImageNet implementation: BN placement, weight init, training from scratch). The passage does not contain training runtime in seconds. Evaluated strictly for this passage, evidence is insufficient; this does not establish corpus-wide unanswerability. Confirms former AI proposal ('insufficient_evidence').",
+    "passages": [
+      {
+        "source_filename": "1512.03385v1.pdf",
+        "page": 4,
+        "text": "Our implementation for ImageNet follows the practice in [21, 41]. We adopt batch normalization (BN) right after each convolution and before activation, following [16]. We initialize the weights as in [13] and train all plain/residual nets from scratch."
+      }
+    ]
+  }
+]

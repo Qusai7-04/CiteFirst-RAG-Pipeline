@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phase 4 Human Answer Verdicts Schema",
+  "type": "object",
+  "required": ["$schema", "title", "metadata", "records"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "title": { "type": "string" },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "authoritative_signed_form",
+        "authoritative_signed_form_sha256",
+        "reviewer",
+        "sign_off_date",
+        "total_records",
+        "partitions",
+        "aggregate_summary"
+      ],
+      "properties": {
+        "authoritative_signed_form": { "type": "string" },
+        "authoritative_signed_form_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "reviewer": { "type": "string" },
+        "sign_off_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "total_records": { "type": "integer", "enum": [26] },
+        "partitions": { "type": "object" },
+        "aggregate_summary": { "type": "object" }
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 26,
+      "maxItems": 26,
+      "items": {
+        "type": "object",
+        "required": [
+          "question_id",
+          "partition",
+          "target_paper",
+          "pipeline_route",
+          "route_status",
+          "exact_question",
+          "approved_pages",
+          "pages_checked",
+          "overall_decision",
+          "factual_correctness",
+          "faithfulness",
+          "citation_support",
+          "claim_verdicts",
+          "reviewer",
+          "sign_off_date",
+          "overall_notes",
+          "signed_form_sha256"
+        ],
+        "properties": {
+          "question_id": { "type": "string", "pattern": "^Q0(0[1-9]|1[0-9]|2[0-6])$" },
+          "partition": { "type": "string", "enum": ["development", "disclosed_pilot"] },
+          "sub_partition": { "type": "string" },
+          "target_paper": { "type": "string" },
+          "pipeline_route": { "type": "string" },
+          "route_status": { "type": "string" },
+          "exact_question": { "type": "string" },
+          "approved_pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source_filename", "page"],
+              "properties": {
+                "source_filename": { "type": "string" },
+                "page": { "type": "integer", "minimum": 1 }
+              }
+            }
+          },
+          "pages_checked": { "type": ["string", "null"] },
+          "overall_decision": { "type": "string", "enum": ["ACCEPT", "PARTIAL", "REJECT"] },
+          "factual_correctness": { "type": "string", "enum": ["Correct", "Partially Correct", "Incorrect"] },
+          "factual_correctness_notes": { "type": "string" },
+          "faithfulness": { "type": "string", "enum": ["Faithful", "Partially Faithful", "Unfaithful"] },
+          "faithfulness_notes": { "type": "string" },
+          "citation_support": { "type": "string", "enum": ["Supported", "Partially Supported", "Unsupported"] },
+          "citation_support_notes": { "type": "string" },
+          "claim_verdicts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["claim_num", "claim_text", "coverage_choice", "reviewer_claim_notes"],
+              "properties": {
+                "claim_num": { "type": "integer" },
+                "claim_text": { "type": "string" },
+                "coverage_choice": { "type": "string", "enum": ["Covered", "Partial", "Omitted"] },
+                "reviewer_claim_notes": { "type": "string" }
+              }
+            }
+          },
+          "reviewer": { "type": "string", "enum": ["Qusai"] },
+          "sign_off_date": { "type": "string", "pattern": "^2026-10-21$" },
+          "overall_notes": { "type": "string" },
+          "signed_form_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    }
+  }
+}
